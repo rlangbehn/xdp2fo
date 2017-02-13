@@ -1,0 +1,46 @@
+/*
+ * $Id: site.css,v 1.1 2007/10/08 22:01:25 rlangbehn Exp $
+ *
+ * This file is part of the XSL XDP Stylesheet distribution xdp2fo.
+ * See ../../../README.txt or http://xdp2fo.sourceforge.net/ for
+ * copyright and other information.
+ *
+ * Copyright (c) 2007 The XDP To XSL-FO Development Team.
+ * Also see acknowledgements in README.txt.
+ *
+ * xdp2fo is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of
+ * the License, or (at your option) any later version.
+ *
+ * xdp2fo is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Version: $Revision: 1.1 $ $Date: 2007/10/08 22:01:25 $
+ * Author:  Rainer Langbehn, rlangbehn@users.sourceforge.net
+ */
+#banner {
+    height: 62px;
+}
+
+#bannerRight {
+    float: right;
+    border: 1px solid #eff7f7;
+    padding: 11px;
+}
+
+#bannerLeft {
+    float: left;
+}
+
+#bannerLeft img {
+    width: 210px !important;
+    height: 62px;
+    display: block;
+    float: none;
+}

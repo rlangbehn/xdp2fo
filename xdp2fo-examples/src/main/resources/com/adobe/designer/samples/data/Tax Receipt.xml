@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+ <transaction xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+  <receiptSerial>200312346</receiptSerial>
+  <issuedAt>City</issuedAt>
+  <issueDate>2003-02-10</issueDate>
+  <taxYear>2003</taxYear>
+  <donationAmount>567.34</donationAmount>
+  <receiptAddr1>Any Donor Name</receiptAddr1>
+  <receiptAddr2>456 Any Blvd.</receiptAddr2>
+  <receiptAddr3>Any City, Any State, Any ZIP</receiptAddr3>
+  <signature xfa:contentType="image/tif" href="..\images\Signature.tif"></signature>
+  <receipt>
+   <copyLabel>Foundation's Copy / Copie de la fondation</copyLabel>
+  </receipt>
+  <receipt>
+   <copyLabel>Chapter's Copy / Copie de l'Émetteur</copyLabel>
+  </receipt>
+  <receipt>
+   <copyLabel>Official receipt for income tax purposes / Reçu officiel pour fins d'impôt</copyLabel>
+  </receipt>
+</transaction>

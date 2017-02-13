@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	xpd.rng - RELAX NG schema for an XFA Version 2.4 Data Package (XDP)
+	
+	Copyright (C) 2006 Adobe Systems Incorporated. All rights reserved. The original 
+	version of this material may be obtained from Adobe Systems Incorporated.
+-->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" 
+   datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+	<start>
+		<element name="xdp" ns="http://ns.adobe.com/xdp/">
+			<optional>
+				<attribute name="uuid">
+					<data type="string"/>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="timeStamp">
+					<ref name="dateTimeDataType"/>
+				</attribute>
+			</optional>
+			<interleave>
+				<!-- 
+					Data Sets. 
+					
+					Everything within this packet is preserved when
+					round-tripping, whether it is an XFA data set or not.
+				-->
+				<optional>
+					<ref name="dataSetsPacket"/>
+				</optional>
+	
+				<!-- Template -->
+				<optional>
+					<externalRef href="template.rng"/>
+				</optional>
+				
+				<!-- Connection set (bindings to web services and data schemas) -->
+				<optional>
+					<externalRef href="connectionset.rng"/>
+				</optional>
+				
+				<!-- PDF -->
+				<optional>
+					<externalRef href="pdf.rng"/>
+				</optional>
+				
+				<!-- Configuration document -->
+				<optional>
+					<externalRef href="config.rng"/>
+				</optional>
+				
+				<!-- Source set (usually binds to a data base) -->
+				<optional>
+					<externalRef href="sourceset.rng"/>
+				</optional>
+				
+				<!-- Two stylesheet packets are allowed.  -->
+				<optional>
+					<group>
+						<externalRef href="stylesheet.rng"/>
+						<optional>
+							<externalRef href="stylesheet.rng"/>
+						</optional>
+					</group>
+				</optional>
+				
+				<!-- XML Data Signature -->
+				<optional>
+					<externalRef href="xmldsig-core-schema.rng"/>
+				</optional>
+
+
+				<!-- xfdf (annotations) -->
+				<optional>
+					<externalRef href="xfdf.rng"/>
+				</optional>
+				
+				<!-- locale definitions -->
+				<optional>
+					<externalRef href="localeset.rng"/>
+				</optional>
+				
+				<!-- Any number of custom packets are allowed. -->
+				<group>
+					<zeroOrMore>
+						<optional>
+							<ref name="nonXFAPacket"/>
+						</optional>
+					</zeroOrMore>
+				</group>
+
+			</interleave>
+		</element>
+	</start>
+
+
+	<!-- type for date+time -->
+	<define name="dateTimeDataType">
+		<data type="token">
+			<param name="pattern">([0-9]{4}((\-)?[0-9]{2}((\-)?[0-9]{2})?)?)?(T)?([0-9]{2}((:)?[0-9]{2}((:)?[0-9]{2}(\.[0-9]{4})?(Z|([\+\-][0-9]{2}((:)?[0-9]{2})?))?)?)?)?</param>
+		</data>
+	</define>
+
+	<!--
+		Pattern for a dataSets packet.
+	-->
+	<define name="dataSetsPacket">
+		<element name="datasets" ns="http://www.xfa.org/schema/xfa-data/1.0/">
+			<interleave>
+			
+				<!-- Variable data (i.e. field content) -->
+				<optional>
+					<externalRef href="data.rng"/>
+				</optional>
+				
+				<!-- Data description (XFA-style schema) -->
+				<optional>
+					<externalRef href="dataDescription.rng"/>
+				</optional>
+	
+				<!-- Non-XFA data sets -->
+				<group>
+					<zeroOrMore>
+						<ref name="nonXFADataSet"/>
+					</zeroOrMore>
+				</group>
+			</interleave>
+		</element>
+	</define>
+	
+	<!--
+		Pattern for a non-XFA data set. 
+
+		Although element name alone is sufficient to distinguish a non-XFA
+		data set, it is recommended to use a different namespace.  Future
+		versions of XFA may reserve more data set element names.
+	-->
+	<define name="nonXFADataSet">
+		<element>
+			<anyName>
+				<except>
+					<name>data</name>
+					<name>dataDescription</name>
+					<nsName ns="http://www.xfa.org/schema/xfa-data/1.0/"/>
+					<nsName ns="http://ns.adobe.com/data-description/"/>
+				</except>
+			</anyName>
+			<zeroOrMore>
+				<choice>
+					<attribute>
+						<anyName/>
+					</attribute>
+					<text/>
+					<ref name="anyElement"/>
+				</choice>
+			</zeroOrMore>
+		</element>
+	</define>
+
+	<!-- 
+		Pattern for a non-XFA packet.
+
+		Although element name alone is sufficient to distinguish a non-XFA
+		packet, it is recommended to use a different namespace.	 Future
+		versions of XFA may reserve more packet element names.
+	-->
+	<define name="nonXFAPacket">
+		<element>
+			<anyName>
+				<except>
+					<name>datasets</name>
+					<name>template</name>
+					<name>connectionSet</name>
+					<name>pdf</name>
+					<name>config</name>
+					<name>sourceSet</name>
+					<name>stylesheet</name>
+					<name>Signature</name>
+					<name>xfdf</name>
+					<name>localeSet</name>
+					<nsName ns="http://www.xfa.org/schema/xfa-data/1.0/"/>
+					<nsName ns="http://www.xfa.org/schema/xfa-template/2.5/"/>
+					<nsName ns="http://www.xfa.org/schema/xfa-connection-set/2.4/"/>
+					<nsName ns="http://ns.adobe.com/xpd/pdf/"/>
+					<nsName ns="http://www.xfa.org/schema/xci/1.0/"/>
+					<nsName ns="http://www.xfa.org/schema/xfa-source-set/2.4/"/>
+					<nsName ns="http://www.w3.org/1999/XSL/Transform"/>
+					<nsName ns="http://www.w3.org/2000/09/xmldsig#"/>
+					<nsName ns="http://ns.adobe.com/xfdf/"/>
+					<nsName ns="http://www.xfa.org/schema/xfa-locale-set/2.4/"/>
+				</except>
+			</anyName>
+			<zeroOrMore>
+				<choice>
+					<attribute>
+						<anyName/>
+					</attribute>
+					<text/>
+					<ref name="anyElement"/>
+				</choice>
+			</zeroOrMore>
+		</element>
+	</define>
+
+	<!-- the standard pattern for arbitrary XML content -->
+	<define name="anyElement">
+		<element>
+			<anyName/>
+			<zeroOrMore>
+				<choice>
+					<attribute>
+						<anyName/>
+					</attribute>
+					<text/>
+					<ref name="anyElement"/>
+				</choice>
+			</zeroOrMore>
+		</element>
+	</define>
+   
+</grammar>

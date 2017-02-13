@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ | $Id: site.xml,v 1.7 2008/07/01 14:40:53 rlangbehn Exp $
+ |
+ | This file is part of the XSL XDP Stylesheet distribution xdp2fo.
+ | See ../../../README.txt or http://xdp2fo.sourceforge.net/ for
+ | copyright and other information.
+ |
+ | Copyright (c) 2007 The XDP To XSL-FO Development Team.
+ | Also see acknowledgements in README.txt.
+ |
+ | xdp2fo is free software; you can redistribute it and/or modify
+ | it under the terms of the GNU Lesser General Public License as
+ | published by the Free Software Foundation; either version 3 of
+ | the License, or (at your option) any later version.
+ |
+ | xdp2fo is distributed in the hope that it will be useful,
+ | but WITHOUT ANY WARRANTY; without even the implied warranty of
+ | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ | GNU Lesser General Public License for more details.
+ |
+ | You should have received a copy of the GNU Lesser General Public License
+ | along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ |
+ | Version: $Revision: 1.7 $ $Date: 2008/07/01 14:40:53 $
+ | Author:  Rainer Langbehn, rlangbehn@users.sourceforge.net
+ +-->
+<project name="XDP To XSL-FO">
+    <bannerRight>
+        <name>XDP To XSL-FO</name>
+        <href>http://xdp2fo.sourceforge.net</href>
+    </bannerRight>
+    <bannerLeft>
+        <name>Sourceforge</name>
+        <src>http://sflogo.sourceforge.net/sflogo.php?group_id=203478&amp;type=5</src>
+        <href>http://sourceforge.net</href>
+    </bannerLeft>
+    
+    <!--skin>
+    	<groupId>org.apache.maven.skins</groupId>
+    	<artifactId>maven-stylus-skin</artifactId>
+    	<version>1.0</version>
+    </skin-->
+
+	<body>
+	    <menu name="XDP To XSL-FO">
+	        <item name="Welcome" href="index.html"/>
+			<item name="Downloads" href="downloads.html"/>
+	        <item name="SourceForge project" href="http://sourceforge.net/projects/xdp2fo"/>
+	        <item name="Release news" href="http://sourceforge.net/news/?group_id=203478"/>
+	    </menu>
+	    
+		<menu name="Documentation">
+	        <item name="Usage" href="usage.html" />
+	        <item name="FAQ" href="faq.html"/>
+			<item name="Wiki" href="http://xdp2fo.wiki.sourceforge.net/"/>
+	        <item name="Examples" href="examples.html" collapse="true">
+	        	<item name="Dunning Notice" href="examples/Dunning Notice.html" />
+	        	<item name="E-Ticket" href="examples/E-Ticket.html" />
+	        	<item name="Grant Application" href="examples/Grant Application.html" />
+	        	<item name="Purchase Order" href="examples/Purchase Order.html" />
+	        	<item name="Scripting" href="examples/Scripting.html" />
+	        	<item name="Subform Set" href="examples/SubformSet.html" />
+	        	<item name="Tax Receipt" href="examples/Tax Receipt.html" />
+	        </item>
+		</menu>
+		
+		<menu name="Development">
+			<item name="Project Team" href="team-list.html"/>
+			<item name="Mailing Lists" href="mail-lists.html"/>
+			<item name="Project License" href="license.html"/>
+			<item name="Issue Tracking" href="issue-tracking.html"/>
+			<item name="Source Repository" href="source-repository.html"/>
+			<item name="Continous Integration" href="integration.html"/>
+		</menu>
+	</body>
+</project>

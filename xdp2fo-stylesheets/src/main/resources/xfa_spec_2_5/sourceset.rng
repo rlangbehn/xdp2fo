@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+		Copyright (C) 2006 Adobe Systems Incorporated. All rights reserved. The original 
+		version of this material may be obtained from Adobe Systems Incorporated.
+	-->
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" ns="http://www.xfa.org/schema/xfa-source-set/2.4/" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+		<!-- The root element -->
+		
+   <rng:start>
+			
+      <rng:ref name="sourceSetElement"/>
+		
+   </rng:start>
+
+		<!-- selection-set-specific patterns -->
+
+		<!-- type for a boolean -->
+		
+   <rng:define name="booleanDataType">
+			
+      <rng:choice>
+				
+         <rng:value>0</rng:value>
+				
+         <rng:value>1</rng:value>
+				
+         <rng:empty/>	<!-- empty element represents null -->
+			
+      </rng:choice>
+		
+   </rng:define>
+
+		<!-- type for integer -->
+		
+   <rng:define name="integerDataType">
+			
+      <rng:data type="token">
+				
+         <rng:param name="pattern">((\-)?[0-9]+)?</rng:param>
+			
+      </rng:data>
+		
+   </rng:define>
+
+		<!-- type for string (wrapper required because a pattern name is expected for "content", not a type) -->
+		
+   <rng:define name="stringDataType">
+			
+      <rng:data type="string"/>
+		
+   </rng:define>
+		
+		<!-- Element types -->
+	
+   <rng:define name="bindElement">
+      <rng:element name="bind"><!--Associates an item of data from the database with a node in the Data DOM-->
+         <rng:ref name="bindContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="bindContent">
+      <rng:optional>
+         <rng:attribute name="contentType">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="ref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="transferEncoding">
+            <rng:choice>
+               <rng:value>base64</rng:value>
+               <rng:value>none</rng:value>
+            </rng:choice>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+   </rng:define>
+   <rng:define name="booleanElement">
+      <rng:element name="boolean"><!--Encloses custom data that is represented as a Boolean value.-->
+         <rng:ref name="booleanContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="booleanContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="booleanDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="commandElement">
+      <rng:element name="command"><!--A command to the database.-->
+         <rng:ref name="commandContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="commandContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="timeout">
+            <rng:ref name="integerDataType"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:optional>
+            <rng:ref name="deleteElement"/>
+         </rng:optional>
+         <rng:optional>
+            <rng:ref name="insertElement"/>
+         </rng:optional>
+         <rng:optional>
+            <rng:ref name="queryElement"/>
+         </rng:optional>
+         <rng:optional>
+            <rng:ref name="updateElement"/>
+         </rng:optional>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="connectElement">
+      <rng:element name="connect"><!--This element controls a connection to a database.-->
+         <rng:ref name="connectContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="connectContent">
+      <rng:optional>
+         <rng:attribute name="delayedOpen">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="timeout">
+            <rng:ref name="integerDataType"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:optional>
+            <rng:ref name="connectStringElement"/>
+         </rng:optional>
+         <rng:optional>
+            <rng:ref name="passwordElement"/>
+         </rng:optional>
+         <rng:optional>
+            <rng:ref name="userElement"/>
+         </rng:optional>
+         <rng:zeroOrMore>
+            <rng:ref name="extrasElement"/>
+         </rng:zeroOrMore>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="connectStringElement">
+      <rng:element name="connectString"><!--A string identifying a data source.-->
+         <rng:ref name="connectStringContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="connectStringContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="deleteElement">
+      <rng:element name="delete"><!--A SQL command to perform a simple delete operation.-->
+         <rng:ref name="deleteContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="deleteContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="extrasElement">
+      <rng:element name="extras"><!--An enclosure around one or more sets of custom properties. The content of this element may be used by custom applications.-->
+         <rng:ref name="extrasContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="extrasContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:zeroOrMore>
+            <rng:ref name="booleanElement"/>
+         </rng:zeroOrMore>
+         <rng:zeroOrMore>
+            <rng:ref name="extrasElement"/>
+         </rng:zeroOrMore>
+         <rng:zeroOrMore>
+            <rng:ref name="integerElement"/>
+         </rng:zeroOrMore>
+         <rng:zeroOrMore>
+            <rng:ref name="textElement"/>
+         </rng:zeroOrMore>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="insertElement">
+      <rng:element name="insert"><!--A SQL command to perform a simple insert operation.-->
+         <rng:ref name="insertContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="insertContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="integerElement">
+      <rng:element name="integer"><!--Encloses custom data that is represented as an integer.-->
+         <rng:ref name="integerContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="integerContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="integerDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="mapElement">
+      <rng:element name="map"><!--Maps a database column to a bind element descended from the same source element.-->
+         <rng:ref name="mapContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="mapContent">
+      <rng:optional>
+         <rng:attribute name="bind">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="from">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+   </rng:define>
+   <rng:define name="passwordElement">
+      <rng:element name="password"><!--The password used to connect to the database.-->
+         <rng:ref name="passwordContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="passwordContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="queryElement">
+      <rng:element name="query"><!--Controls a cursor and associated record set.-->
+         <rng:ref name="queryContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="queryContent">
+      <rng:optional>
+         <rng:attribute name="commandType">
+            <rng:choice>
+               <rng:value>storedProc</rng:value>
+               <rng:value>table</rng:value>
+               <rng:value>text</rng:value>
+               <rng:value>unknown</rng:value>
+            </rng:choice>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:optional>
+            <rng:ref name="recordSetElement"/>
+         </rng:optional>
+         <rng:optional>
+            <rng:ref name="selectElement"/>
+         </rng:optional>
+         <rng:zeroOrMore>
+            <rng:ref name="mapElement"/>
+         </rng:zeroOrMore>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="recordSetElement">
+      <rng:element name="recordSet"><!--Controls the type and behavior of the cursor for the record set.-->
+         <rng:ref name="recordSetContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="recordSetContent">
+      <rng:optional>
+         <rng:attribute name="bofAction">
+            <rng:choice>
+               <rng:value>moveFirst</rng:value>
+               <rng:value>stayBOF</rng:value>
+            </rng:choice>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="cursorLocation">
+            <rng:choice>
+               <rng:value>client</rng:value>
+               <rng:value>server</rng:value>
+            </rng:choice>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="cursorType">
+            <rng:choice>
+               <rng:value>dynamic</rng:value>
+               <rng:value>forwardOnly</rng:value>
+               <rng:value>keyset</rng:value>
+               <rng:value>static</rng:value>
+               <rng:value>unspecified</rng:value>
+            </rng:choice>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="eofAction">
+            <rng:choice>
+               <rng:value>addNew</rng:value>
+               <rng:value>moveLast</rng:value>
+               <rng:value>stayEOF</rng:value>
+            </rng:choice>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="lockType">
+            <rng:choice>
+               <rng:value>batchOptimistic</rng:value>
+               <rng:value>optimistic</rng:value>
+               <rng:value>pessimistic</rng:value>
+               <rng:value>readOnly</rng:value>
+               <rng:value>unspecified</rng:value>
+            </rng:choice>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="max">
+            <rng:ref name="integerDataType"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:zeroOrMore>
+            <rng:ref name="extrasElement"/>
+         </rng:zeroOrMore>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="selectElement">
+      <rng:element name="select"><!--String identifying the records in the record set.-->
+         <rng:ref name="selectContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="selectContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="sourceElement">
+      <rng:element name="source"><!--This element describes a database or some other external data source/sink.-->
+         <rng:ref name="sourceContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="sourceContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:optional>
+            <rng:ref name="connectElement"/>
+         </rng:optional>
+         <rng:zeroOrMore>
+            <rng:ref name="bindElement"/>
+         </rng:zeroOrMore>
+         <rng:zeroOrMore>
+            <rng:ref name="commandElement"/>
+         </rng:zeroOrMore>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="sourceSetElement">
+      <rng:element name="sourceSet"><!--This element contains the set of source descriptions.-->
+         <rng:ref name="sourceSetContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="sourceSetContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:zeroOrMore>
+            <rng:ref name="sourceElement"/>
+         </rng:zeroOrMore>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="textElement">
+      <rng:element name="text"><!--Encloses a custom property which is represented as text.-->
+         <rng:ref name="textContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="textContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="updateElement">
+      <rng:element name="update"><!--A SQL command to perform a simple update.-->
+         <rng:ref name="updateContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="updateContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="userElement">
+      <rng:element name="user"><!--Username to be used when connecting to the database.-->
+         <rng:ref name="userContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="userContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+</rng:grammar>

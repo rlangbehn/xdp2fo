@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesigner_V8.0" APIVersion="2.5.6151.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2006-06-07T19:58:29Z" uuid="37e51dbd-1ffa-4e63-b279-6c3631306f1c">
+<template xmlns="http://www.xfa.org/schema/xfa-template/2.5/">
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel client?>
+   <subform name="form1" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <draw name="StaticText1" y="6.35mm" x="107.95mm" minW="0mm" anchorType="topCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4055.0"><p>Subform Set Sample</p></body>
+                  </exData>
+               </value>
+               <font size="20pt" typeface="Myriad Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="center"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                     <color value="192,192,192"/>
+                  </edge>
+                  <edge presence="hidden"/>
+                  <corner presence="hidden" thickness="0.006in">
+                  </corner>
+                  <corner presence="hidden" thickness="0.006in">
+                  </corner>
+                  <corner presence="hidden" thickness="0.006in">
+                     <color value="192,192,192"/>
+                  </corner>
+                  <corner presence="hidden" thickness="0.006in"/>
+               </border>
+            </draw>
+            <draw name="Rectangle1" y="25.4mm" x="19.05mm" w="177.8mm" h="25.4mm">
+               <value>
+                  <rectangle>
+                     <edge>
+                        <color value="192,192,192"/>
+                     </edge>
+                     <corner>
+                        <color value="192,192,192"/>
+                     </corner>
+                  </rectangle>
+               </value>
+            </draw>
+            <draw name="Circle1" y="25.4mm" x="27.94mm" w="6.35mm" h="6.35mm" anchorType="middleCenter">
+               <value>
+                  <arc hand="right" circular="1">
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </arc>
+               </value>
+               <para vAlign="middle" hAlign="center"/>
+            </draw>
+            <draw name="StaticText2" y="25.4mm" x="27.94mm" anchorType="middleCenter" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <font size="12pt" typeface="Myriad Pro" weight="bold">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>1</p></body>
+                  </exData>
+               </value>
+            </draw>
+            <draw name="StaticText3" y="22.9658mm" x="33.02mm" w="15.24mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Data</text>
+               </value>
+               <font typeface="Myriad Pro" weight="bold" size="12pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill/>
+               </border>
+               <para marginLeft="7.2pt"/>
+            </draw>
+            <field name="dataFileName" y="29.21mm" x="35.56mm" h="6.35mm" access="nonInteractive" minW="50.8mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Myriad Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="20.32mm">
+                  <font size="9pt" typeface="Myriad Pro"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Data File File:</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+            </field>
+            <field name="dataValues" y="34.29mm" x="35.56mm" h="6.35mm" access="nonInteractive" minW="50.8mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Myriad Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="20.32mm">
+                  <font size="9pt" typeface="Myriad Pro"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Data Values:</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+            </field>
+            <draw name="Circle2" y="25.4mm" x="126.8362mm" w="6.0476mm" h="6.35mm" anchorType="middleCenter">
+               <value>
+                  <arc hand="right" circular="1">
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </arc>
+               </value>
+               <para vAlign="middle" hAlign="center"/>
+            </draw>
+            <draw name="StaticText4" y="25.4mm" x="126.8362mm" anchorType="middleCenter" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <font size="12pt" typeface="Myriad Pro" weight="bold">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>2</p></body>
+                  </exData>
+               </value>
+            </draw>
+            <draw name="StaticText5" y="22.9658mm" x="132.08mm" w="48.26mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Subform Occurrence</text>
+               </value>
+               <font typeface="Myriad Pro" weight="bold" size="12pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <fill/>
+               </border>
+               <para marginLeft="7.2pt"/>
+            </draw>
+            <draw name="StaticText6" y="30.48mm" x="134.62mm" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>subformA: &lt;occur min=2 max=2/&gt;</text>
+               </value>
+               <font size="9pt" typeface="Myriad Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <draw name="StaticText7" y="35.56mm" x="134.62mm" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>subformB: &lt;occur min=1 max=1/&gt;</text>
+               </value>
+               <font size="9pt" typeface="Myriad Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <draw name="StaticText8" y="40.64mm" x="134.62mm" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>subformC: &lt;occur min=3 max=3/&gt;</text>
+               </value>
+               <font size="9pt" typeface="Myriad Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <draw name="Circle3" y="50.8mm" x="58.7375mm" w="6.35mm" h="6.35mm" anchorType="middleCenter">
+               <value>
+                  <arc hand="right" circular="1">
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </arc>
+               </value>
+               <para vAlign="middle" hAlign="center"/>
+            </draw>
+            <draw name="StaticText9" y="50.8mm" x="58.7375mm" anchorType="middleCenter" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <font size="12pt" typeface="Myriad Pro" weight="bold">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>3</p></body>
+                  </exData>
+               </value>
+            </draw>
+            <draw name="StaticText10" y="58.42mm" x="58.7375mm" minW="0mm" anchorType="topCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="2.4.5277.0"><p style="font-size:12pt;font-weight:bold;text-decoration:none">Use All Subforms in Order</p><p style="text-decoration:none">Subform Relationship</p></body>
+                  </exData>
+               </value>
+               <font size="9pt" typeface="Myriad Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="center" vAlign="middle"/>
+               <border>
+                  <edge presence="hidden">
+                     <color value="51,102,255"/>
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner presence="hidden" thickness="0.006in">
+                     <color value="51,102,255"/>
+                  </corner>
+                  <corner presence="hidden" thickness="0.006in">
+                  </corner>
+                  <corner presence="hidden" thickness="0.006in"/>
+                  <corner presence="hidden" thickness="0.006in"/>
+               </border>
+            </draw>
+            <contentArea x="0.75in" y="69.85mm" w="79.375mm" h="266.7mm" name="UseAll" id="UseAll_TemplateOrder"/>
+            <draw name="Rectangle2" y="69.85mm" x="19.05mm" w="79.375mm" h="266.7mm">
+               <value>
+                  <rectangle>
+                     <edge thickness="0.1524mm">
+                        <color value="192,192,192"/>
+                     </edge>
+                     <corner thickness="0.1524mm">
+                        <color value="192,192,192"/>
+                     </corner>
+                  </rectangle>
+               </value>
+            </draw>
+            <draw name="Circle4" y="50.8mm" x="157.1625mm" w="6.35mm" h="6.35mm" anchorType="middleCenter">
+               <value>
+                  <arc hand="right" circular="1">
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </arc>
+               </value>
+               <para vAlign="middle" hAlign="center"/>
+            </draw>
+            <draw name="StaticText11" y="50.8mm" x="157.1625mm" anchorType="middleCenter" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <font size="12pt" typeface="Myriad Pro" weight="bold">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>3</p></body>
+                  </exData>
+               </value>
+            </draw>
+            <draw name="StaticText12" y="58.42mm" x="157.1625mm" anchorType="topCenter" w="2.875in" h="8.255mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="2.4.5277.0"><p style="font-size:12pt;font-weight:bold;text-decoration:none">Select One Subform from Alternatives</p><p style="text-decoration:none">Subform Relationship</p></body>
+                  </exData>
+               </value>
+               <font size="9pt" typeface="Myriad Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="center" vAlign="middle"/>
+               <border>
+                  <edge presence="hidden">
+                     <color value="51,102,255"/>
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner presence="hidden" thickness="0.006in">
+                     <color value="51,102,255"/>
+                  </corner>
+                  <corner presence="hidden" thickness="0.006in">
+                  </corner>
+                  <corner presence="hidden" thickness="0.006in"/>
+                  <corner presence="hidden" thickness="0.006in"/>
+               </border>
+               <?renderCache.bounds 207000 23400 0 0 0 0 0 0?>
+               <?renderCache.textRun 37 Select One Subform from Alternatives  0 2593 9000 0 0 0 "Myriad Pro" 1 0 12000 ISO-8859-1?>
+               <?renderCache.textRun 20 Subform Relationship 0 62969 21150 0 0 0 "Myriad Pro" 0 0 9000 ISO-8859-1?></draw>
+            <medium stock="legal" short="215.9mm" long="355.6mm"/>
+            <contentArea x="117.475mm" y="69.85mm" w="79.375mm" h="266.7mm" name="SelectOne" id="UseOneOf"/>
+            <draw name="Rectangle3" y="69.85mm" x="117.475mm" w="79.375mm" h="266.7mm">
+               <value>
+                  <rectangle>
+                     <edge thickness="0.1524mm">
+                        <color value="192,192,192"/>
+                     </edge>
+                     <corner thickness="0.1524mm">
+                        <color value="192,192,192"/>
+                     </corner>
+                  </rectangle>
+               </value>
+            </draw>
+            <?templateDesigner expand 0?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <desc>
+         <text name="description">Adobe LiveCycle Designer Sample</text>
+         <text name="contact">Adobe Systems Incorporated</text>
+         <text name="title">SubformSet</text>
+      </desc>
+      <subform layout="tb" name="A">
+         <occur min="0"/>
+         <keep intact="contentArea"/>
+         <margin leftInset="2.54mm" topInset="2.54mm" rightInset="2.54mm" bottomInset="2.54mm"/>
+         <subformSet>
+            <occur min="0" max="-1"/>
+            <subform name="startSubformSet" x="0mm" y="0mm" w="74.295mm">
+               <border>
+                  <edge thickness="0.0254mm" presence="hidden">
+                     <color value="255,0,0"/>
+                  </edge>
+                  <corner thickness="0.001in" presence="hidden">
+                     <color value="255,0,0"/>
+                  </corner>
+               </border>
+               <draw name="StaticText13" y="0mm" x="0mm" minH="4.572mm" w="74.295mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>&lt;subformSet&gt;</text>
+                  </value>
+                  <font size="11pt" typeface="Myriad Pro" weight="bold">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para hAlign="center" vAlign="middle"/>
+                  <border>
+                     <edge>
+                        <color value="153,204,0"/>
+                     </edge>
+                     <corner thickness="0.006in">
+                        <color value="153,204,0"/>
+                     </corner>
+                     <fill>
+                        <color value="153,204,0"/>
+                     </fill>
+                  </border>
+               </draw>
+               <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0.127mm"/>
+               <bind match="none"/>
+               <?templateDesigner expand 0?></subform>
+            <subformSet>
+               <occur min="0"/>
+               <subform name="subformA" x="0mm" y="49.74mm">
+                  <occur min="2"/>
+                  <margin topInset="1.27mm" bottomInset="1.27mm"/>
+                  <field name="fieldA" y="0mm" x="0mm" w="74.295mm" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </edge>
+                              <corner thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </corner>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="8pt" typeface="Myriad Pro" weight="bold">
+                        <fill>
+                           <color value="128,128,128"/>
+                        </fill>
+                     </font>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <caption reserve="25.4mm">
+                        <font typeface="Myriad Pro" weight="bold" size="8pt">
+                           <fill>
+                              <color value="51,51,153"/>
+                           </fill>
+                        </font>
+                        <para vAlign="middle" hAlign="center"/>
+                        <value>
+                           <text>subformA</text>
+                        </value>
+                     </caption>
+                  </field>
+                  <border>
+                     <edge thickness="0.508mm" presence="hidden">
+                        <color value="255,204,0"/>
+                     </edge>
+                     <corner thickness="0.02in" presence="hidden">
+                        <color value="255,204,0"/>
+                     </corner>
+                  </border>
+                  <?templateDesigner expand 0?></subform>
+               <subform name="subformB" x="0mm" y="67.73mm">
+                  <field name="fieldB" y="0mm" x="0mm" w="74.295mm" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </edge>
+                              <corner thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </corner>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="8pt" typeface="Myriad Pro" weight="bold">
+                        <fill>
+                           <color value="128,128,128"/>
+                        </fill>
+                     </font>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <caption reserve="25.4mm">
+                        <font typeface="Myriad Pro" weight="bold" size="8pt">
+                           <fill>
+                              <color value="51,51,153"/>
+                           </fill>
+                        </font>
+                        <para vAlign="middle" hAlign="center"/>
+                        <value>
+                           <exData contentType="text/html" maxLength="0">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4030.0"><p>subformB</p></body>
+                           </exData>
+                        </value>
+                     </caption>
+                  </field>
+                  <margin topInset="1.27mm" bottomInset="1.27mm"/>
+                  <border>
+                     <edge thickness="0.508mm" presence="hidden">
+                        <color value="255,204,0"/>
+                     </edge>
+                     <corner thickness="0.02in" presence="hidden">
+                        <color value="255,204,0"/>
+                     </corner>
+                  </border>
+                  <?templateDesigner expand 0?></subform>
+               <subform name="subformC" x="0mm" y="87.05mm">
+                  <occur min="3"/>
+                  <field name="fieldC" y="0mm" x="0mm" w="74.295mm" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </edge>
+                              <corner thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </corner>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="8pt" typeface="Myriad Pro" weight="bold">
+                        <fill>
+                           <color value="128,128,128"/>
+                        </fill>
+                     </font>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <caption reserve="25.4mm">
+                        <font typeface="Myriad Pro" weight="bold" size="8pt">
+                           <fill>
+                              <color value="51,51,153"/>
+                           </fill>
+                        </font>
+                        <para vAlign="middle" hAlign="center"/>
+                        <value>
+                           <exData contentType="text/html" maxLength="0">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4030.0"><p>subformC</p></body>
+                           </exData>
+                        </value>
+                     </caption>
+                  </field>
+                  <margin topInset="1.27mm" bottomInset="1.27mm"/>
+                  <border>
+                     <edge thickness="0.508mm" presence="hidden">
+                        <color value="255,204,0"/>
+                     </edge>
+                     <corner thickness="0.02in" presence="hidden">
+                        <color value="255,204,0"/>
+                     </corner>
+                  </border>
+                  <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 0?></subformSet>
+            <subform name="endSubformSet" x="0mm" y="109.27mm" w="74.295mm">
+               <draw name="StaticText14" y="0mm" x="0mm" w="74.295mm" minH="4.572mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>&lt;/subformSet&gt;</text>
+                  </value>
+                  <font size="11pt" typeface="Myriad Pro" weight="bold">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para hAlign="center" vAlign="middle"/>
+                  <border>
+                     <edge>
+                        <color value="255,0,0"/>
+                     </edge>
+                     <corner thickness="0.006in">
+                        <color value="255,0,0"/>
+                     </corner>
+                     <fill>
+                        <color value="255,0,0"/>
+                     </fill>
+                  </border>
+               </draw>
+               <border>
+                  <edge thickness="0.0254mm" presence="hidden">
+                     <color value="153,204,0"/>
+                  </edge>
+                  <corner thickness="0.001in" presence="hidden">
+                     <color value="153,204,0"/>
+                  </corner>
+               </border>
+               <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="2.54mm"/>
+               <bind match="none"/>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?></subformSet>
+         <?templateDesigner expand 0?></subform>
+      <subform layout="tb" name="A">
+         <occur min="0"/>
+         <keep intact="contentArea"/>
+         <subformSet>
+            <occur min="0" max="-1"/>
+            <subform name="startSubformSet" x="0mm" y="0mm" w="74.295mm">
+               <border>
+                  <edge thickness="0.0254mm" presence="hidden">
+                     <color value="255,0,0"/>
+                  </edge>
+                  <corner thickness="0.001in" presence="hidden">
+                     <color value="255,0,0"/>
+                  </corner>
+               </border>
+               <draw name="StaticText15" y="0mm" x="0mm" w="74.295mm" minH="4.572mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>&lt;subformSet&gt;</text>
+                  </value>
+                  <font size="11pt" typeface="Myriad Pro" weight="bold">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para hAlign="center" vAlign="middle"/>
+                  <border>
+                     <edge>
+                        <color value="153,204,0"/>
+                     </edge>
+                     <corner thickness="0.006in">
+                        <color value="153,204,0"/>
+                     </corner>
+                     <fill>
+                        <color value="153,204,0"/>
+                     </fill>
+                  </border>
+               </draw>
+               <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0.127mm"/>
+               <bind match="none"/>
+               <?templateDesigner expand 0?></subform>
+            <subformSet relation="choice">
+               <occur min="0"/>
+               <subform name="subformA" x="0mm" y="49.74mm">
+                  <occur min="2"/>
+                  <margin topInset="1.27mm" bottomInset="1.27mm"/>
+                  <field name="fieldA" y="0mm" x="0mm" w="74.295mm" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </edge>
+                              <corner thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </corner>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="8pt" typeface="Myriad Pro" weight="bold">
+                        <fill>
+                           <color value="128,128,128"/>
+                        </fill>
+                     </font>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <caption reserve="25.4mm">
+                        <font typeface="Myriad Pro" weight="bold" size="8pt">
+                           <fill>
+                              <color value="51,51,153"/>
+                           </fill>
+                        </font>
+                        <para vAlign="middle" hAlign="center"/>
+                        <value>
+                           <text>subformA</text>
+                        </value>
+                     </caption>
+                  </field>
+                  <border>
+                     <edge thickness="0.508mm" presence="hidden">
+                        <color value="255,204,0"/>
+                     </edge>
+                     <corner thickness="0.02in" presence="hidden">
+                        <color value="255,204,0"/>
+                     </corner>
+                  </border>
+                  <?templateDesigner expand 0?></subform>
+               <subform name="subformB" x="0mm" y="67.73mm">
+                  <field name="fieldB" y="0mm" x="0mm" w="74.295mm" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </edge>
+                              <corner thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </corner>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="8pt" typeface="Myriad Pro" weight="bold">
+                        <fill>
+                           <color value="128,128,128"/>
+                        </fill>
+                     </font>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <caption reserve="25.4mm">
+                        <font typeface="Myriad Pro" weight="bold" size="8pt">
+                           <fill>
+                              <color value="51,51,153"/>
+                           </fill>
+                        </font>
+                        <para vAlign="middle" hAlign="center"/>
+                        <value>
+                           <exData contentType="text/html" maxLength="0">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4030.0"><p>subformB</p></body>
+                           </exData>
+                        </value>
+                     </caption>
+                  </field>
+                  <margin topInset="1.27mm" bottomInset="1.27mm"/>
+                  <border>
+                     <edge thickness="0.508mm" presence="hidden">
+                        <color value="255,204,0"/>
+                     </edge>
+                     <corner thickness="0.02in" presence="hidden">
+                        <color value="255,204,0"/>
+                     </corner>
+                  </border>
+                  <?templateDesigner expand 0?></subform>
+               <subform name="subformC" x="0mm" y="87.05mm">
+                  <occur min="3"/>
+                  <field name="fieldC" y="0mm" x="0mm" w="74.295mm" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </edge>
+                              <corner thickness="0.508mm">
+                                 <color value="51,51,153"/>
+                              </corner>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="8pt" typeface="Myriad Pro" weight="bold">
+                        <fill>
+                           <color value="128,128,128"/>
+                        </fill>
+                     </font>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle" hAlign="center"/>
+                     <caption reserve="25.4mm">
+                        <font typeface="Myriad Pro" weight="bold" size="8pt">
+                           <fill>
+                              <color value="51,51,153"/>
+                           </fill>
+                        </font>
+                        <para vAlign="middle" hAlign="center"/>
+                        <value>
+                           <exData contentType="text/html" maxLength="0">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4030.0"><p>subformC</p></body>
+                           </exData>
+                        </value>
+                     </caption>
+                  </field>
+                  <margin topInset="1.27mm" bottomInset="1.27mm"/>
+                  <border>
+                     <edge thickness="0.508mm" presence="hidden">
+                        <color value="255,204,0"/>
+                     </edge>
+                     <corner thickness="0.02in" presence="hidden">
+                        <color value="255,204,0"/>
+                     </corner>
+                  </border>
+                  <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 0?></subformSet>
+            <subform name="endSubformSet" x="0mm" y="109.27mm" w="74.295mm">
+               <draw name="StaticText16" y="0mm" x="0mm" w="74.295mm" minH="4.572mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>&lt;/subformSet&gt;</text>
+                  </value>
+                  <font size="11pt" typeface="Myriad Pro" weight="bold">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para hAlign="center" vAlign="middle"/>
+                  <border>
+                     <edge>
+                        <color value="255,0,0"/>
+                     </edge>
+                     <corner thickness="0.006in">
+                        <color value="255,0,0"/>
+                     </corner>
+                     <fill>
+                        <color value="255,0,0"/>
+                     </fill>
+                  </border>
+               </draw>
+               <border>
+                  <edge thickness="0.0254mm" presence="hidden">
+                     <color value="153,204,0"/>
+                  </edge>
+                  <corner thickness="0.001in" presence="hidden">
+                     <color value="153,204,0"/>
+                  </corner>
+               </border>
+               <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="2.54mm"/>
+               <bind match="none"/>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?></subformSet>
+         <margin leftInset="2.54mm" topInset="2.54mm" rightInset="2.54mm" bottomInset="2.54mm"/>
+         <break before="contentArea" startNew="1" beforeTarget="#UseOneOf"/>
+         <?templateDesigner expand 0?></subform>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 136 34 00010010001200130014001B001D001E001F00220023002400250027003300340037004200430044004600470049004A004D004E004F0050005100530054005500560059 /123:<=>ABCDFRSVabcefhilmnoprstux?>
+      <?renderCache.subset "Myriad Pro" 1 0 ISO-8859-1 4 120 30 00010010001200130014001D001F0022002300240025003000340036004200430044004500460047004A004D004E004F005000530054005500560057 /123<>ABCDOSUabcdefilmnorstuv?></subform>
+   <?templateDesigner Grid show:0, snap:0, units:0, color:ff8080, origin:(0,0), interval:(250000,250000)?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner DefaultLanguage FormCalc?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner DefaultPreviewType print?>
+   <?templateDesigner XDPPreviewFormat 14?>
+   <?templateDesigner Zoom 112?></template>
+<config xmlns="http://www.xfa.org/schema/xci/1.0/">
+   <agent name="designer">
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <trace>
+      <area name="font" level="1"/>
+   </trace>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+         </fontInfo>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+      <cache>
+         <macroCache/>
+      </cache>
+   </present>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.1/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+   </locale>
+</localeSet>
+<PDFSecurity print="1" printHighQuality="1" change="1" modifyAnnots="1" formFieldFilling="1" documentAssembly="1" contentCopy="1" accessibleContent="1" metadata="1" xmlns="http://ns.adobe.com/xtd/"/></xdp:xdp>

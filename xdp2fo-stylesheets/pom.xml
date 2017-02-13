@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ | $Id: pom.xml,v 1.6 2008/07/11 08:36:42 rlangbehn Exp $
+ |
+ | This file is part of the XSL XDP Stylesheet distribution xdp2fo.
+ | See README.txt or http://xdp2fo.sourceforge.net/ for
+ | copyright and other information.
+ |
+ | Copyright (c) 2007 The XDP To XSL-FO Development Team.
+ | Also see acknowledgements in README.txt.
+ |
+ | xdp2fo is free software; you can redistribute it and/or modify
+ | it under the terms of the GNU Lesser General Public License as
+ | published by the Free Software Foundation; either version 3 of
+ | the License, or (at your option) any later version.
+ |
+ | xdp2fo is distributed in the hope that it will be useful,
+ | but WITHOUT ANY WARRANTY; without even the implied warranty of
+ | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ | GNU Lesser General Public License for more details.
+ |
+ | You should have received a copy of the GNU Lesser General Public License
+ | along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ |
+ | Version: $Revision: 1.6 $ $Date: 2008/07/11 08:36:42 $
+ | Author:  Rainer Langbehn, rlangbehn@users.sourceforge.net
+ +-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                        http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<parent>
+		<groupId>net.sourceforge.xdp2fo</groupId>
+		<artifactId>xdp2fo</artifactId>
+		<relativePath>../pom.xml</relativePath>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>xdp2fo-stylesheets</artifactId>
+	<name>xdp2fo-stylesheets</name>
+	<description>xdp2fo-stylesheets</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>xmlunit</groupId>
+			<artifactId>xmlunit</artifactId>
+		</dependency>
+	</dependencies>
+	
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/xsl</directory>
+            </resource>
+        </resources>
+    	<testResources>
+    		<testResource>
+    			<directory>src/test/resources</directory>
+    		</testResource>
+    		<testResource>
+    			<directory>src/test/xsl</directory>
+    		</testResource>
+    	</testResources>
+    </build>	
+</project>

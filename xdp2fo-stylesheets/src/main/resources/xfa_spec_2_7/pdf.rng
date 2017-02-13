@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	pdf.rng - RELAX NG schema for the PDF packet within an XFA Version 2.4 Data Package (XDP)
+	
+	Copyright (C) 2006 Adobe Systems Incorporated. All rights reserved. The original 
+	version of this material may be obtained from Adobe Systems Incorporated.
+-->
+<grammar 
+	xmlns="http://relaxng.org/ns/structure/1.0" 
+	ns="http://ns.adobe.com/xpd/pdf/" 
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+
+	<!--
+		XFA does not guarantee recognition of all number encodings
+		permitted by the XMLSchema integer type.  In particular XFA 
+		does not guarantee recognition of an integer that has a leading
+		"+" sign.  So when it is practical we use a pattern to exactly 
+		match the XFA requirements.
+	-->
+	<define name="positiveIntegerDataType">
+		<data type="string">
+			<param name="pattern">([0-9]+)?</param>
+		</data>
+	</define>
+
+
+	<start>
+
+		<!-- the element enclosing the packet -->
+		<element name="pdf">
+			<!-- 
+				The "href" attribute and "document" child element are mutually
+				exclusive.  Either the pdf is external, in which case the 
+				"href" attribute points to it, or it is inline, in which case 
+				it is contained in a child "document" element.
+			-->
+			<choice>
+
+				<attribute name="href">
+					<data type="anyURI" />
+				</attribute>
+
+				<element name="document">
+
+					<optional>
+						<attribute name="transferEncoding">
+							<value>chunked</value>
+						</attribute>
+					</optional>
+
+					<zeroOrMore>
+
+						<element name="chunk">
+
+							<optional>
+								<attribute name="encodedBytes">
+									<ref name="positiveIntegerDataType" />
+								</attribute>
+							</optional>
+
+							<optional>
+								<attribute name="lineLength">
+									<ref name="positiveIntegerDataType" />
+								</attribute>
+							</optional>
+
+							<optional>
+								<attribute name="transferEncoding">
+									<value>base64</value>
+								</attribute>
+							</optional>
+
+						</element>
+
+					</zeroOrMore>
+
+				</element>
+
+			</choice>
+
+		</element>
+
+	</start>
+
+</grammar>

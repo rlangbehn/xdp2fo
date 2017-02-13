@@ -1,0 +1,1036 @@
+<?xml version="1.0"?>
+<!--
+	xfdf.rng - RELAX NG schema for XFDF 2.0 packet in an XFA Version 2.4 Data Package (XDP)
+
+	Copyright (C) 2006 Adobe Systems Incorporated. All rights reserved. The original 
+	version of this material may be obtained from Adobe Systems Incorporated.
+
+	The definitive schema for XDFD 2.0 is in XML-Schema format and is available
+	for download (as of 31 July 2006) at 
+	http://partners.adobe.com/public/developer/en/xml/xfdf.xsd
+	
+	The above URL may change in future but the schema will continue to
+	be available somewhere on partners.adobe.com.
+	
+	This document (apart from this comment) was created automatically
+	by the Sun RELAX NG Converter 1.2 using the command line
+	
+	java -jar rngconv.jar xfdf.xsd >xfdf.rng
+	
+	The Sun RELAX NG Converter is available for download at
+	http://wwws.sun.com/software/xml/developers/relaxngconverter/
+	(free registration required).  Note the "wwws" is NOT a typo.
+-->
+<grammar ns="http://ns.adobe.com/xfdf/"
+    xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <choice>
+            <notAllowed/>
+            <element name="xfdf">
+                <attribute>
+                    <name ns="http://www.w3.org/XML/1998/namespace">space</name>
+                    <choice>
+                        <value type="NCName">preserve</value>
+                        <value type="NCName">default</value>
+                    </choice>
+                </attribute>
+                <interleave>
+                    <optional>
+                        <element name="f">
+                            <attribute name="href">
+                                <data type="anyURI"/>
+                            </attribute>
+                        </element>
+                    </optional>
+                    <optional>
+                        <element name="ids">
+                            <attribute name="modified">
+                                <data type="hexBinary"/>
+                            </attribute>
+                            <attribute name="original">
+                                <data type="hexBinary"/>
+                            </attribute>
+                        </element>
+                    </optional>
+                    <optional>
+                        <element name="annots">
+                            <zeroOrMore>
+                                <choice>
+                                    <element name="text">
+                                    <optional>
+                                    <attribute name="statemodel">
+                                    <choice>
+                                    <choice>
+                                    <value type="NMTOKEN">Review</value>
+                                    <value type="NMTOKEN">Marked</value>
+                                    </choice>
+                                    <data type="string"/>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="state">
+                                    <choice>
+                                    <choice>
+                                    <value type="string">Rejected</value>
+                                    <value type="string">Completed</value>
+                                    <value type="string">None</value>
+                                    <value type="string">Accepted</value>
+                                    <value type="string">Marked</value>
+                                    <value type="string">Unmarked</value>
+                                    <value type="string">Cancelled</value>
+                                    </choice>
+                                    <data type="string"/>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="inreplyto">
+                                    <data type="string"/>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="icon">
+                                    <choice>
+                                    <choice>
+                                    <value type="string">Key</value>
+                                    <value type="string">Check</value>
+                                    <value type="string">Comment</value>
+                                    <value type="string">Insert</value>
+                                    <value type="string">NewParagraph</value>
+                                    <value type="string">Help</value>
+                                    <value type="string">Star</value>
+                                    <value type="string">UpArrow</value>
+                                    <value type="string">RightArrow</value>
+                                    <value type="string">Paragraph</value>
+                                    <value type="string">RightPointer</value>
+                                    <value type="string">Note</value>
+                                    <value type="string">UpLeftArrow</value>
+                                    <value type="string">Circle</value>
+                                    <value type="string">Cross</value>
+                                    </choice>
+                                    <data type="string"/>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="popup">
+                                    <ref name="popup.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="caret">
+                                    <optional>
+                                    <attribute name="symbol">
+                                    <choice>
+                                    <choice>
+                                    <value type="string">none</value>
+                                    <value type="string">paragraph</value>
+                                    </choice>
+                                    <data type="string"/>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="fringe">
+                                    <data type="string"/>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="defaultappearance">
+                                    <ref name="defaultappearance.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="popup">
+                                    <ref name="popup.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="freetext">
+                                    <optional>
+                                    <attribute name="justification">
+                                    <choice>
+                                    <value type="string">right</value>
+                                    <value type="string">centered</value>
+                                    <value type="string">left</value>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="rotation">
+                                    <data type="integer"/>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="BS.attgroup"/>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <optional>
+                                    <element name="defaultstyle">
+                                    <data type="string"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <element name="defaultappearance">
+                                    <ref name="defaultappearance.elem.type"/>
+                                    </element>
+                                    </interleave>
+                                    </element>
+                                    <element name="fileattachment">
+                                    <optional>
+                                    <attribute name="checksum">
+                                    <data type="hexBinary"/>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="creation">
+                                    <data type="string">
+                                    <param name="pattern">D:\d{4,4}((0[1-9]|1[0-2])((0[1-9]|[1-2]\d|3[0-1])(([0-1]\d|2[0-3])(([0-5]\d)(([0-5]\d)(Z|([\+\-]([0-1]\d'|2[0-3]')([0-5]\d')?)?)?)?)?)?)?)?</param>
+                                    </data>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="modification">
+                                    <data type="string">
+                                    <param name="pattern">D:\d{4,4}((0[1-9]|1[0-2])((0[1-9]|[1-2]\d|3[0-1])(([0-1]\d|2[0-3])(([0-5]\d)(([0-5]\d)(Z|([\+\-]([0-1]\d'|2[0-3]')([0-5]\d')?)?)?)?)?)?)?)?</param>
+                                    </data>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="size">
+                                    <data type="int"/>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="mimetype">
+                                    <data type="string"/>
+                                    </attribute>
+                                    </optional>
+                                    <attribute name="file">
+                                    <data type="string"/>
+                                    </attribute>
+                                    <optional>
+                                    <attribute name="icon">
+                                    <choice>
+                                    <choice>
+                                    <value type="string">Paperclip</value>
+                                    <value type="string">PushPin</value>
+                                    <value type="string">Graph</value>
+                                    <value type="string">Tag</value>
+                                    </choice>
+                                    <data type="string"/>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <element name="data">
+                                    <ref name="data.elem.type"/>
+                                    </element>
+                                    <optional>
+                                    <element name="resource">
+                                    <attribute name="mode">
+                                    <choice>
+                                    <value type="string">raw</value>
+                                    <value type="string">filtered</value>
+                                    </choice>
+                                    </attribute>
+                                    <attribute name="encoding">
+                                    <choice>
+                                    <value type="NMTOKEN">ascii</value>
+                                    <value type="NMTOKEN">hex</value>
+                                    </choice>
+                                    </attribute>
+                                    <attribute name="length">
+                                    <data type="int"/>
+                                    </attribute>
+                                    <attribute name="filter">
+                                    <choice>
+                                    <data type="string">
+                                    <param name="pattern">(ASCIIHexDecode,|ASCII85Decode,|LZWDecode,|FlateDecode,|RunLengthDecode,|CCITTFaxDecode,|JBIG2Decode,|DCTDecode,|JPXDecode,|Crypt)*(ASCIIHexDecode|ASCII85Decode|LZWDecode|FlateDecode|RunLengthDecode|CCITTFaxDecode|JBIG2Decode|DCTDecode|JPXDecode|Crypt)</param>
+                                    </data>
+                                    <data type="string"/>
+                                    </choice>
+                                    </attribute>
+                                    <optional>
+                                    <attribute name="creator">
+                                    <data type="string"/>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="subtype">
+                                    <data type="string"/>
+                                    </attribute>
+                                    </optional>
+                                    <data type="string"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="highlight">
+                                    <attribute name="coords">
+                                    <data type="string"/>
+                                    </attribute>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="popup">
+                                    <ref name="popup.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="ink">
+                                    <ref name="BS.attgroup"/>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <element name="inklist">
+                                    <oneOrMore>
+                                    <element name="gesture">
+                                    <data type="string"/>
+                                    </element>
+                                    </oneOrMore>
+                                    </element>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="popup">
+                                    <ref name="popup.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="line">
+                                    <optional>
+                                    <attribute name="interior-color">
+                                    <data type="string">
+                                    <param name="pattern">#[A-Fa-f0-9]{6,6}</param>
+                                    </data>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="BS.attgroup"/>
+                                    <optional>
+                                    <attribute name="tail">
+                                    <choice>
+                                    <value type="string">ClosedArrow</value>
+                                    <value type="string">Butt</value>
+                                    <value type="string">Diamond</value>
+                                    <value type="string">RClosedArrow</value>
+                                    <value type="string">None</value>
+                                    <value type="string">ROpenArrow</value>
+                                    <value type="string">Circle</value>
+                                    <value type="string">OpenArrow</value>
+                                    <value type="string">Square</value>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="head">
+                                    <choice>
+                                    <value type="string">ClosedArrow</value>
+                                    <value type="string">Butt</value>
+                                    <value type="string">Diamond</value>
+                                    <value type="string">RClosedArrow</value>
+                                    <value type="string">None</value>
+                                    <value type="string">ROpenArrow</value>
+                                    <value type="string">Circle</value>
+                                    <value type="string">OpenArrow</value>
+                                    <value type="string">Square</value>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <attribute name="end">
+                                    <data type="string"/>
+                                    </attribute>
+                                    <attribute name="start">
+                                    <data type="string"/>
+                                    </attribute>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="popup">
+                                    <ref name="popup.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="square">
+                                    <optional>
+                                    <attribute name="interior-color">
+                                    <data type="string">
+                                    <param name="pattern">#[A-Fa-f0-9]{6,6}</param>
+                                    </data>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="fringe">
+                                    <data type="string"/>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="BS_BE.attgroup"/>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="popup">
+                                    <ref name="popup.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="circle">
+                                    <optional>
+                                    <attribute name="interior-color">
+                                    <data type="string">
+                                    <param name="pattern">#[A-Fa-f0-9]{6,6}</param>
+                                    </data>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="fringe">
+                                    <data type="string"/>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="BS_BE.attgroup"/>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="popup">
+                                    <ref name="popup.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="polygon">
+                                    <ref name="BS_BE.attgroup"/>
+                                    <optional>
+                                    <attribute name="interior-color">
+                                    <data type="string">
+                                    <param name="pattern">#[A-Fa-f0-9]{6,6}</param>
+                                    </data>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <element name="vertices">
+                                    <ref name="vertices.elem.type"/>
+                                    </element>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="popup">
+                                    <ref name="popup.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="polyline">
+                                    <optional>
+                                    <attribute name="tail">
+                                    <choice>
+                                    <value type="string">ClosedArrow</value>
+                                    <value type="string">Butt</value>
+                                    <value type="string">Diamond</value>
+                                    <value type="string">RClosedArrow</value>
+                                    <value type="string">None</value>
+                                    <value type="string">ROpenArrow</value>
+                                    <value type="string">Circle</value>
+                                    <value type="string">OpenArrow</value>
+                                    <value type="string">Square</value>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="head">
+                                    <choice>
+                                    <value type="string">ClosedArrow</value>
+                                    <value type="string">Butt</value>
+                                    <value type="string">Diamond</value>
+                                    <value type="string">RClosedArrow</value>
+                                    <value type="string">None</value>
+                                    <value type="string">ROpenArrow</value>
+                                    <value type="string">Circle</value>
+                                    <value type="string">OpenArrow</value>
+                                    <value type="string">Square</value>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="BS.attgroup"/>
+                                    <optional>
+                                    <attribute name="interior-color">
+                                    <data type="string">
+                                    <param name="pattern">#[A-Fa-f0-9]{6,6}</param>
+                                    </data>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <element name="vertices">
+                                    <ref name="vertices.elem.type"/>
+                                    </element>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="popup">
+                                    <ref name="popup.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="sound">
+                                    <optional>
+                                    <attribute name="encoding">
+                                    <choice>
+                                    <value type="string">signed</value>
+                                    <value type="string">mulaw</value>
+                                    <value type="string">alaw</value>
+                                    <value type="string">raw</value>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="channels">
+                                    <data type="integer"/>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="bits">
+                                    <data type="int"/>
+                                    </attribute>
+                                    </optional>
+                                    <attribute name="rate">
+                                    <data type="decimal"/>
+                                    </attribute>
+                                    <optional>
+                                    <attribute name="icon">
+                                    <choice>
+                                    <choice>
+                                    <value type="string">Speaker</value>
+                                    <value type="string">Ear</value>
+                                    <value type="string">Mic</value>
+                                    </choice>
+                                    <data type="string"/>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <element name="data">
+                                    <ref name="data.elem.type"/>
+                                    </element>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="squiggly">
+                                    <ref name="underline.elem.type"/>
+                                    </element>
+                                    <element name="stamp">
+                                    <optional>
+                                    <attribute name="icon">
+                                    <choice>
+                                    <choice>
+                                    <value type="string">SBNotApproved</value>
+                                    <value type="string">SBInformationOnly</value>
+                                    <value type="string">SBNotForPublicRelease</value>
+                                    <value type="string">SBRejected</value>
+                                    <value type="string">SBConfidential</value>
+                                    <value type="string">SBPreliminaryResults</value>
+                                    <value type="string">SHSignHere</value>
+                                    <value type="string">SHWitness</value>
+                                    <value type="string">SHAccepted</value>
+                                    <value type="string">SBFinal</value>
+                                    <value type="string">SBForComment</value>
+                                    <value type="string">SBApproved</value>
+                                    <value type="string">SBVoid</value>
+                                    <value type="string">SBDraft</value>
+                                    <value type="string">SBForPublicRelease</value>
+                                    <value type="string">SBCompleted</value>
+                                    <value type="string">SHInitialHere</value>
+                                    </choice>
+                                    <choice>
+                                    <value type="string">NotForPublicRelease</value>
+                                    <value type="string">Expired</value>
+                                    <value type="string">Final</value>
+                                    <value type="string">TopSecret</value>
+                                    <value type="string">ForPublicRelease</value>
+                                    <value type="string">Approved</value>
+                                    <value type="string">ForComment</value>
+                                    <value type="string">Departmental</value>
+                                    <value type="string">Sold</value>
+                                    <value type="string">Draft</value>
+                                    <value type="string">AsIs</value>
+                                    <value type="string">Experimental</value>
+                                    <value type="string">Confidential</value>
+                                    <value type="string">NotApproved</value>
+                                    </choice>
+                                    <data type="string"/>
+                                    </choice>
+                                    </attribute>
+                                    </optional>
+                                    <optional>
+                                    <attribute name="rotation">
+                                    <data type="integer"/>
+                                    </attribute>
+                                    </optional>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="appearance">
+                                    <data type="string"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="popup">
+                                    <ref name="popup.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="strikeout">
+                                    <attribute name="coords">
+                                    <data type="string"/>
+                                    </attribute>
+                                    <ref name="annots-markup.attgroup"/>
+                                    <ref name="annots-common.attgroup"/>
+                                    <interleave>
+                                    <optional>
+                                    <element name="contents-richtext">
+                                    <ref name="richtext.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="contents">
+                                    <ref name="contents.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    <optional>
+                                    <element name="popup">
+                                    <ref name="popup.elem.type"/>
+                                    </element>
+                                    </optional>
+                                    </interleave>
+                                    </element>
+                                    <element name="underline">
+                                    <ref name="underline.elem.type"/>
+                                    </element>
+                                </choice>
+                            </zeroOrMore>
+                        </element>
+                    </optional>
+                    <optional>
+                        <element name="fields">
+                            <zeroOrMore>
+                                <element name="field">
+                                    <ref name="field.elem.type"/>
+                                </element>
+                            </zeroOrMore>
+                        </element>
+                    </optional>
+                </interleave>
+            </element>
+        </choice>
+    </start>
+    <define name="popup.elem.type">
+        <group>
+            <optional>
+                <attribute name="open">
+                    <choice>
+                        <value type="string">no</value>
+                        <value type="string">yes</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <ref name="annots-common.attgroup"/>
+        </group>
+        <empty/>
+    </define>
+    <define name="contents.elem.type">
+        <data type="string"/>
+    </define>
+    <define name="richtext.elem.type">
+        <mixed>
+            <oneOrMore>
+                <ref name="element0"/>
+            </oneOrMore>
+        </mixed>
+        <empty/>
+    </define>
+    <define name="underline.elem.type">
+        <group>
+            <attribute name="coords">
+                <data type="string"/>
+            </attribute>
+            <ref name="annots-markup.attgroup"/>
+            <ref name="annots-common.attgroup"/>
+            <interleave>
+                <optional>
+                    <choice>
+                        <notAllowed/>
+                        <element name="contents-richtext">
+                            <ref name="richtext.elem.type"/>
+                        </element>
+                    </choice>
+                </optional>
+                <optional>
+                    <choice>
+                        <notAllowed/>
+                        <element name="contents">
+                            <ref name="contents.elem.type"/>
+                        </element>
+                    </choice>
+                </optional>
+                <optional>
+                    <choice>
+                        <notAllowed/>
+                        <element name="popup">
+                            <ref name="popup.elem.type"/>
+                        </element>
+                    </choice>
+                </optional>
+            </interleave>
+        </group>
+        <empty/>
+    </define>
+    <define name="annots-common.attgroup">
+        <optional>
+            <attribute name="title">
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <attribute name="rect">
+            <data type="string"/>
+        </attribute>
+        <attribute name="page">
+            <data type="nonNegativeInteger"/>
+        </attribute>
+        <optional>
+            <attribute name="name">
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="flags">
+                <data type="string">
+                    <param name="pattern">(invisible,|hidden,|print,|nozoom,|norotate,|noview,|readonly,|locked,|togglenoview,)*(invisible|hidden|print|nozoom|norotate|noview|readonly|locked|togglenoview)</param>
+                </data>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="date">
+                <choice>
+                    <data type="string">
+                        <param name="pattern">D:\d{4,4}((0[1-9]|1[0-2])((0[1-9]|[1-2]\d|3[0-1])(([0-1]\d|2[0-3])(([0-5]\d)(([0-5]\d)(Z|([\+\-]([0-1]\d'|2[0-3]')([0-5]\d')?)?)?)?)?)?)?)?</param>
+                    </data>
+                    <data type="string"/>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="color">
+                <data type="string">
+                    <param name="pattern">#[A-Fa-f0-9]{6,6}</param>
+                </data>
+            </attribute>
+        </optional>
+    </define>
+    <define name="annots-markup.attgroup">
+        <optional>
+            <attribute name="subject">
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="opacity">
+                <data type="decimal"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="creationdate">
+                <data type="string">
+                    <param name="pattern">D:\d{4,4}((0[1-9]|1[0-2])((0[1-9]|[1-2]\d|3[0-1])(([0-1]\d|2[0-3])(([0-5]\d)(([0-5]\d)(Z|([\+\-]([0-1]\d'|2[0-3]')([0-5]\d')?)?)?)?)?)?)?)?</param>
+                </data>
+            </attribute>
+        </optional>
+    </define>
+    <define name="defaultappearance.elem.type">
+        <data type="string"/>
+    </define>
+    <define name="element0">
+        <element>
+            <nsName ns="http://www.w3.org/1999/xhtml"/>
+            <mixed>
+                <zeroOrMore>
+                    <choice>
+                        <ref name="element0"/>
+                        <attribute>
+                            <nsName ns="http://www.w3.org/1999/xhtml"/>
+                        </attribute>
+                    </choice>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+    <define name="data.elem.type">
+        <group>
+            <attribute name="mode">
+                <choice>
+                    <value type="string">raw</value>
+                    <value type="string">filtered</value>
+                </choice>
+            </attribute>
+            <attribute name="encoding">
+                <choice>
+                    <value type="NMTOKEN">ascii</value>
+                    <value type="NMTOKEN">hex</value>
+                </choice>
+            </attribute>
+            <attribute name="length">
+                <data type="int"/>
+            </attribute>
+            <attribute name="filter">
+                <choice>
+                    <data type="string">
+                        <param name="pattern">(ASCIIHexDecode,|ASCII85Decode,|LZWDecode,|FlateDecode,|RunLengthDecode,|CCITTFaxDecode,|JBIG2Decode,|DCTDecode,|JPXDecode,|Crypt)*(ASCIIHexDecode|ASCII85Decode|LZWDecode|FlateDecode|RunLengthDecode|CCITTFaxDecode|JBIG2Decode|DCTDecode|JPXDecode|Crypt)</param>
+                    </data>
+                    <data type="string"/>
+                </choice>
+            </attribute>
+            <data type="string"/>
+        </group>
+        <empty/>
+    </define>
+    <define name="BS.attgroup">
+        <optional>
+            <attribute name="style">
+                <choice>
+                    <value type="string">inset</value>
+                    <value type="string">bevelled</value>
+                    <value type="string">underline</value>
+                    <value type="string">dash</value>
+                    <value type="string">solid</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="dashes">
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="width">
+                <data type="decimal"/>
+            </attribute>
+        </optional>
+    </define>
+    <define name="vertices.elem.type">
+        <data type="string"/>
+    </define>
+    <define name="BS_BE.attgroup">
+        <optional>
+            <attribute name="intensity">
+                <data type="integer"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="style">
+                <choice>
+                    <value type="string">inset</value>
+                    <value type="string">bevelled</value>
+                    <value type="string">underline</value>
+                    <value type="string">dash</value>
+                    <value type="string">solid</value>
+                    <value type="string">cloudy</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="dashes">
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="width">
+                <data type="decimal"/>
+            </attribute>
+        </optional>
+    </define>
+    <define name="field.elem.type">
+        <group>
+            <attribute name="name">
+                <data type="string">
+                    <param name="pattern">[^.]+</param>
+                </data>
+            </attribute>
+            <choice>
+                <oneOrMore>
+                    <choice>
+                        <notAllowed/>
+                        <element name="field">
+                            <ref name="field.elem.type"/>
+                        </element>
+                    </choice>
+                </oneOrMore>
+                <empty/>
+                <interleave>
+                    <optional>
+                        <choice>
+                            <notAllowed/>
+                            <element name="value">
+                                <data type="string"/>
+                            </element>
+                        </choice>
+                    </optional>
+                    <optional>
+                        <choice>
+                            <notAllowed/>
+                            <element name="value-richtext">
+                                <ref name="richtext.elem.type"/>
+                            </element>
+                        </choice>
+                    </optional>
+                </interleave>
+            </choice>
+        </group>
+        <empty/>
+    </define>
+</grammar>

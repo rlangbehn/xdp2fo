@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	config.rng - RELAX NG schema for a config packet within an XFA Version 2.6 Data Package (XDP)
+	
+	Copyright (C) 2006 Adobe Systems Incorporated. All rights reserved. The original 
+	version of this material may be obtained from Adobe Systems Incorporated.
+
+	NOTE:  This schema is very permissive because the configuration DOM for each 
+	XFA processor is implementation-defined.  But, see the XFA specification for 
+	RECOMMENDED substructure to be placed within a child element called "common".
+	
+-->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" 
+	xmlns:xci="http://www.xfa.org/schema/xci/1.0/"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+	<start>
+		<!-- packet wrapper -->
+		<element name="config" ns="http://www.xfa.org/schema/xci/2.6/">
+
+			<!-- optional content -->
+			<zeroOrMore>
+				<ref name="anyElement"/>
+			</zeroOrMore>
+		</element>
+	</start>
+
+	<!-- data in processor-specific schema -->
+	<define name="anyElement">
+
+		<!-- any element in any namespace -->
+		<element>
+			<anyName/>
+
+			<zeroOrMore>
+				<choice>
+				
+					<!-- any attribute -->
+					<attribute>
+						<anyName/>
+					</attribute>
+					
+					<!-- any pcdata content -->
+					<text/>
+
+					<!-- any element -->
+					<ref name="anyElement"/>
+
+				</choice>
+			</zeroOrMore>
+		</element>
+
+	</define>
+
+</grammar>

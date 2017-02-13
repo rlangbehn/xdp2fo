@@ -1,0 +1,67 @@
+~~
+~~ $Id: Tax\040Receipt.apt,v 1.4 2008/07/26 22:59:02 rlangbehn Exp $
+~~
+~~ This file is part of the XSL XDP Stylesheet distribution xdp2fo.
+~~ See ../../../README.txt or http://xdp2fo.sourceforge.net/ for
+~~ copyright and other information.
+~~
+~~ Copyright (c) 2007 The XDP To XSL-FO Development Team.
+~~ Also see acknowledgements in README.txt.
+~~
+~~ xdp2fo is free software; you can redistribute it and/or modify
+~~ it under the terms of the GNU Lesser General Public License as
+~~ published by the Free Software Foundation; either version 3 of
+~~ the License, or (at your option) any later version.
+~~
+~~ xdp2fo is distributed in the hope that it will be useful,
+~~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+~~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+~~ GNU Lesser General Public License for more details.
+~~
+~~ You should have received a copy of the GNU Lesser General Public License
+~~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+~~
+~~ Version: $Revision: 1.4 $ $Date: 2008/07/26 22:59:02 $
+~~ Author:  Rainer Langbehn, rlangbehn@users.sourceforge.net
+~~
+
+           ----------------------
+           The Tax Receipt Sample
+           ----------------------
+
+The Tax Receipt Sample
+
+  The Tax Receipt sample demonstrates the behavior of a dynamic PDF form.\
+  This form prints three copies of a tax receipt on a single page:
+  the foundation’s copy, the chapter’s copy, and the income tax copy.\
+  The sample includes these files:
+
+*-----------------------------------------------+--------------------------------------------------------------+
+|<<File>>                                       |<<Description>>                                               |
+*-----------------------------------------------+--------------------------------------------------------------+
+|{{{Tax Receipt.xdp}Tax Receipt.xdp}}           |LiveCycle Designer ES form file located in the Forms folder   |
+*-----------------------------------------------+--------------------------------------------------------------+
+|{{{Tax Receipt.xml}Tax Receipt.xml}}           |XML data files located in the Data folder                     |
+*-----------------------------------------------+--------------------------------------------------------------+
+|{{{Signature.tif}Signature.tif}}               |Image files located in the Images folder                      |
+|{{{Tax Receipt.tif}Tax Receipt.tif}}           |                                                              |
+*-----------------------------------------------+--------------------------------------------------------------+
+|{{{Tax Receipt.pdf}Tax Receipt.pdf}}           |Rendered forms with merged data located in the Outputs folder |
+*-----------------------------------------------+--------------------------------------------------------------+
+
+  The transformation output:
+  
+*-----------------------------------------------+--------------------------------------------------------------+
+|<<File>>                                       |<<Description>>                                               |
+*-----------------------------------------------+--------------------------------------------------------------+
+|{{{Tax Receipt.xsl}Tax Receipt.xsl}}           |                                                              |
+*-----------------------------------------------+--------------------------------------------------------------+
+|{{{Tax Receipt.pdf}Tax Receipt.pdf}}           |                                                              |
+*-----------------------------------------------+--------------------------------------------------------------+
+|{{{Tax Receipt Ref.xsl}Tax Receipt Ref.xsl}}   |                                                              |
+*-----------------------------------------------+--------------------------------------------------------------+
+|{{{Tax Receipt Ref.pdf}Tax Receipt Ref.pdf}}   |                                                              |
+*-----------------------------------------------+--------------------------------------------------------------+
+
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------

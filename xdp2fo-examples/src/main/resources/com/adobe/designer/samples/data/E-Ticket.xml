@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<transaction>
+ <referenceNum>ET7514800</referenceNum>
+ <reservationRef>R5639</reservationRef>
+ <lastName>Name</lastName>
+ <firstName>Customer</firstName>
+ <initial>A</initial>
+ <issuedDate>02/26/2004</issuedDate>
+ <issuedBy>Flights Travel Itinerary</issuedBy>
+ <birthDate>03/15/1975</birthDate>
+ <confirmationNum>DS763389</confirmationNum>
+ <reservationBroker>Hotel Broker Accomodations</reservationBroker>
+ <address>555, Any Blvd.</address>
+ <city>Any City</city>
+ <state>Any State</state>
+ <zipCode>33567-1890</zipCode>
+ <SSN>385620364</SSN>
+ <coverPage>
+  <headerDate>02/27/2004</headerDate>
+  <numTicket>2</numTicket>
+  <numCustoms>1</numCustoms>
+  <numMedical>1</numMedical>
+  <numTransfer>0</numTransfer>
+  <numHotel>4</numHotel>
+  <numPass>5</numPass>
+ </coverPage>
+ <flight>
+  <legDesc>Chicago IL to Los Angeles CA</legDesc>
+  <airline>Any Airline</airline>
+  <flightNum>2335</flightNum>
+  <flightDate>03/26/2004</flightDate>
+  <departTime>7:15 AM</departTime>
+  <arriveTime>8:35 AM</arriveTime>
+  <gate>34</gate>
+  <terminal>D</terminal>
+ </flight>
+ <flight>
+  <legDesc>Los Angeles CA to Sydney Australia</legDesc>
+  <airline>Other Airline</airline>
+  <flightNum>1223</flightNum>
+  <flightDate>03/28/2004</flightDate>
+  <departTime>9:30 AM</departTime>
+  <arriveTime>6:30 AM</arriveTime>
+  <gate>12</gate>
+  <terminal>C</terminal>
+ </flight>
+ <flight>
+  <legDesc>Sydney Australia to Auckland NZ</legDesc>
+  <airline>Other Airline</airline>
+  <flightNum>6534</flightNum>
+  <flightDate>04/26/2004</flightDate>
+  <departTime>1:45 PM</departTime>
+  <arriveTime>5:35 PM</arriveTime>
+  <gate>N/A</gate>
+  <terminal>N/A</terminal>
+ </flight>
+ <flight>
+  <legDesc>Auckland NZ to Los Angeles CA</legDesc>
+  <airline>Other Airline</airline>
+  <flightNum>2391</flightNum>
+  <flightDate>04/30/2004</flightDate>
+  <departTime>10:00 AM</departTime>
+  <arriveTime>6:35 AM</arriveTime>
+  <gate>N/A</gate>
+  <terminal>N/A</terminal>
+ </flight>
+ <flight>
+  <legDesc>Los Angeles CA to Chicago IL</legDesc>
+  <airline>Any Airline</airline>
+  <flightNum>3445</flightNum>
+  <flightDate>05/01/2004</flightDate>
+  <departTime>12:35 PM</departTime>
+  <arriveTime>5:00 PM</arriveTime>
+  <gate>27</gate>
+  <terminal>A</terminal>
+ </flight>
+ <customs>
+  <countryCitizen>Any Country</countryCitizen>
+  <countryResidence>Any State</countryResidence>
+  <airlineFlightNum>SPA 2391</airlineFlightNum>
+  <numFamily>1</numFamily>
+  <usAddress>555, Any Blvd.</usAddress>
+  <usCity>Any City</usCity>
+  <usState>Any State</usState>
+  <usZipCode>33567-1890</usZipCode>
+  <visitedCountry>Australia</visitedCountry>
+  <VisitedCountry></VisitedCountry>
+  <visitedCountry>New Zealand</visitedCountry>
+  <visitedCountry></visitedCountry>
+  <purpose>2</purpose>
+  <food>2</food>
+  <currency>2</currency>
+  <merchandise>2</merchandise>
+  <totalValue></totalValue>
+ </customs>
+ <medical>
+  <sex>2</sex>
+  <phoneNum>(613) 555-3676</phoneNum>
+  <mobileNum>(613) 555-2256</mobileNum>
+  <insuranceCompany>Any Insurance</insuranceCompany>
+  <insuranceAddress>274 Any Street</insuranceAddress>
+  <insuranceCityStateZip>Any City, Any State, 33572</insuranceCityStateZip>
+  <asthma>2</asthma>
+  <diabetes>2</diabetes>
+  <seizure>2</seizure>
+  <heart>2</heart>
+  <hypertension>1</hypertension>
+  <hyperNotes>Medication required.</hyperNotes>
+  <pregnant>2</pregnant>
+  <pregnantMonths/>
+ </medical>
+ <hotel>
+  <roomType>Deluxe King</roomType>
+  <reservationNum>H2364567</reservationNum>
+  <hotelName>Any Airport Inn</hotelName>
+  <hotelAddress>2767 Any Dr.
+Any City, Any State, 92617</hotelAddress>
+  <hotelPhoneNum>1-800-555-9977</hotelPhoneNum>
+  <room>Non smoking</room>
+  <arrivalDate>03/26/2004</arrivalDate>
+  <departureDate>03/28/2004</departureDate>
+  <nights>2</nights>
+ </hotel>
+ <hotel>
+  <roomType>Deluxe King</roomType>
+  <reservationNum>GG36467</reservationNum>
+  <hotelName>Any Sydney Hotel</hotelName>
+  <hotelAddress>257 Any Road
+Any City, Any State</hotelAddress>
+  <hotelPhoneNum>011 61 92565-9977</hotelPhoneNum>
+  <room>Non smoking</room>
+  <arrivalDate>03/29/2004</arrivalDate>
+  <departureDate>04/03/2004</departureDate>
+  <nights>6</nights>
+ </hotel>
+ <hotel>
+  <roomType>Deluxe King</roomType>
+  <reservationNum>28K236</reservationNum>
+  <hotelName>Any Auckland Inn</hotelName>
+  <hotelAddress>3200 Any Dr.
+Any City, Any State</hotelAddress>
+  <hotelPhoneNum>011 42 8005 9980</hotelPhoneNum>
+  <room>Non smoking</room>
+  <arrivalDate>04/26/2004</arrivalDate>
+  <departureDate>04/28/2004</departureDate>
+  <nights>2</nights>
+ </hotel>
+ <hotel>
+  <roomType>Deluxe King</roomType>
+  <reservationNum>278F54</reservationNum>
+  <hotelName>Any Auckland Hotel</hotelName>
+  <hotelAddress>2779 Any Road
+Any City, Any State</hotelAddress>
+  <hotelPhoneNum>011 42 8745 3700</hotelPhoneNum>
+  <room>Non smoking</room>
+  <arrivalDate>04/28/2004</arrivalDate>
+  <departureDate>04/30/2004</departureDate>
+  <nights>2</nights>
+ </hotel>
+ <hotel>
+  <roomType>Deluxe King</roomType>
+  <reservationNum>H2364573</reservationNum>
+  <hotelName>Any Airport Inn</hotelName>
+  <hotelAddress>2767 Any Dr.
+Any City, Any State, 92617</hotelAddress>
+  <hotelPhoneNum>1-800-555-9977</hotelPhoneNum>
+  <room>Non smoking</room>
+  <arrivalDate>04/30/2004</arrivalDate>
+  <departureDate>05/01/2004</departureDate>
+  <nights>1</nights>
+ </hotel>
+ <boarding>
+  <flightDate>05/01/2004</flightDate>
+  <flightNum>3445</flightNum>
+  <freqFlyer>893DD23</freqFlyer>
+  <airline>Any Airline</airline>
+  <departureTime>12:35 PM</departureTime>
+  <from>Los Angeles CA</from>
+  <destination>Chicago IL</destination>
+  <gate>D-27</gate>
+  <seat>4C</seat>
+  <class>J</class>
+  <passBarcode>0000 2 0020501 344504C</passBarcode>
+ </boarding>
+ <boarding>
+  <flightDate>04/30/2004</flightDate>
+  <flightNum>2391</flightNum>
+  <freqFlyer>893DD23</freqFlyer>
+  <airline>Other Airline</airline>
+  <departureTime>10:00 AM</departureTime>
+  <from>Auckland NZ</from>
+  <destination>Los Angeles CA</destination>
+  <gate></gate>
+  <seat>1A</seat>
+  <class>J</class>
+  <passBarcode>0000 2 0020430 239101A</passBarcode>
+ </boarding>
+ <boarding>
+  <flightDate>04/26/2004</flightDate>
+  <flightNum>6534</flightNum>
+  <freqFlyer>893DD23</freqFlyer>
+  <airline>Other Airline</airline>
+  <departureTime>1:45 PM</departureTime>
+  <from>Sydney Australia</from>
+  <destination>Auckland NZ</destination>
+  <gate></gate>
+  <seat>3D</seat>
+  <class>F</class>
+  <passBarcode>0000 2 0020426 653403D</passBarcode>
+ </boarding>
+ <boarding>
+  <flightDate>03/28/2004</flightDate>
+  <flightNum>1223</flightNum>
+  <freqFlyer>893DD23</freqFlyer>
+  <airline>Other Airline</airline>
+  <departureTime>9:30 AM</departureTime>
+  <from>Los Angeles CA</from>
+  <destination>Sydney Australia</destination>
+  <gate>C-12</gate>
+  <seat>3A</seat>
+  <class>Y</class>
+  <passBarcode>0000 2 0020328 122303A</passBarcode>
+ </boarding>
+ <boarding>
+  <flightDate>03/26/2004</flightDate>
+  <flightNum>2335</flightNum>
+  <freqFlyer>DD27872</freqFlyer>
+  <airline>Any Airline</airline>
+  <departureTime>7:15 AM</departureTime>
+  <from>Chicago IL</from>
+   <destination>Los Angeles CA</destination>
+  <gate>D-34</gate>
+  <seat>3A</seat>
+  <class>Y</class>
+  <passBarcode>0000 2 0020326 233503A</passBarcode>
+ </boarding>
+</transaction>

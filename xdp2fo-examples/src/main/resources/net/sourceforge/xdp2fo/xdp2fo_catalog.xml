@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<uri name="xdp2fo.xsl"
+		uri="jar:file:E:/maven/m2/repository/net/sourceforge/xdp2fo/xdp2fo-stylesheets/1.0-SNAPSHOT/xdp2fo-stylesheets-1.0-SNAPSHOT.jar!/net/sourceforge/xdp2fo/xdp2fo.xsl" />
+</catalog>

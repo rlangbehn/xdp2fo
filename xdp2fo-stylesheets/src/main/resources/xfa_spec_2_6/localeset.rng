@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	localeset.rng - RNG grammar for the localSet packet within an XFA Version 2.4 Data Package (XDP)
+
+	Copyright (C) 2006 Adobe Systems Incorporated. All rights reserved. The original 
+	version of this material may be obtained from Adobe Systems Incorporated.
+
+	This is hand-generated.  It is not optimum.  In particular there are numerous
+	elements of the form <foo name="bar"> where "name" can take any of a small set
+	of predefined values and there should be at most one "foo" element with
+	each value of "name".  This could be validated by defining each combination of
+	element name and "name" attribute value as a different pattern, but it would be
+	painful.
+-->
+<grammar 
+	xmlns="http://relaxng.org/ns/structure/1.0" 
+	ns="http://www.xfa.org/schema/xfa-locale-set/2.4/" 
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<start>
+
+
+		<element name="localeSet" ns="http://www.xfa.org/schema/xfa-locale-set/2.4/">
+			<zeroOrMore>
+				<element name="locale">
+					<optional>
+						<attribute name="name">
+							<!-- 
+								Validation is not possible.  At the time
+								of writing the proposed successor to RFC3066
+								(a.k.a. "RFC3066bis") has lapsed without
+								approval by the IETF.  See
+								http://www.ietf.org/ids.by.wg/ltru.html
+								for links to relevant drafts.
+							-->
+							<data type="string"/>
+						</attribute>
+					</optional>
+					
+					<optional>
+						<attribute name="desc">
+							<data type="string"/>
+						</attribute>
+					</optional>
+					
+					<interleave>
+						<ref name="calendarSymbolsElement"/>
+						<ref name="datePatternsElement"/>
+						<ref name="timePatternsElement"/>
+						<ref name="numberPatternsElement"/>
+						<ref name="dateTimeSymbolsElement"/>
+						<ref name="numberSymbolsElement"/>
+						<ref name="currencySymbolsElement"/>
+					</interleave>
+				</element>
+			</zeroOrMore>
+		</element>
+	</start>
+
+	<define name="calendarSymbolsElement">
+		<element name="calendarSymbols">
+
+			<!-- if calendar name is supplied it must be "gregorian" -->
+			<optional>
+				<attribute name="name">
+					<value>gregorian</value>
+				</attribute>
+			</optional>
+		
+			<interleave>
+				<group>
+					<ref name="monthNamesElement"/>
+					<optional>
+						<ref name="monthNamesElement"/>
+					</optional>
+				</group>
+				<group>
+					<ref name="dayNamesElement"/>
+					<optional>
+						<ref name="dayNamesElement"/>
+					</optional>
+				</group>
+				<ref name="eraNamesElement"/>
+				<ref name="meridiemNamesElement"/>
+			</interleave>
+		</element>
+	</define>
+
+	<define name="monthNamesElement">
+	
+		<element name="monthNames">
+		
+			<optional>
+				<attribute name="abbr">
+					<choice>
+						<value>1</value>
+						<value>0</value>
+					</choice>
+				</attribute>
+			</optional>
+			
+			<!-- up to twelve abbreviated names -->
+			<ref name="monthNamesPattern"/>
+		</element>
+	</define>
+
+	<define name="monthNamesPattern">				
+
+		<!-- zero to twelve "month" elements -->
+		<optional>
+			<element name="month">  <!-- for January -->
+				<data type="string"/>
+			</element>
+			<optional>
+				<element name="month">  <!-- for February -->
+					<data type="string"/>
+				</element>
+				<optional>
+					<element name="month">  <!-- for March -->
+						<data type="string"/>
+					</element>
+					<optional>
+						<element name="month">  <!-- for April -->
+							<data type="string"/>
+						</element>
+						<optional>
+							<element name="month">  <!-- for May -->
+								<data type="string"/>
+							</element>
+							<optional>
+								<element name="month">  <!-- for June -->
+									<data type="string"/>
+								</element>
+								<optional>
+									<element name="month">  <!-- for July -->
+										<data type="string"/>
+									</element>
+									<optional>
+										<element name="month">  <!-- for August -->
+											<data type="string"/>
+										</element>
+										<optional>
+											<element name="month">  <!-- for September -->
+												<data type="string"/>
+											</element>
+											<optional>
+												<element name="month">  <!-- for October -->
+													<data type="string"/>
+												</element>
+												<optional>
+													<element name="month">  <!-- for November -->
+														<data type="string"/>
+													</element>
+													<optional>
+														<element name="month">  <!-- for December -->
+															<data type="string"/>
+														</element>
+													</optional>
+												</optional>
+											</optional>
+										</optional>
+									</optional>
+								</optional>
+							</optional>
+						</optional>
+					</optional>
+				</optional>
+			</optional>
+		</optional>
+	</define>
+	
+	<define name="dayNamesElement">
+	
+		<element name="dayNames">
+			<optional>
+				<attribute name="abbr">
+					<choice>
+						<value>0</value>
+						<value>1</value>
+					</choice>
+				</attribute>
+			</optional>
+		
+			<!-- up to seven abbreviated names -->
+			<ref name="dayNamesPattern"/>
+		</element>
+	</define>
+
+	<define name="dayNamesPattern">
+
+		<!-- zero to seven day names -->
+		<optional>
+			<element name="day">  <!-- for Sunday -->
+				<data type="string"/>
+			</element>
+			<optional>
+				<element name="day">  <!-- for Monday -->
+					<data type="string"/>
+				</element>
+				<optional>
+					<element name="day">  <!-- for Tuesday -->
+						<data type="string"/>
+					</element>
+					<optional>
+						<element name="day">  <!-- for Wednesday -->
+							<data type="string"/>
+						</element>
+						<optional>
+							<element name="day">  <!-- for Thursday -->
+								<data type="string"/>
+							</element>
+							<optional>
+								<element name="day">  <!-- for Friday -->
+									<data type="string"/>
+								</element>
+								<optional>
+									<element name="day">  <!-- for Saturday -->
+										<data type="string"/>
+									</element>
+								</optional>
+							</optional>
+						</optional>
+					</optional>
+				</optional>
+			</optional>
+		</optional>
+	</define>
+
+	<define name="eraNamesElement">
+		<element name="eraNames">
+			<!-- zero to two era names -->
+			<optional>
+				<element name="era">  <!-- for BC  -->
+					<data type="string"/>
+				</element>
+				<optional>
+					<element name="era">  <!-- for AD -->
+						<data type="string"/>
+					</element>
+				</optional>
+			</optional>
+		</element>
+	</define>
+
+	<define name="meridiemNamesElement">
+		<element name="meridiemNames">
+			<!-- zero to two meridiem names -->
+			<optional>
+				<element name="meridiem">  <!-- for AM -->
+					<data type="string"/>
+				</element>
+				<optional>
+					<element name="meridiem">  <!-- for PM -->
+						<data type="string"/>
+					</element>
+				</optional>
+			</optional>
+		</element>
+	</define>
+
+
+	<define name="datePatternsElement">
+		<element name="datePatterns">
+		
+			<!-- up to four date patterns, "full", "long", "med" and "short" -->
+			<ref name="datePatternElement"/>
+			<optional>
+				<ref name="datePatternElement"/>
+				<optional>
+					<ref name="datePatternElement"/>
+					<optional>
+						<ref name="datePatternElement"/>
+					</optional>
+				</optional>
+			</optional>
+			
+		</element>
+	</define>
+
+	<define name="datePatternElement">
+		<element name="datePattern">
+		
+			<optional>
+				<attribute name="name">
+					<choice>
+						<value>full</value>
+						<value>long</value>
+						<value>med</value>
+						<value>short</value>
+					</choice>
+				</attribute>
+			</optional>
+			<data type="string"/>
+			
+		</element>
+	</define>
+
+	<define name="timePatternsElement">
+		<element name="timePatterns">
+		
+			<!-- up to four time patterns, "full", "long", "med" and "short" -->
+			<ref name="timePatternElement"/>
+			<optional>
+				<ref name="timePatternElement"/>
+				<optional>
+					<ref name="timePatternElement"/>
+					<optional>
+						<ref name="timePatternElement"/>
+					</optional>
+				</optional>
+			</optional>
+			
+		</element>
+	</define>
+
+	<define name="timePatternElement">
+		<element name="timePattern">
+		
+			<optional>
+				<attribute name="name">
+					<choice>
+						<value>full</value>
+						<value>long</value>
+						<value>med</value>
+						<value>short</value>
+					</choice>
+				</attribute>
+			</optional>
+			<data type="string"/>
+			
+		</element>
+	</define>
+
+	<define name="numberPatternsElement">
+		<element name="numberPatterns">
+		
+			<!-- up to three number patterns, "numeric", "currency", and "percent" -->
+			<ref name="numberPatternElement"/>
+			<optional>
+				<ref name="numberPatternElement"/>
+				<optional>
+					<ref name="numberPatternElement"/>
+				</optional>
+			</optional>
+			
+		</element>
+	</define>
+
+	<define name="numberPatternElement">
+		<element name="numberPattern">
+		
+			<optional>
+				<attribute name="name">
+					<choice>
+						<value>numeric</value>
+						<value>currency</value>
+						<value>percent</value>
+					</choice>
+				</attribute>
+			</optional>
+			<data type="string"/>
+			
+		</element>
+	</define>
+
+	<define name="dateTimeSymbolsElement">
+		<element name="dateTimeSymbols">
+			<data type="string"/>  <!-- ASCII letters and/or ASCII puncuation only -->
+		</element>
+	</define>
+	
+	<define name="numberSymbolsElement">
+		<element name="numberSymbols">
+
+			<!-- up to five number symbols, "decimal", "grouping", "percent", "minus", "zero" -->
+			<ref name="numberSymbolElement"/>
+			<optional>
+				<ref name="numberSymbolElement"/>
+				<optional>
+					<ref name="numberSymbolElement"/>
+					<optional>
+						<ref name="numberSymbolElement"/>
+						<optional>
+							<ref name="numberSymbolElement"/>
+						</optional>
+					</optional>
+				</optional>
+			</optional>
+		
+		</element>
+	</define>
+
+	<define name="numberSymbolElement">
+		<element name="numberSymbol">
+		
+			<optional>
+				<attribute name="name">
+					<choice>
+						<value>decimal</value>
+						<value>grouping</value>
+						<value>percent</value>
+						<value>minus</value>
+						<value>zero</value>
+					</choice>
+				</attribute>
+			</optional>
+			<data type="string"/> <!-- might be multi-character e.g. to include direction-control characters -->
+			
+		</element>
+	</define>
+	
+	<define name="currencySymbolsElement">
+		<element name="currencySymbols">
+		
+			<!-- up to three currency symbols, "symbol", "isoname", "decimal" -->
+			<ref name="currencySymbolElement"/>
+			<optional>
+				<ref name="currencySymbolElement"/>
+				<optional>
+					<ref name="currencySymbolElement"/>
+				</optional>
+			</optional>
+		
+		</element>
+	</define>
+
+	<define name="currencySymbolElement">
+		<element name="currencySymbol">
+		
+			<optional>
+				<attribute name="name">
+					<choice>
+						<value>symbol</value>
+						<value>isoname</value>
+						<value>decimal</value>
+					</choice>
+				</attribute>
+			</optional>
+			<data type="string"/> <!-- isoname is always three characters, symbol is one to three -->
+			
+		</element>
+	</define>
+</grammar>

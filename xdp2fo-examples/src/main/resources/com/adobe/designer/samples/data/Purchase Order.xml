@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<purchaseOrder>
+	<general>
+		<poNum>8745236985</poNum>
+		<poDate>2004-02-08</poDate>
+	</general>
+	<order>
+		<companyName>Any Company Name</companyName>
+		<address>555, Any Blvd.</address>
+		<city>Any City</city>
+		<stateProv>ST</stateProv>
+		<zipCode>12345</zipCode>
+		<country>Any Country</country>
+		<phone>(123) 456-7890</phone>
+		<fax>(123) 456-7899</fax>
+		<contactName>Contact Name</contactName>
+	</order>
+	<delivery>
+		<companyName>Any Company Name</companyName>
+		<address>7895, Any Street</address>
+		<city>Any City</city>
+		<stateProv>ST</stateProv>
+		<zipCode>12346</zipCode>
+		<country>Any Country</country>
+		<phone>(123) 456-7891</phone>
+		<fax>(123) 456-7899</fax>
+		<contactName>Contact Name</contactName>
+	</delivery>
+	<item>
+		<item>
+			<partNum>00010-100</partNum>
+			<description>Monitor</description>
+			<quantity>1</quantity>
+			<unitPrice>350.00</unitPrice>
+		</item>
+		<item>
+			<partNum>00010-200</partNum>
+			<description>Desk lamps</description>
+			<quantity>3</quantity>
+			<unitPrice>55.00</unitPrice>
+		</item>
+		<item>
+			<partNum>00025-275</partNum>
+			<description>Phone</description>
+			<quantity>5</quantity>
+			<unitPrice>85.00</unitPrice>
+		</item>
+		<item>
+			<partNum>00300-896</partNum>
+			<description>Address book</description>
+			<quantity>2</quantity>
+			<unitPrice>15.00</unitPrice>
+		</item>
+	</item>
+	<terms>
+		<termsCondition>Account number: 123456</termsCondition>
+	</terms>
+	<tax>
+		<stateTaxRate>7.00</stateTaxRate>
+		<federalTaxRate>8.00</federalTaxRate>
+	</tax>
+	<shipping>
+		<shippingCharge>50.00</shippingCharge>
+	</shipping>
+</purchaseOrder>

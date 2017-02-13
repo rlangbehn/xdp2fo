@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ | $Id: faq.fml,v 1.2 2008/06/23 07:14:52 rlangbehn Exp $
+ |
+ | This file is part of the XSL XDP Stylesheet distribution xdp2fo.
+ | See ../../../README.txt or http://xdp2fo.sourceforge.net/ for
+ | copyright and other information.
+ |
+ | Copyright (c) 2007 The XDP To XSL-FO Development Team.
+ | Also see acknowledgements in README.txt.
+ |
+ | xdp2fo is free software; you can redistribute it and/or modify
+ | it under the terms of the GNU Lesser General Public License as
+ | published by the Free Software Foundation; either version 3 of
+ | the License, or (at your option) any later version.
+ |
+ | xdp2fo is distributed in the hope that it will be useful,
+ | but WITHOUT ANY WARRANTY; without even the implied warranty of
+ | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ | GNU Lesser General Public License for more details.
+ |
+ | You should have received a copy of the GNU Lesser General Public License
+ | along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ |
+ | Version: $Revision: 1.2 $ $Date: 2008/06/23 07:14:52 $
+ | Author:  Rainer Langbehn, rlangbehn@users.sourceforge.net
+ +-->
+<faqs id="FAQ" title="Frequently Asked Questions">
+
+  <part id="General">
+  	<title>General</title>
+
+  	<faq id="what-is-it">
+  		<question>What is XDP To XSL-FO?</question>
+  		<answer>
+  			<p>TODO</p>
+  		</answer>
+  	</faq>
+  	<faq id="license">
+  		<question>What license does the XDP To XSL-FO project use?</question>
+  		<answer>
+  			<p>The GNU Lesser General Public License</p>
+  		</answer>
+  	</faq>
+  </part>
+
+  <part id="Using">
+  	<title>Using the XDP To XSL-FO stylesheets</title>
+
+  	<faq id="how-to-use">
+  		<question>How to use the XDP To XSL-FO stylesheets?</question>
+  		<answer>
+  			<p>Instructions on how to use the XDP To XSL-FO stylesheets can be found <a href="usage.html">here</a>.</p>
+  		</answer>
+  	</faq>
+  </part>
+
+</faqs>

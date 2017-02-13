@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesigner_V8.0" APIVersion="2.5.6183.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2006-07-06T20:29:03Z" uuid="6e9601a0-5b79-11d8-9843-00d0b7babdf6">
+<template xmlns="http://www.xfa.org/schema/xfa-template/2.5/">
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel client?>
+   <subform name="form1" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <medium stock="letter" short="215.9mm" long="279.4mm"/>
+            <field name="companyLogo" y="19.05mm" x="12.7mm" w="50.8mm" h="25.4mm">
+               <ui>
+                  <imageEdit/>
+               </ui>
+            </field>
+            <draw name="StaticText1" y="38.1mm" x="190.5mm" minW="0mm" anchorType="topRight">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Dunning Notice</text>
+               </value>
+               <font size="30pt" typeface="Minion Pro" posture="italic"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="right"/>
+            </draw>
+            <contentArea x="38.1mm" y="57.15mm" w="152.4mm" h="209.55mm"/>
+            <draw name="StaticText2" y="63.5mm" x="7.62mm" anchorType="topRight" rotate="90">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Confidential</text>
+               </value>
+               <font size="72pt" typeface="Minion Pro" posture="italic">
+                  <fill>
+                     <color value="239,239,239"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <draw name="StaticText3" y="203.2mm" x="8.9196mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>Global Company</p><p>123 Any Ave</p><p>Any Town</p><p>Any Country</p><p>Phone: 111.222.3333</p><p>Fax: 111.222.4444</p><p>www.globalCompany.com</p></body>
+                  </exData>
+               </value>
+               <font size="7pt" typeface="Minion Pro">
+                  <fill>
+                     <color value="153,153,153"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="center" vAlign="middle" lineHeight="17.5pt"/>
+            </draw>
+            <draw name="StaticText4" y="266.7mm" x="38.1mm" w="152.4mm" minH="6.35mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>Any reference to company names and company logos in the sample forms included in this software is for demonstration purposes</p><p>only and is not intended to refer to any actual organization.</p></body>
+                  </exData>
+               </value>
+               <font size="7pt" typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="center"/>
+               <border>
+                  <edge thickness="0.254mm"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.254mm"/>
+                  <corner/>
+                  <corner/>
+                  <corner/>
+               </border>
+            </draw>
+            <?templateDesigner expand 0?>
+            <occur min="1" max="1"/>
+         </pageArea>
+         <pageArea name="Page2" id="Page2">
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <draw name="StaticText5" y="12.7mm" x="190.5mm" anchorType="topRight">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>Page<span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField015724"/> of<span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField011478"/></p></body>
+                  </exData>
+               </value>
+               <font typeface="Minion Pro" posture="italic"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <field name="currentPage" y="0mm" x="0mm" w="55mm" h="7.5mm" id="floatingField015724" access="nonInteractive" presence="hidden">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Minion Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="20mm">
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Text Field</text>
+                  </value>
+               </caption>
+               <event activity="ready" ref="$layout">
+                  <script contentType="application/x-javascript">// Current Page Runtime Property.
+
+this.rawValue = xfa.layout.page(this);</script>
+               </event>
+               <value>
+                  <text>#</text>
+               </value>
+            </field>
+            <field name="pageCount" y="0mm" x="0mm" w="55mm" h="7.5mm" id="floatingField011478" access="nonInteractive" presence="hidden">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Minion Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="20mm">
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Text Field</text>
+                  </value>
+               </caption>
+               <event activity="ready" ref="$layout">
+                  <script contentType="application/x-javascript">// Page Count Runtime Property.
+
+this.rawValue = xfa.layout.pageCount();</script>
+               </event>
+               <value>
+                  <text>##</text>
+               </value>
+            </field>
+            <contentArea x="38.1mm" y="25.4mm" w="152.4mm" h="241.3mm"/>
+            <draw name="StaticText6" y="63.5mm" x="7.62mm" anchorType="topRight" rotate="90">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Confidential</text>
+               </value>
+               <font size="72pt" typeface="Minion Pro" posture="italic">
+                  <fill>
+                     <color value="239,239,239"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <draw name="StaticText7" y="203.2mm" x="8.9196mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>Global Company</p><p>123 Any Ave</p><p>Any Town</p><p>Any Country</p><p>Phone: 111.222.3333</p><p>Fax: 111.222.4444</p><p>www.globalCompany.com</p></body>
+                  </exData>
+               </value>
+               <font size="7pt" typeface="Minion Pro">
+                  <fill>
+                     <color value="153,153,153"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="center" vAlign="middle" lineHeight="17.5pt"/>
+            </draw>
+            <draw name="StaticText8" y="266.7mm" x="38.1mm" w="152.4mm" minH="6.35mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>Any reference to company names and company logos in the sample forms included in this software is for demonstration purposes</p><p>only and is not intended to refer to any actual organization.</p></body>
+                  </exData>
+               </value>
+               <font size="7pt" typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="center"/>
+               <border>
+                  <edge thickness="0.254mm"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.254mm"/>
+                  <corner/>
+                  <corner/>
+                  <corner/>
+               </border>
+            </draw>
+            <?templateDesigner expand 0?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="152.4mm" layout="tb" name="dunningNotice">
+         <subform x="0mm" y="0mm" w="152.4mm" name="header" layout="tb">
+            <occur min="0"/>
+            <field name="date" y="0mm" x="0mm" h="6.35mm" minW="25.4mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>EEEE, MMMM D, YYYY</picture>
+               </format>
+               <value>
+                  <date/>
+               </value>
+            </field>
+            <field name="billToAddress" y="25.4mm" x="0mm" w="63.5mm" minH="6.35mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="12mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <value>
+                  <text maxChars="100"/>
+               </value>
+               <bind match="none"/>
+               <event activity="ready" ref="$form">
+                  <script contentType="application/x-javascript">// Concatenate the address information.
+
+this.rawValue =	$record.header.billToName.value + '\u000a' +
+				$record.header.billToStreet.value + '\u000a' +
+				$record.header.billToCity.value + ', ' + $record.header.billToState.value + ', ' + $record.header.billToZip.value;</script>
+               </event>
+            </field>
+            <keep intact="contentArea"/>
+            <?templateDesigner expand 0?></subform>
+         <subform x="0mm" y="15.35mm" layout="tb" name="level1" w="152.4mm">
+            <occur min="0"/>
+            <draw name="StaticText9">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>SUBJECT: Status of Account</text>
+               </value>
+               <font size="9pt" typeface="Minion Pro" underline="1" weight="bold"/>
+               <margin topInset="6mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <field name="salutation" y="11.37mm" x="0mm" minW="25.4mm" minH="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="6mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.006in" presence="hidden"/>
+               </border>
+            </field>
+            <draw name="StaticText10" y="19.05mm" x="17.2mm" w="152.4mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>The invoices listed below are due for payment.
+If you have paid the amounts due in the meantime, please disregard this letter.</text>
+               </value>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="6mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <margin topInset="0mm"/>
+            <keep intact="contentArea"/>
+            <?templateDesigner expand 0?></subform>
+         <subform x="0mm" y="47.89mm" name="level2" w="152.4mm" layout="tb">
+            <occur min="0"/>
+            <draw name="StaticText11">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>SUBJECT: Status of Account</text>
+               </value>
+               <font size="9pt" typeface="Minion Pro" underline="1" weight="bold"/>
+               <margin topInset="6mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <field name="salutation" y="9.26mm" x="0mm" minH="6.35mm" minW="25.4mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="6mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw name="StaticText12" y="20.11mm" x="0mm" w="152.4mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>We have already sent you a reminder about the due date of our invoices. As of now, however, we are unable to find any record of incoming payment for this due date. Please transfer these overdue amounts immediately. If this dunning notice is again unsuccessful, we will unfortunately have to calculate interest on arrears.</text>
+               </value>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="6mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="justify" marginLeft="0pt" textIndent="0pt"/>
+            </draw>
+            <margin topInset="0mm"/>
+            <keep intact="contentArea"/>
+            <?templateDesigner expand 0?></subform>
+         <subform x="0mm" y="83.08mm" w="152.4mm" name="level3" layout="tb">
+            <occur min="0"/>
+            <draw name="StaticText13">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>SUBJECT: Status of Account</text>
+               </value>
+               <font size="9pt" typeface="Minion Pro" underline="1" weight="bold"/>
+               <margin topInset="6mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <field name="salutation" y="9.26mm" x="0mm" minH="6.35mm" minW="25.4mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="6mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <draw name="StaticText14" y="20.11mm" x="0mm" w="152.4mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4039.0"><p>Since you have not reacted to our previous dunning letters, we have had to calculate interest on arrears to the rate of<span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField015614"/>. For the items due, as well as for the interest on arrears, we are now giving you a final payment period up until<span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField012925"/>.<span style="xfa-spacerun:yes">  </span>If you do not adhere to this payment deadline, we will unfortunately have to apply for a court order for our receivables to the amount of<span style="xfa-spacerun:yes">  </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField029264"/><span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField014406"/>.</p></body>
+                  </exData>
+               </value>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="6mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="justify" marginLeft="0pt" textIndent="0pt"/>
+            </draw>
+            <field name="rate" y="-83.08mm" x="0mm" w="25.4mm" h="6.35mm" presence="hidden" id="floatingField015614">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>9.999'%'</picture>
+               </format>
+            </field>
+            <field name="deadline" y="-83.08mm" x="0mm" w="25.4mm" h="6.35mm" presence="hidden" id="floatingField012925">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>MMM D, YYYY</picture>
+               </format>
+               <bind>
+                  <picture>DD-MM-YYYY</picture>
+               </bind>
+               <value>
+                  <date/>
+               </value>
+            </field>
+            <field name="amount" y="-83.08mm" x="0mm" w="25.4mm" h="6.35mm" presence="hidden" id="floatingField029264">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>$z,zzz,zz9.99</picture>
+               </format>
+            </field>
+            <field name="currency" y="-83.08mm" x="0mm" w="25.4mm" h="6.35mm" id="floatingField014406" presence="hidden">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="global"/>
+            </field>
+            <margin topInset="0mm"/>
+            <keep intact="contentArea"/>
+            <?templateDesigner expand 0?></subform>
+         <subform x="0mm" y="126.74mm" w="152.4mm" name="detailHeader" id="detailHeader">
+            <occur max="-1"/>
+            <draw name="Rectangle1" y="0mm" x="0mm" w="152.4mm" h="7.62mm">
+               <value>
+                  <rectangle>
+                     <edge>
+                        <color value="233,233,250"/>
+                     </edge>
+                     <fill>
+                        <color value="233,233,250"/>
+                     </fill>
+                     <corner>
+                        <color value="233,233,250"/>
+                     </corner>
+                  </rectangle>
+               </value>
+            </draw>
+            <draw name="StaticText15" y="0mm" x="2.54mm" minW="0mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Document No.</text>
+               </value>
+               <font size="9pt" typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+            </draw>
+            <draw name="StaticText16" y="0mm" x="27.94mm" minW="0mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Document Date</text>
+               </value>
+               <font size="9pt" typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+            </draw>
+            <draw name="StaticText17" y="0mm" x="53.34mm" minW="0mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Due Date</text>
+               </value>
+               <font size="9pt" typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+            </draw>
+            <draw name="StaticText18" y="0mm" x="78.74mm" minW="0mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Days in
+Arrears</text>
+               </value>
+               <font size="9pt" typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="right" lineHeight="8.5pt"/>
+            </draw>
+            <draw name="StaticText19" y="0mm" x="94.1335mm" minW="0mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4055.0"><p>Dunning Level</p></body>
+                  </exData>
+               </value>
+               <font size="9pt" typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" lineHeight="8.5pt"/>
+            </draw>
+            <draw name="StaticText20" y="0mm" x="131.1254mm" minW="0mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Amount</text>
+               </value>
+               <font size="9pt" typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="right"/>
+            </draw>
+            <bind match="none"/>
+            <margin topInset="6mm"/>
+            <?templateDesigner expand 0?></subform>
+         <subform x="0mm" y="160.6mm" w="152.4mm" h="7.62mm" name="document">
+            <occur max="-1" min="0"/>
+            <field name="docNum" y="0mm" x="2.54mm" w="19.05mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text maxChars="9"/>
+               </value>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.006in" presence="hidden"/>
+               </border>
+            </field>
+            <field name="docDate" y="0mm" x="27.94mm" w="19.05mm" h="7.62mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>MMM D, YYYY</picture>
+               </format>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.006in" presence="hidden"/>
+               </border>
+               <value>
+                  <date/>
+               </value>
+            </field>
+            <field name="dueDate" y="0mm" x="53.34mm" w="19.05mm" h="7.62mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <format>
+                  <picture>MMM D, YYYY</picture>
+               </format>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.006in" presence="hidden"/>
+               </border>
+               <value>
+                  <date/>
+               </value>
+            </field>
+            <field name="daysArrears" y="0mm" x="83.1363mm" w="6.35mm" h="7.62mm">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="right"/>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.006in" presence="hidden"/>
+               </border>
+               <value>
+                  <integer/>
+               </value>
+            </field>
+            <field name="level" y="0mm" x="101.6mm" w="5.08mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <value>
+                  <text maxChars="1"/>
+               </value>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.006in" presence="hidden"/>
+               </border>
+            </field>
+            <field name="amount" y="0mm" x="116.84mm" w="25.4mm" h="7.62mm">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="right"/>
+               <format>
+                  <picture>$z,zzz,zz9.99</picture>
+               </format>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.006in" presence="hidden"/>
+               </border>
+            </field>
+            <border>
+               <edge thickness="0.0762mm" presence="hidden">
+                  <color value="153,153,153"/>
+               </edge>
+               <edge presence="hidden"/>
+               <edge thickness="0.0762mm">
+                  <color value="153,153,153"/>
+               </edge>
+               <edge presence="hidden"/>
+               <corner thickness="0.0762mm" presence="hidden">
+                  <color value="153,153,153"/>
+               </corner>
+               <corner thickness="0.127mm"/>
+               <corner thickness="0.0762mm"/>
+            </border>
+            <break overflowLeader="#detailHeader"/>
+            <field name="currency" x="142.24mm" w="10.16mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="3.6pt"/>
+               <bind match="global"/>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <subform x="111.76mm" y="170.13mm" w="152.4mm" name="footer">
+            <occur min="0"/>
+            <field name="totalDueItems" y="0mm" x="85.09mm" w="57.15mm" h="6.35mm">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.127mm">
+                           <color value="153,153,153"/>
+                        </edge>
+                        <edge presence="hidden"/>
+                        <corner>
+                           <color value="153,153,153"/>
+                        </corner>
+                        <corner stroke="dotted" thickness="0.127mm"/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="right" marginLeft="0pt" marginRight="0pt"/>
+               <caption reserve="30.48mm">
+                  <font size="9pt" typeface="Minion Pro" weight="bold"/>
+                  <para vAlign="middle" hAlign="right" marginRight="7.2pt"/>
+                  <value>
+                     <text>Total of due items</text>
+                  </value>
+               </caption>
+               <format>
+                  <picture>$z,zzz,zz9.99</picture>
+               </format>
+            </field>
+            <field name="currency" x="142.24mm" w="10.16mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.127mm">
+                           <color value="153,153,153"/>
+                        </edge>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.127mm">
+                           <color value="153,153,153"/>
+                        </corner>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="3.6pt"/>
+               <bind match="global"/>
+            </field>
+            <field name="dunningCharge" y="7.62mm" x="85.09mm" w="57.15mm" h="6.35mm">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.127mm">
+                           <color value="153,153,153"/>
+                        </edge>
+                        <edge presence="hidden"/>
+                        <corner>
+                           <color value="153,153,153"/>
+                        </corner>
+                        <corner stroke="dotted" thickness="0.127mm"/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="right" marginRight="0pt"/>
+               <caption reserve="30.48mm">
+                  <font size="9pt" typeface="Minion Pro"/>
+                  <para vAlign="middle" hAlign="right" marginRight="7.2pt"/>
+                  <value>
+                     <text>Dunning charge</text>
+                  </value>
+               </caption>
+               <format>
+                  <picture>$z,zzz,zz9.99</picture>
+               </format>
+            </field>
+            <field name="currency" x="142.24mm" w="10.16mm" h="6.35mm" y="0.3in">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.127mm">
+                           <color value="153,153,153"/>
+                        </edge>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.127mm">
+                           <color value="153,153,153"/>
+                        </corner>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="3.6pt"/>
+               <bind match="global"/>
+            </field>
+            <field name="amountDue" y="15.24mm" x="85.09mm" w="57.15mm" h="6.35mm">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.127mm">
+                           <color value="153,153,153"/>
+                        </edge>
+                        <edge presence="hidden"/>
+                        <corner>
+                           <color value="153,153,153"/>
+                        </corner>
+                        <corner stroke="dotted" thickness="0.127mm"/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="right" marginRight="0pt"/>
+               <caption reserve="30.48mm">
+                  <font size="9pt" typeface="Minion Pro" weight="bold"/>
+                  <para vAlign="middle" hAlign="right" marginRight="7.2pt"/>
+                  <value>
+                     <text>Amount due</text>
+                  </value>
+               </caption>
+               <format>
+                  <picture>$z,zzz,zz9.99</picture>
+               </format>
+            </field>
+            <margin topInset="1.27mm"/>
+            <field name="currency" x="142.24mm" w="10.16mm" h="6.35mm" y="0.6in">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.127mm">
+                           <color value="153,153,153"/>
+                        </edge>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.127mm">
+                           <color value="153,153,153"/>
+                        </corner>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="3.6pt"/>
+               <bind match="global"/>
+            </field>
+            <border>
+               <edge thickness="0.0762mm" presence="hidden">
+                  <color value="153,153,153"/>
+               </edge>
+               <edge presence="hidden"/>
+               <edge presence="hidden"/>
+               <edge presence="hidden"/>
+               <corner thickness="0.0762mm" presence="hidden">
+                  <color value="153,153,153"/>
+               </corner>
+               <corner presence="hidden"/>
+               <corner presence="hidden"/>
+               <corner presence="hidden"/>
+            </border>
+            <?templateDesigner expand 0?></subform>
+         <subform w="152.4mm" layout="tb" name="closing">
+            <field name="closing" minW="25.4mm" minH="6.35mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Minion Pro"/>
+               <margin topInset="6mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="none"/>
+               <event activity="ready" ref="$form">
+                  <script contentType="application/x-javascript">// Display the variable's value.
+
+this.rawValue = varClosing.value;</script>
+               </event>
+            </field>
+            <bind match="none"/>
+            <margin topInset="0mm"/>
+            <keep intact="contentArea"/>
+            <?templateDesigner expand 0?></subform>
+         <bind match="none"/>
+         <?templateDesigner expand 0?></subform>
+      <desc>
+         <text name="contact">Adobe Systems Incorporated</text>
+         <text name="description">Adobe LiveCycle Designer Sample</text>
+         <text name="title">Dunning Notice</text>
+      </desc>
+      <variables>
+         <text name="varClosing">If you request further information, or have any question regarding these invoices, please do not hesitate to contact us.
+
+Sincerely,
+Global Company.</text>
+      </variables>
+      <?renderCache.subset "Minion Pro" 0 0 ISO-8859-1 4 176 44 00010004000D000F0012001300140015001B00220024002500270028002A003100340035003800420043004400450046004700480049004A004D004E004F005000510053005400550056005700580059005A005B005C005E #,.1234:ACDFGIPSTWabcdefghilmnoprstuvwxyz{}?>
+      <?renderCache.subset "Minion Pro" 1 0 ISO-8859-1 4 124 31 0001000F001B00220023002400250026002B002D002F003400350036004200440045004600470048004A004D004E004F005000530054005500560057005A .:ABCDEJLNSTUacdefgilmnorstuvy?>
+      <?renderCache.subset "Minion Pro" 0 1 ISO-8859-1 4 72 18 0001000400240025002F0031004200440045004600470048004A004D004F005000550056 #CDNPacdefgilnotu?></subform>
+   <?templateDesigner Grid show:0, snap:0, units:0, color:ff8080, origin:(0,0), interval:(250000,250000)?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner DefaultPreviewType print?>
+   <?templateDesigner XDPPreviewFormat 14?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 112?></template>
+<config xmlns="http://www.xfa.org/schema/xci/1.0/">
+   <agent name="designer">
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <trace>
+      <area name="font" level="1"/>
+   </trace>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+         </fontInfo>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+      <cache>
+         <macroCache/>
+      </cache>
+   </present>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.1/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+   </locale>
+</localeSet>
+<PDFSecurity xmlns="http://ns.adobe.com/xtd/" print="1" printHighQuality="1" change="1" modifyAnnots="1" formFieldFilling="1" documentAssembly="1" contentCopy="1" accessibleContent="1" metadata="1"/></xdp:xdp>

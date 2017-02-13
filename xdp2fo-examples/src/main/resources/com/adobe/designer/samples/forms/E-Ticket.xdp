@@ -1,0 +1,3859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesigner_V8.0" APIVersion="2.5.6151.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2006-06-07T19:55:07Z" uuid="c7ad4940-5b73-11d8-8714-00d0b7babdf6">
+<template xmlns="http://www.xfa.org/schema/xfa-template/2.5/">
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel client?>
+   <subform name="form1" layout="tb" locale="en_US" restoreState="auto">
+      <pageSet>
+         <pageArea name="portrait" id="Page1">
+            <contentArea x="0.75in" y="0.75in" w="177.8mm" h="237.49mm"/>
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <draw name="StaticText1" y="256.54mm" x="50.8mm" w="114.3mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>Any reference to company names and company logos in the sample forms included in this software is for demonstration purposes only and is not intended to refer to any actual organization.</p></body>
+                  </exData>
+               </value>
+               <font size="8pt" typeface="Minion Pro"/>
+               <para hAlign="center"/>
+               <margin topInset="1.016mm"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+                  <corner presence="hidden"/>
+                  <corner presence="hidden"/>
+                  <corner presence="hidden"/>
+               </border>
+            </draw>
+            <draw name="StaticText2" y="264.16mm" x="107.95mm" anchorType="topCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>etick220040206</text>
+               </value>
+               <font size="8pt" typeface="Minion Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            </draw>
+            <?templateDesigner expand 0?></pageArea>
+         <pageArea name="landscape" id="Page2">
+            <medium stock="letter" short="8.5in" long="11in" orientation="landscape"/>
+            <contentArea x="0.75in" y="0.75in" w="241.3mm" h="179.07mm"/>
+            <draw name="StaticText3" y="198.12mm" x="19.05mm" w="212.09mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>Any reference to company names and company logos in the sample forms included in this software is for demonstration purposes only and is not intended<br/>to refer to any actual organization.</p></body>
+                  </exData>
+               </value>
+               <font size="8pt" typeface="Minion Pro"/>
+               <para hAlign="center"/>
+               <margin topInset="1.016mm"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+                  <corner presence="hidden"/>
+                  <corner presence="hidden"/>
+                  <corner presence="hidden"/>
+               </border>
+            </draw>
+            <draw name="StaticText4" y="205.74mm" x="125.095mm" anchorType="topCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>etick220040206</text>
+               </value>
+               <font size="8pt" typeface="Minion Pro"/>
+               <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+            </draw>
+            <?templateDesigner expand 0?></pageArea>
+      </pageSet>
+      <subform layout="tb" name="eticket">
+         <occur min="0"/>
+         <subform x="0mm" y="0mm" name="coverPage" w="177.8mm">
+            <occur min="0"/>
+            <draw name="StaticImage1" y="2.54mm" x="31.75mm" w="57.6753mm" h="21.4849mm">
+               <value>
+                  <image contentType="image/tif" aspect="actual" href="..\images\E-Ticket.tif"/>
+               </value>
+               <ui>
+                  <imageEdit/>
+               </ui>
+            </draw>
+            <draw name="StaticText5" y="8.012mm" x="148.91mm" anchorType="topRight" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>E-Ticket</text>
+               </value>
+               <font size="26pt" typeface="Minion Pro" posture="italic"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+            </draw>
+            <field name="lastName" y="38.1mm" x="31.75mm" w="114.3mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="16pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="global"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="referenceNum" y="53.34mm" x="54.61mm" h="6.35mm" w="91.44mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden" thickness="0.0762mm"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="7.2pt" marginRight="0pt"/>
+               <caption reserve="40.64mm">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle" marginLeft="0pt" marginRight="7.2pt" textIndent="0pt" hAlign="right"/>
+                  <value>
+                     <text>Flight Reference</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm" presence="hidden"/>
+               </border>
+            </field>
+            <field name="reservationRef" y="60.96mm" x="54.61mm" w="91.44mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden" thickness="0.0762mm"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="7.2pt"/>
+               <caption reserve="40.64mm">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle" marginLeft="0pt" textIndent="0pt" hAlign="right" marginRight="7.2pt"/>
+                  <value>
+                     <exData contentType="text/html" maxLength="0">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>Accommodation Reference</p></body>
+                     </exData>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm" presence="hidden"/>
+               </border>
+            </field>
+            <field name="issuedDate" y="68.58mm" x="54.61mm" w="91.44mm" h="6.35mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden" thickness="0.0762mm"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="7.2pt"/>
+               <caption reserve="40.64mm">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle" marginLeft="0pt" textIndent="0pt" hAlign="right" marginRight="7.2pt"/>
+                  <value>
+                     <text>Issue Date</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm" presence="hidden"/>
+               </border>
+               <bind match="global">
+                  <picture>MM/DD/YYYY</picture>
+               </bind>
+               <format>
+                  <picture>EEEE, MMMM D, YYYY</picture>
+               </format>
+               <value>
+                  <date/>
+               </value>
+            </field>
+            <field name="lastName" y="76.2mm" x="54.61mm" w="91.44mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden" thickness="0.0762mm"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="7.2pt"/>
+               <caption reserve="40.64mm">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle" marginLeft="0pt" textIndent="0pt" hAlign="right" marginRight="7.2pt"/>
+                  <value>
+                     <text>Last Name</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm" presence="hidden"/>
+               </border>
+            </field>
+            <field name="firstName" y="83.82mm" x="54.61mm" w="91.44mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden" thickness="0.0762mm"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="7.2pt"/>
+               <caption reserve="40.64mm">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle" marginLeft="0pt" textIndent="0pt" hAlign="right" marginRight="7.2pt"/>
+                  <value>
+                     <exData contentType="text/html" maxLength="0">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>First Name</p></body>
+                     </exData>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm" presence="hidden"/>
+               </border>
+            </field>
+            <field name="initial" y="91.44mm" x="54.61mm" w="91.44mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge presence="hidden" thickness="0.0762mm">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden" thickness="0.0762mm"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="7.2pt"/>
+               <caption reserve="40.64mm">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle" marginLeft="0pt" textIndent="0pt" hAlign="right" marginRight="7.2pt"/>
+                  <value>
+                     <exData contentType="text/html" maxLength="0">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>Initial</p></body>
+                     </exData>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm" presence="hidden"/>
+               </border>
+            </field>
+            <draw name="StaticText6" y="116.84mm" x="31.75mm" h="12.7mm" w="114.3mm">
+               <ui>
+                  <textEdit>
+                     <margin/>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>Items in this Travel Package</p></body>
+                  </exData>
+               </value>
+               <font size="16pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <?renderCache.bounds 324000 36000 0 0 0 0 0 0?>
+               <?renderCache.textRun 28 Items in this Travel Package 0 0 21632 0 0 0 "Minion Pro" 0 0 16000 ISO-8859-1?></draw>
+            <field name="numTicket" y="132.08mm" x="95.25mm" w="50.8mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="43.18mm" placement="right">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Airline Itinerary</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <event activity="ready" ref="$form">
+                  <script contentType="application/x-javascript">// Change the field's caption for multiple documents.
+
+if (this.rawValue &gt; "1") {
+
+	this.caption.value.oneOfChild.value = "Airline Itineraries";
+
+}</script>
+               </event>
+            </field>
+            <field name="numCustoms" y="139.7mm" x="95.25mm" w="50.8mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="43.18mm" placement="right">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Customs Form</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="numMedical" y="147.32mm" x="95.25mm" w="50.8mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="43.18mm" placement="right">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Medical Declaration</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <event activity="ready" ref="$form">
+                  <script contentType="application/x-javascript">// Change the field's caption for multiple documents.
+
+if (this.rawValue &gt; "1") {
+
+	this.caption.value.oneOfChild.value = "Medical Declarations";
+
+}</script>
+               </event>
+            </field>
+            <field name="numTransfer" y="154.94mm" x="95.25mm" w="50.8mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="43.18mm" placement="right">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Transfer Slip</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <event activity="ready" ref="$form">
+                  <script contentType="application/x-javascript">// Change the field's caption for multiple documents.
+
+if (this.rawValue &gt; "1") {
+
+	this.caption.value.oneOfChild.value = "Transfer Slips";
+
+}</script>
+               </event>
+            </field>
+            <field name="numHotel" y="162.56mm" x="95.25mm" w="50.8mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="43.18mm" placement="right">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html" maxLength="0">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4055.0"><p>Accommodation Information</p></body>
+                     </exData>
+                  </value>
+               </caption>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="numPass" y="170.18mm" x="95.25mm" w="50.8mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="43.18mm" placement="right">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Boarding Pass</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <event activity="ready" ref="$form">
+                  <script contentType="application/x-javascript">// Change the field's caption for multiple documents.
+
+if (this.rawValue &gt; "1") {
+
+	this.caption.value.oneOfChild.value = "Boarding Passes";
+
+}</script>
+               </event>
+            </field>
+            <draw name="StaticText7" y="190.5mm" x="31.75mm" w="114.3mm" minH="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>The Airline Industries was formed to better meet the needs of frequent international travellers. That is why we offer you , as an Airline Industries Gold member, worldwide privileges, a seamless experience, and convenient global access. Along with our consistent focus on safety and security, we provide tangible benefits every time you travel with an Airline Industries carrier.</text>
+               </value>
+               <font typeface="Minion Pro" posture="italic"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para lineHeight="18.75pt" hAlign="justify"/>
+            </draw>
+            <draw name="Circle1" y="3.175mm" x="174.885mm" w="6.35mm" h="6.35mm" anchorType="middleCenter">
+               <value>
+                  <arc hand="right" circular="1">
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </arc>
+               </value>
+               <para vAlign="middle" hAlign="center"/>
+            </draw>
+            <draw name="StaticText8" y="3.175mm" x="174.885mm" anchorType="middleCenter" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <font size="12pt" typeface="Minion Pro" weight="bold">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>1</p></body>
+                  </exData>
+               </value>
+            </draw>
+            <?templateDesigner expand 0?></subform>
+         <subformSet name="itinerary">
+            <occur min="0" max="-1"/>
+            <subform name="flighHeader" w="241.3mm" x="0mm" y="0mm" id="flighHeader">
+               <occur max="-1"/>
+               <field name="issuedBy" y="0mm" x="0mm" h="12.7mm" w="212.09mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" size="16pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt"/>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge thickness="0.0762mm"/>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+                  <bind match="global"/>
+               </field>
+               <field name="referenceNum" y="2.54mm" x="212.3948mm" w="50.8mm" h="7.62mm" anchorType="topRight" access="nonInteractive">
+                  <ui>
+                     <barcode type="code3Of9" wideNarrowRatio="3.0" textLocation="none" dataLength="9"/>
+                  </ui>
+                  <font typeface="Minion Pro"/>
+                  <value>
+                     <text>123456789</text>
+                  </value>
+                  <bind match="global"/>
+               </field>
+               <break before="pageArea" beforeTarget="#Page2"/>
+               <field name="issuedDate" y="12.7mm" x="0mm" h="6.35mm" minW="50.8mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para marginLeft="0pt" vAlign="middle"/>
+                  <bind match="global">
+                     <picture>MM/DD/YYYY</picture>
+                  </bind>
+                  <format>
+                     <picture>EEEE, MMMM D, YYYY</picture>
+                  </format>
+                  <value>
+                     <date/>
+                  </value>
+               </field>
+               <field name="referenceNum" y="12.7mm" x="212.3948mm" h="12.7mm" anchorType="topRight" minW="50.8mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" size="16pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para hAlign="center" vAlign="middle"/>
+                  <bind match="global"/>
+               </field>
+               <draw name="Circle1" y="3.175mm" x="238.385mm" w="6.35mm" h="6.35mm" anchorType="middleCenter">
+                  <value>
+                     <arc hand="right" circular="1">
+                        <fill>
+                           <color value="0,0,0"/>
+                        </fill>
+                     </arc>
+                  </value>
+                  <para vAlign="middle" hAlign="center"/>
+               </draw>
+               <draw name="StaticText9" y="3.175mm" x="238.385mm" anchorType="middleCenter">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>2</text>
+                  </value>
+                  <font size="12pt" typeface="Minion Pro" weight="bold">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               </draw>
+               <?templateDesigner expand 0?></subform>
+            <subform name="flight" x="0mm" y="25.4mm" w="241.3mm">
+               <occur min="0" max="-1"/>
+               <margin leftInset="0mm" rightInset="0mm" topInset="6.35mm" bottomInset="0mm"/>
+               <field name="legDesc" h="7.62mm" x="0mm" y="0mm" w="69.85mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" size="12pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt"/>
+                  <border>
+                     <edge thickness="0.1524mm"/>
+                     <corner thickness="0.1524mm"/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </border>
+               </field>
+               <draw name="Rectangle1" y="0mm" x="69.85mm" w="116.84mm" h="0.508mm">
+                  <value>
+                     <rectangle>
+                        <edge/>
+                        <fill>
+                           <color value="0,0,0"/>
+                        </fill>
+                     </rectangle>
+                  </value>
+               </draw>
+               <field name="flightNum" x="212.09mm" h="7.62mm" y="0mm" anchorType="topRight" w="25.4mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden" thickness="0.0762mm">
+                           </edge>
+                           <corner presence="hidden" thickness="0.0762mm"/>
+                           <corner thickness="0.0762mm"/>
+                           <corner presence="hidden" thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" size="12pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <border>
+                     <edge/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                     <corner thickness="0.006in"/>
+                  </border>
+               </field>
+               <field name="airline" x="72.39mm" w="81.28mm" h="12.7mm" y="2.54mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                           <corner presence="hidden" thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" weight="bold"/>
+                  <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <caption reserve="5.08mm" placement="top">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt"/>
+                     <value>
+                        <text>Airline</text>
+                     </value>
+                  </caption>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+               </field>
+               <field name="flightDate" y="2.54mm" x="153.67mm" w="30.48mm" h="12.7mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                           <corner thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Minion Pro" weight="bold"/>
+                  <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <caption reserve="5.08mm" placement="top">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt"/>
+                     <value>
+                        <text>Flight Date</text>
+                     </value>
+                  </caption>
+                  <bind>
+                     <picture>MM/DD/YYYY</picture>
+                  </bind>
+                  <format>
+                     <picture>MM/DD/YYYY</picture>
+                  </format>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+                  <value>
+                     <date/>
+                  </value>
+               </field>
+               <field name="departTime" y="15.24mm" x="72.39mm" w="25.4mm" h="12.7mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge thickness="0.0762mm" presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden">
+                           </edge>
+                           <edge presence="hidden"/>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner thickness="0.0762mm" presence="hidden">
+                           </corner>
+                           <corner thickness="0.0762mm" presence="hidden">
+                           </corner>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm" presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Minion Pro" weight="bold"/>
+                  <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <caption reserve="5.08mm" placement="top">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt"/>
+                     <value>
+                        <text>Departs</text>
+                     </value>
+                  </caption>
+                  <bind>
+                     <picture>h:MM A</picture>
+                  </bind>
+                  <format>
+                     <picture>h:MM A</picture>
+                  </format>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+                  <value>
+                     <time/>
+                  </value>
+               </field>
+               <field name="arriveTime" y="15.24mm" x="97.79mm" w="25.4mm" h="12.7mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm" presence="hidden"/>
+                           <corner thickness="0.0762mm" presence="hidden"/>
+                           <corner thickness="0.0762mm" presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Minion Pro" weight="bold"/>
+                  <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <caption reserve="5.08mm" placement="top">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt"/>
+                     <value>
+                        <text>Arrives</text>
+                     </value>
+                  </caption>
+                  <bind>
+                     <picture>h:MM A</picture>
+                  </bind>
+                  <format>
+                     <picture>h:MM A</picture>
+                  </format>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+                  <value>
+                     <time/>
+                  </value>
+               </field>
+               <field name="gate" y="15.24mm" w="30.48mm" h="12.7mm" x="123.19mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                           <corner thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" weight="bold"/>
+                  <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <caption reserve="5.08mm" placement="top">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt"/>
+                     <value>
+                        <text>Gate</text>
+                     </value>
+                  </caption>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+               </field>
+               <field name="terminal" y="15.24mm" x="153.67mm" w="30.48mm" h="12.7mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                           <corner thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" weight="bold"/>
+                  <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <caption reserve="5.08mm" placement="top">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt"/>
+                     <value>
+                        <text>Terminal</text>
+                     </value>
+                  </caption>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+               </field>
+               <draw name="Circle1" y="2.915mm" x="238.385mm" w="6.35mm" h="6.35mm" anchorType="middleCenter">
+                  <value>
+                     <arc hand="right" circular="1">
+                        <fill>
+                           <color value="0,0,0"/>
+                        </fill>
+                     </arc>
+                  </value>
+                  <para vAlign="middle" hAlign="center"/>
+               </draw>
+               <draw name="StaticText10" y="2.915mm" x="238.385mm" anchorType="middleCenter">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html" maxLength="0">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>3</p></body>
+                     </exData>
+                  </value>
+                  <font size="12pt" typeface="Minion Pro" weight="bold">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               </draw>
+               <break overflowLeader="#flighHeader"/>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?></subformSet>
+         <subform name="customs" w="177.8mm">
+            <occur min="0"/>
+            <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0mm"/>
+            <draw name="StaticText11" y="0mm" x="88.9mm" anchorType="topCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>CUSTOMS USE ONLY</text>
+               </value>
+               <font size="7pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="center" vAlign="middle"/>
+            </draw>
+            <draw name="StaticText12" y="11.43mm" x="88.9mm" anchorType="topCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Welcome</text>
+               </value>
+               <font size="12pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="1.27mm" leftInset="0mm" rightInset="0mm"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm" presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <para hAlign="center" vAlign="middle"/>
+            </draw>
+            <draw name="Line1" y="16.51mm" x="48.26mm" w="27.94mm" h="0mm">
+               <value>
+                  <line>
+                     <edge thickness="0.0762mm"/>
+                  </line>
+               </value>
+            </draw>
+            <draw name="Line1" y="16.51mm" x="101.6mm" w="27.94mm" h="0mm">
+               <value>
+                  <line>
+                     <edge thickness="0.0762mm"/>
+                  </line>
+               </value>
+            </draw>
+            <draw name="StaticText13" y="17.78mm" x="88.9mm" anchorType="topCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Department of the Treasury Customs Service</text>
+               </value>
+               <font size="12pt" typeface="Minion Pro"/>
+               <margin topInset="1.27mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <border>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm" presence="hidden"/>
+                  <corner presence="hidden"/>
+                  <corner presence="hidden"/>
+                  <corner presence="hidden"/>
+               </border>
+               <para hAlign="center" vAlign="middle"/>
+            </draw>
+            <draw name="StaticText14" y="31.75mm" x="88.9mm" anchorType="topCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Customs Declaration</text>
+               </value>
+               <font size="20pt" typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="center" vAlign="middle"/>
+            </draw>
+            <draw name="StaticText15" y="48.26mm" x="88.9mm" minW="0mm" anchorType="topCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>Each arriving traveler or responsible family member must complete the declaration.<br/>Only ONE written declaration per family is required.</p></body>
+                  </exData>
+               </value>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="center" vAlign="middle"/>
+            </draw>
+            <field name="lastName" y="63.5mm" x="12.7mm" w="50.8mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <text>1. Last Name</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="firstName" y="63.5mm" x="63.5mm" w="50.8mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <text>2. FirstName</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="initial" y="63.5mm" x="114.3mm" w="50.8mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <text>3. Middle Initial</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="countryCitizen" y="76.2mm" x="12.7mm" w="50.8mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <text>4. Country of Citizenship</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="countryResidence" y="76.2mm" x="63.5mm" w="50.8mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <text>5. Country of Residence</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="birthDate" y="76.2mm" x="114.3mm" w="50.8mm" h="12.7mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <corner presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                        <corner presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <exData contentType="text/html" maxLength="0">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>6. Date of Birth<span style="xfa-spacerun:yes"> </span><span style="font-weight:normal">(YY/MM/DD)</span></p></body>
+                     </exData>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <bind match="global">
+                  <picture>MM/DD/YYYY</picture>
+               </bind>
+               <format>
+                  <picture>YY/MM/DD</picture>
+               </format>
+               <value>
+                  <date/>
+               </value>
+            </field>
+            <field name="numFamily" y="88.9mm" x="12.7mm" w="76.2mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <text>7. Number of Family Members  Traveling</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="airlineFlightNum" y="88.9mm" x="88.9mm" w="76.2mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <text>8. Airline Flight Number</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="usAddress" y="101.6mm" x="12.7mm" w="152.4mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="10.8pt"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <text>9. Address</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="usCity" y="114.3mm" x="12.7mm" w="50.8mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <text>10. City</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="usState" y="114.3mm" x="63.5mm" w="50.8mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <text>11. State/Province</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="usZipCode" y="114.3mm" x="114.3mm" w="50.8mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <text>12. Zip/Postal Code</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <draw name="StaticText16" y="127mm" x="12.7mm" w="101.6mm" h="25.4mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>13. Countries visited on this trip prior to your arrival </text>
+               </value>
+               <font typeface="Minion Pro" weight="bold" size="8pt"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <?renderCache.bounds 285192 69192 0 0 2808 2808 0 0?>
+               <?renderCache.textRun 57 13. Countries visited on this trip prior to your arrival  0 2808 8624 0 0 0 "Minion Pro" 1 0 8000 ISO-8859-1?></draw>
+            <field name="visitedCountry" y="133.35mm" x="22.86mm" w="38.1mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+            </field>
+            <field name="visitedCountry" y="140.97mm" x="22.86mm" w="38.1mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+            </field>
+            <field name="visitedCountry" y="133.35mm" x="66.04mm" w="38.1mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+            </field>
+            <field name="visitedCountry" y="140.97mm" x="66.04mm" w="38.1mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+            </field>
+            <draw name="StaticText17" y="127mm" x="114.3mm" w="50.8mm" h="25.4mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>14. Trip Purpose</text>
+               </value>
+               <font typeface="Minion Pro" weight="bold" size="8pt"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <?renderCache.bounds 141192 69192 0 0 2808 2808 0 0?>
+               <?renderCache.textRun 16 14. Trip Purpose 0 2808 8624 0 0 0 "Minion Pro" 1 0 8000 ISO-8859-1?></draw>
+            <exclGroup name="purpose" x="121.92mm" y="133.35mm">
+               <field y="0mm" x="0mm" w="25.4mm" h="7.41mm" name="business">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="17.78mm" placement="right">
+                     <font typeface="Minion Pro"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Business</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                  </items>
+               </field>
+               <field y="8.47mm" x="0mm" w="25.4mm" h="7.41mm" name="pleasure">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="17.78mm" placement="right">
+                     <font typeface="Minion Pro"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Pleasure</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <draw name="StaticText18" y="152.4mm" x="12.7mm" w="152.4mm" h="48.26mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>15. Declaration of Goods</text>
+               </value>
+               <font typeface="Minion Pro" weight="bold" size="8pt"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <?renderCache.bounds 429192 133992 0 0 2808 2808 0 0?>
+               <?renderCache.textRun 24 15. Declaration of Goods 0 2808 8624 0 0 0 "Minion Pro" 1 0 8000 ISO-8859-1?></draw>
+            <draw name="StaticText19" y="158.75mm" x="140.97mm" w="7.62mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Yes</text>
+               </value>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <draw name="StaticText20" y="158.75mm" x="151.13mm" w="6.35mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>No</text>
+               </value>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <exclGroup name="food" x="21.96mm" y="162.56mm">
+               <field y="0mm" x="0mm" w="127mm" h="10.16mm" name="yes">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="120.65mm">
+                     <font typeface="Minion Pro"/>
+                     <para vAlign="middle" textIndent="-10.08pt"/>
+                     <value>
+                        <text>a. Fruits, plants, meats, food, soil, birds, snails, other live animals, wildlife products, farm products; or have been on a farm or ranch outside the country.</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                  </items>
+               </field>
+               <field y="0mm" x="127mm" w="6.35mm" h="10.16mm" name="no">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <items>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <exclGroup name="currency" x="21.96mm" y="172.72mm">
+               <field y="0mm" x="0mm" w="127mm" name="yes" h="5.08mm">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="120.65mm">
+                     <font typeface="Minion Pro"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>b. Currency or monetary instruments over $10, 000 U.S. or foreign equivalent.</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                  </items>
+               </field>
+               <field y="0mm" x="127mm" w="6.35mm" h="5.08mm" name="no">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <items>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <exclGroup name="merchandise" x="21.96mm" y="179.07mm">
+               <field y="0mm" x="0mm" w="127mm" name="yes" h="5.08mm">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="120.65mm">
+                     <font typeface="Minion Pro"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>c. Commercial merchandise.</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                  </items>
+               </field>
+               <field y="0mm" x="127mm" w="6.35mm" h="5.08mm" name="no">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <items>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <field name="totalValue" y="185.42mm" x="21.96mm" w="137.16mm" h="10.16mm">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font size="8pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="101.6mm">
+                  <font typeface="Minion Pro"/>
+                  <para vAlign="middle" marginLeft="0pt" textIndent="-10.08pt"/>
+                  <value>
+                     <text>d. The total value of all goods, including commercial merchandise, purchased or aquired abroad and bringing into the country.</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="confirmationNum" y="200.66mm" x="12.7mm" w="152.4mm" h="19.05mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <corner presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                        <corner presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" size="16pt"/>
+               <margin topInset="0.9906mm" bottomInset="3.81mm" leftInset="0.9906mm" rightInset="76.2mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" weight="bold" size="8pt"/>
+                  <value>
+                     <exData contentType="text/html" maxLength="0">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>16. Confirmation Number</p></body>
+                     </exData>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="confirmationNum" y="206.265mm" x="124.09mm" w="50.8mm" h="7.62mm" anchorType="topCenter">
+               <ui>
+                  <barcode type="code3Of9" wideNarrowRatio="3.0" textLocation="none" dataLength="8"/>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <value>
+                  <text>12345678</text>
+               </value>
+               <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0.0991mm"/>
+               <border>
+                  <edge presence="hidden" thickness="0.0762mm"/>
+                  <corner presence="hidden" thickness="0.003in"/>
+               </border>
+               <bind match="global"/>
+            </field>
+            <break startNew="1" before="pageArea" beforeTarget="#Page1"/>
+            <draw name="Circle1" y="3.175mm" x="174.625mm" w="6.35mm" h="6.35mm" anchorType="middleCenter">
+               <value>
+                  <arc hand="right" circular="1">
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </arc>
+               </value>
+               <para vAlign="middle" hAlign="center"/>
+            </draw>
+            <draw name="StaticText21" y="3.175mm" x="174.625mm" anchorType="middleCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>4</text>
+               </value>
+               <font size="12pt" typeface="Minion Pro" weight="bold">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <?templateDesigner expand 0?></subform>
+         <subform name="medical" x="0mm" y="0mm" w="178.06mm">
+            <occur min="0" max="-1"/>
+            <draw name="StaticText22" y="0mm" x="31.75mm" w="114.3mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Medical Declaration</text>
+               </value>
+               <font size="16pt" typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <?renderCache.bounds 324000 36000 0 0 0 0 0 0?>
+               <?renderCache.textRun 19 Medical Declaration 0 0 21632 0 0 0 "Minion Pro" 0 0 16000 ISO-8859-1?></draw>
+            <draw name="StaticText23" y="30.48mm" x="31.75mm" minH="0mm" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Personal Information</text>
+               </value>
+               <font size="12pt" typeface="Minion Pro" posture="italic" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <border>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <corner thickness="0.003in" presence="hidden"/>
+               </border>
+            </draw>
+            <field name="lastName" y="38.1mm" x="31.75mm" w="38.1mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                  <value>
+                     <text>Last Name</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="firstName" y="38.1mm" x="69.85mm" w="38.1mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                  <value>
+                     <text>First Name</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="initial" y="38.1mm" x="107.95mm" w="38.1mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                  <value>
+                     <text>Middle Initial</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="homeAddress" y="50.8mm" x="31.75mm" w="76.2mm" h="25.4mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para marginLeft="7.2pt"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font size="8pt" typeface="Minion Pro" posture="italic"/>
+                  <value>
+                     <text>Home Address</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <bind match="none"/>
+               <event activity="ready" ref="$form">
+                  <script contentType="application/x-javascript">// Concatenate the address information.
+
+this.rawValue =	$record.address.value + '\u000a' +
+				$record.city.value + ', ' + $record.state.value + ', ' + $record.zipCode.value;</script>
+               </event>
+            </field>
+            <field name="phoneNum" y="50.8mm" w="38.1mm" h="12.7mm" x="107.95mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                  <value>
+                     <text>Phone Number</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="mobileNum" y="63.5mm" w="38.1mm" h="12.7mm" x="107.95mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                  <value>
+                     <text>Mobile Number</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="SSN" y="76.2mm" x="31.75mm" w="38.1mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                  <value>
+                     <text>SSN</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <format>
+                  <picture>999-99-9999</picture>
+               </format>
+            </field>
+            <field name="birthDate" y="76.2mm" x="69.85mm" w="38.1mm" h="12.7mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                  <value>
+                     <text>Date of Birth</text>
+                  </value>
+               </caption>
+               <bind match="global">
+                  <picture>MM/DD/YYYY</picture>
+               </bind>
+               <format>
+                  <picture>MMMM D, YYYY</picture>
+               </format>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <value>
+                  <date/>
+               </value>
+            </field>
+            <draw name="StaticText24" y="76.2mm" x="107.95mm" w="38.1mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Sex</text>
+               </value>
+               <font typeface="Minion Pro" posture="italic" size="8pt"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <?renderCache.bounds 105192 33192 0 0 2808 2808 0 0?>
+               <?renderCache.textRun 3 Sex 0 2808 8624 0 0 0 "Minion Pro" 0 1 8000 ISO-8859-1?></draw>
+            <exclGroup name="sex" x="113.03mm" y="81.28mm">
+               <field w="15.24mm" h="6.35mm" name="female">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="10.16mm" placement="right">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para vAlign="middle" marginLeft="0pt"/>
+                     <value>
+                        <text>Female</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                  </items>
+               </field>
+               <field x="17.78mm" w="12.7mm" h="6.35mm" name="male">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="right" reserve="7.62mm">
+                     <para vAlign="middle"/>
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <value>
+                        <text>Male</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <draw name="StaticText25" y="106.68mm" x="31.75mm" minH="0mm" w="114.3mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Medical Information</text>
+               </value>
+               <font size="12pt" typeface="Minion Pro" posture="italic" weight="bold"/>
+               <margin topInset="0mm" bottomInset="2.54mm" leftInset="0mm" rightInset="0mm"/>
+               <border>
+                  <edge thickness="0.0762mm" presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm" presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <corner thickness="0.003in" presence="hidden">
+                  </corner>
+                  <corner thickness="0.003in" presence="hidden">
+                  </corner>
+                  <corner thickness="0.003in"/>
+                  <corner thickness="0.003in" presence="hidden"/>
+               </border>
+            </draw>
+            <draw name="StaticText26" y="118.11mm" x="62.23mm" minH="0mm" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Yes</text>
+               </value>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <border>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <corner thickness="0.003in" presence="hidden"/>
+               </border>
+            </draw>
+            <draw name="StaticText27" y="118.11mm" x="73.66mm" minH="0mm" minW="0mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>No</text>
+               </value>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <border>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <corner thickness="0.003in" presence="hidden"/>
+               </border>
+            </draw>
+            <exclGroup name="asthma" x="38.1mm" y="127mm" w="39.37mm">
+               <field y="0mm" x="0mm" w="33.02mm" h="7.62mm" name="yes">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="25.4mm">
+                     <font typeface="Minion Pro" posture="italic"/>
+                     <para vAlign="middle" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <exData contentType="text/html" maxLength="0">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>Asthma</p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                  </items>
+               </field>
+               <field y="0mm" x="33.02mm" w="6.35mm" h="7.62mm" name="no">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <items>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <field name="asthmaNotes" y="127mm" x="82.55mm" w="63.5mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="3.6pt"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <exclGroup name="diabetes" x="38.1mm" y="134.62mm" w="39.37mm">
+               <field x="0mm" w="33.02mm" h="7.62mm" name="yes" y="0mm">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="25.4mm">
+                     <font typeface="Minion Pro" posture="italic"/>
+                     <para vAlign="middle" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <exData contentType="text/html" maxLength="0">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>Diabetes</p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                  </items>
+               </field>
+               <field y="0mm" x="33.02mm" w="6.35mm" h="7.62mm" name="no">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <items>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <field name="diabetesNotes" y="134.62mm" x="82.55mm" w="63.5mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="3.6pt"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <exclGroup name="seizure" x="38.1mm" y="142.24mm" w="39.37mm">
+               <field y="0mm" x="0mm" w="33.02mm" h="7.62mm" name="yes">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="25.4mm">
+                     <font typeface="Minion Pro" posture="italic"/>
+                     <para vAlign="middle" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <exData contentType="text/html" maxLength="0">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>Seizure Disorder</p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                  </items>
+               </field>
+               <field y="0mm" x="33.02mm" w="6.35mm" h="7.62mm" name="no">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <items>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <field name="seizureNotes" y="142.24mm" x="82.55mm" w="63.5mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="3.6pt"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <exclGroup name="heart" x="38.1mm" y="149.86mm" w="39.37mm">
+               <field y="0mm" x="0mm" w="33.02mm" h="7.62mm" name="yes">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="25.4mm">
+                     <font typeface="Minion Pro" posture="italic"/>
+                     <para vAlign="middle" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <exData contentType="text/html" maxLength="0">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>Heart Disease</p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                  </items>
+               </field>
+               <field y="0mm" x="33.02mm" w="6.35mm" h="7.62mm" name="no">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <items>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <field name="heartNotes" y="149.86mm" x="82.55mm" w="63.5mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="3.6pt"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <exclGroup name="hypertension" x="38.1mm" y="149.86mm" w="39.37mm">
+               <field y="7.62mm" x="0mm" w="33.02mm" h="7.62mm" name="yes">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                        </border>
+                        <margin/>
+                     </checkButton>
+                  </ui>
+                  <font typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="25.4mm">
+                     <font typeface="Minion Pro" posture="italic"/>
+                     <para vAlign="middle" marginLeft="0pt" marginRight="0pt"/>
+                     <value>
+                        <exData contentType="text/html" maxLength="0">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>Hypertension</p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                  </items>
+               </field>
+               <field y="7.62mm" x="33.02mm" w="6.35mm" h="7.62mm" name="no">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <items>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <field name="hyperNotes" y="157.48mm" x="82.55mm" w="63.5mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="3.6pt"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <exclGroup name="pregnant" x="38.1mm" y="165.1mm" w="39.37mm">
+               <field y="0mm" x="0mm" w="33.02mm" h="7.62mm" name="yes">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="25.4mm">
+                     <para vAlign="middle" marginLeft="0pt" marginRight="0pt"/>
+                     <font typeface="Minion Pro" posture="italic"/>
+                     <value>
+                        <text>Pregnancy</text>
+                     </value>
+                  </caption>
+                  <items>
+                     <integer>1</integer>
+                  </items>
+               </field>
+               <field y="0mm" x="33.02mm" w="6.35mm" h="7.62mm" name="no">
+                  <ui>
+                     <checkButton shape="round">
+                        <border>
+                           <edge/>
+                           <fill/>
+                        </border>
+                     </checkButton>
+                  </ui>
+                  <font size="8pt" typeface="Minion Pro"/>
+                  <margin leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <items>
+                     <integer>2</integer>
+                  </items>
+               </field>
+               <?templateDesigner expand 0?></exclGroup>
+            <field name="pregnantMonths" y="165.1mm" x="82.55mm" w="63.5mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm" presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="3.6pt"/>
+               <border>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <draw name="StaticText28" y="190.5mm" x="31.75mm" minH="0mm" w="114.3mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Insurance Information</text>
+               </value>
+               <font size="12pt" typeface="Minion Pro" posture="italic" weight="bold"/>
+               <margin topInset="0mm" bottomInset="2.54mm" leftInset="0mm" rightInset="0mm"/>
+               <border>
+                  <edge thickness="0.0762mm" presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm" presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge thickness="0.0762mm" presence="hidden"/>
+                  <corner thickness="0.003in" presence="hidden">
+                  </corner>
+                  <corner thickness="0.003in" presence="hidden">
+                  </corner>
+                  <corner thickness="0.003in"/>
+                  <corner thickness="0.003in" presence="hidden"/>
+               </border>
+            </draw>
+            <field name="insuranceCompany" y="198.12mm" x="62.23mm" w="83.82mm" h="7.62mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="7.2pt"/>
+               <caption reserve="38.1mm">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle" hAlign="right" marginRight="7.2pt"/>
+                  <value>
+                     <text>Insurance Company</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="insuranceAddress" y="205.74mm" x="62.23mm" w="83.82mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="7.2pt"/>
+               <caption reserve="38.1mm">
+                  <font typeface="Minion Pro" posture="italic"/>
+                  <para vAlign="middle" hAlign="right" marginRight="7.2pt"/>
+                  <value>
+                     <text>Address</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="insuranceCityStateZip" y="212.09mm" x="100.33mm" w="45.72mm" h="6.35mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge presence="hidden">
+                        </edge>
+                        <edge thickness="0.0762mm"/>
+                        <edge presence="hidden"/>
+                        <corner thickness="0.0762mm"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle" marginLeft="7.2pt"/>
+            </field>
+            <break startNew="1" before="pageArea" beforeTarget="#Page1"/>
+            <draw name="Circle1" y="3.175mm" x="174.885mm" w="6.35mm" h="6.35mm" anchorType="middleCenter">
+               <value>
+                  <arc hand="right" circular="1">
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </arc>
+               </value>
+               <para vAlign="middle" hAlign="center"/>
+            </draw>
+            <draw name="StaticText29" y="3.175mm" x="174.885mm" anchorType="middleCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>5</text>
+               </value>
+               <font size="12pt" typeface="Minion Pro" weight="bold">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <?templateDesigner expand 0?></subform>
+         <subformSet name="accommodation">
+            <occur min="0" max="-1"/>
+            <subform name="hotelHeader" w="241.3mm" id="hotelHeader">
+               <occur max="-1"/>
+               <field name="reservationBroker" y="0mm" x="0mm" w="212.09mm" h="12.7mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" size="16pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt"/>
+                  <bind match="global"/>
+                  <border>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge presence="hidden">
+                     </edge>
+                     <edge thickness="0.0762mm"/>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+               </field>
+               <field name="reservationRef" y="2.54mm" x="212.09mm" w="25.4mm" h="7.62mm" anchorType="topRight" access="nonInteractive">
+                  <ui>
+                     <barcode type="code3Of9" wideNarrowRatio="3.0" textLocation="none" dataLength="5"/>
+                  </ui>
+                  <font typeface="Minion Pro"/>
+                  <value>
+                     <text>12345</text>
+                  </value>
+                  <bind match="global"/>
+               </field>
+               <break before="pageArea" beforeTarget="#Page2"/>
+               <field name="guestName" y="12.7mm" x="0mm" h="10.16mm" minW="76.2mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" size="16pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt"/>
+                  <bind match="global"/>
+                  <event activity="ready" ref="$form">
+                     <script contentType="application/x-javascript">// Concatenate the names.
+
+this.rawValue =	$record.lastName.value + ' ' + $record.firstName.value;</script>
+                  </event>
+               </field>
+               <field name="guestAddress" y="22.86mm" x="0mm" w="76.2mm" minH="6.35mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt"/>
+                  <bind match="global"/>
+                  <event activity="ready" ref="$form">
+                     <script contentType="application/x-javascript">// Concatenate the address information.
+
+this.rawValue =	$record.address.value + '\u000a' +
+				$record.city.value + ', ' + $record.state.value + ', ' + $record.zipCode.value;</script>
+                  </event>
+               </field>
+               <field name="reservationRef" y="12.7mm" x="212.09mm" w="25.4mm" h="10.16mm" anchorType="topRight">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" size="16pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <bind match="global"/>
+               </field>
+               <draw name="Circle1" y="3.175mm" x="238.385mm" w="6.35mm" h="6.35mm" anchorType="middleCenter">
+                  <value>
+                     <arc hand="right" circular="1">
+                        <fill>
+                           <color value="0,0,0"/>
+                        </fill>
+                     </arc>
+                  </value>
+                  <para vAlign="middle" hAlign="center"/>
+               </draw>
+               <draw name="StaticText30" y="3.175mm" x="238.385mm" anchorType="middleCenter">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>6</text>
+                  </value>
+                  <font size="12pt" typeface="Minion Pro" weight="bold">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               </draw>
+               <?templateDesigner expand 0?></subform>
+            <subform name="hotel" w="241.3mm" x="0mm" y="0mm">
+               <occur max="-1" min="0"/>
+               <margin leftInset="0mm" rightInset="0mm" topInset="6.35mm" bottomInset="0mm"/>
+               <field name="hotelName" y="0mm" w="69.85mm" h="7.62mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Minion Pro">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                     <corner thickness="0.006in"/>
+                  </border>
+               </field>
+               <draw name="Rectangle1" y="0mm" x="69.85mm" w="116.84mm" h="0.508mm">
+                  <value>
+                     <rectangle>
+                        <edge/>
+                        <fill>
+                           <color value="0,0,0"/>
+                        </fill>
+                     </rectangle>
+                  </value>
+               </draw>
+               <field name="reservationNum" w="25.4mm" h="7.62mm" x="186.69mm" y="0mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                           <corner/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" size="12pt">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <border>
+                     <edge thickness="0.1524mm"/>
+                     <corner thickness="0.1524mm"/>
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </border>
+               </field>
+               <field name="hotelAddress" x="72.39mm" w="60.96mm" h="20.32mm" y="2.54mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" weight="bold"/>
+                  <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para marginLeft="7.2pt"/>
+                  <caption reserve="5.08mm" placement="top">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt"/>
+                     <value>
+                        <text>Hotel Address</text>
+                     </value>
+                  </caption>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+               </field>
+               <field name="roomName" y="2.54mm" x="133.35mm" w="50.8mm" h="20.32mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" weight="bold"/>
+                  <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para marginLeft="7.2pt"/>
+                  <caption reserve="5.08mm" placement="top">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt"/>
+                     <value>
+                        <text>Room Type</text>
+                     </value>
+                  </caption>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+                  <bind match="none"/>
+                  <event activity="ready" ref="$form">
+                     <script contentType="application/x-javascript">// Concatenate the room information.
+
+this.rawValue =	$record.hotel.roomType.value + '\u000a' +
+				$record.hotel.room.value;</script>
+                  </event>
+               </field>
+               <field name="hotelPhoneNum" y="22.86mm" x="72.39mm" w="60.96mm" h="12.7mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" weight="bold"/>
+                  <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <caption reserve="5.08mm" placement="top">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt"/>
+                     <value>
+                        <text>Hotel Phone Number</text>
+                     </value>
+                  </caption>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+               </field>
+               <field name="arrivalDate" y="22.86mm" x="133.35mm" w="25.4mm" h="12.7mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Minion Pro" weight="bold"/>
+                  <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <caption reserve="5.08mm" placement="top">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt"/>
+                     <value>
+                        <text>Arrival</text>
+                     </value>
+                  </caption>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+                  <bind>
+                     <picture>MM/DD/YYYY</picture>
+                  </bind>
+                  <format>
+                     <picture>MM/DD/YYYY</picture>
+                  </format>
+                  <value>
+                     <date/>
+                  </value>
+               </field>
+               <field name="departureDate" y="22.86mm" x="158.75mm" w="25.4mm" h="12.7mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Minion Pro" weight="bold"/>
+                  <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <caption reserve="5.08mm" placement="top">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt"/>
+                     <value>
+                        <text>Departure</text>
+                     </value>
+                  </caption>
+                  <bind>
+                     <picture>MM/DD/YYYY</picture>
+                  </bind>
+                  <format>
+                     <picture>MM/DD/YYYY</picture>
+                  </format>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+                  <value>
+                     <date/>
+                  </value>
+               </field>
+               <field name="nights" y="11.43mm" w="17.78mm" x="190.5mm" h="17.78mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge presence="hidden">
+                           </edge>
+                           <edge thickness="0.0762mm" presence="hidden"/>
+                           <corner presence="hidden"/>
+                           <corner thickness="0.0762mm"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Minion Pro" size="20pt"/>
+                  <margin topInset="0mm" bottomInset="0.762mm" leftInset="0mm" rightInset="0.762mm"/>
+                  <para vAlign="middle" marginLeft="0pt" hAlign="center"/>
+                  <caption reserve="3.81mm" placement="bottom">
+                     <font typeface="Minion Pro" posture="italic" size="8pt"/>
+                     <para marginRight="0pt" hAlign="right" vAlign="bottom"/>
+                     <value>
+                        <exData contentType="text/html" maxLength="0">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4042.0"><p>Night(s)</p></body>
+                        </exData>
+                     </value>
+                  </caption>
+                  <border>
+                     <edge thickness="0.0762mm"/>
+                     <corner thickness="0.0762mm"/>
+                  </border>
+               </field>
+               <draw name="Circle1" y="2.915mm" x="238.385mm" w="6.35mm" h="6.35mm" anchorType="middleCenter">
+                  <value>
+                     <arc hand="right" circular="1">
+                        <fill>
+                           <color value="0,0,0"/>
+                        </fill>
+                     </arc>
+                  </value>
+                  <para vAlign="middle" hAlign="center"/>
+               </draw>
+               <draw name="StaticText31" y="2.915mm" x="238.385mm" anchorType="middleCenter">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>7</text>
+                  </value>
+                  <font size="12pt" typeface="Minion Pro" weight="bold">
+                     <fill>
+                        <color value="255,255,255"/>
+                     </fill>
+                  </font>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               </draw>
+               <break overflowLeader="#hotelHeader"/>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?></subformSet>
+         <subform name="boarding" x="0mm" y="92.6mm" w="241.3mm">
+            <occur max="-1" min="0"/>
+            <draw name="StaticText32" y="0mm" x="31.75mm" w="5in" h="3in">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html" maxLength="0">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>Thank you for choosing Airline Industries</p></body>
+                  </exData>
+               </value>
+               <font size="12pt" typeface="Minion Pro" weight="bold" posture="italic"/>
+               <margin topInset="0mm" bottomInset="2.54mm" leftInset="0mm" rightInset="6.35mm"/>
+               <para vAlign="bottom" hAlign="right"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.003in" join="round" radius="6.35mm"/>
+               </border>
+               <?renderCache.bounds 342000 208800 0 0 0 0 0 0?>
+               <?renderCache.textRun 41 Thank you for choosing Airline Industries 0 137115 205524 0 0 0 "Minion Pro" 1 1 12000 ISO-8859-1?></draw>
+            <draw name="StaticText33" y="76.2mm" x="31.75mm" w="76.2mm" rotate="90" h="12.7mm">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>Boarding Pass</text>
+               </value>
+               <font size="30pt" typeface="Minion Pro">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <border>
+                  <edge thickness="0.1524mm"/>
+                  <corner thickness="0.1524mm" radius="6.35mm"/>
+                  <fill>
+                     <color value="0,0,0"/>
+                  </fill>
+               </border>
+               <para hAlign="center" vAlign="middle"/>
+               <?renderCache.bounds 36000 216000 0 0 0 -216000 0 0?>
+               <?renderCache.textRun 13 Boarding Pass 0 24810 193229 255 255 255 "Minion Pro" 0 0 30000 ISO-8859-1?></draw>
+            <field name="lastName" y="0mm" x="44.45mm" w="38.1mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <text>Passenger Last Name</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="firstName" y="0mm" x="82.55mm" w="38.1mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <text>Passenger First Name</text>
+                  </value>
+               </caption>
+               <bind match="global"/>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="freqFlyer" y="0mm" x="120.65mm" w="38.1mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <text>Frequent Flyer Number</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm" presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm" presence="hidden">
+                  </edge>
+                  <edge thickness="0.0762mm"/>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm" presence="hidden">
+                  </corner>
+                  <corner thickness="0.0762mm" presence="hidden">
+                  </corner>
+                  <corner thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="from" y="12.7mm" x="44.45mm" w="57.15mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <text>From</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="destination" y="12.7mm" x="101.6mm" w="57.15mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <text>Destination</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="airline" y="25.4mm" x="44.45mm" w="57.15mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <exData contentType="text/html" maxLength="0">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4036.0"><p>Airline</p></body>
+                     </exData>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="flightNum" y="25.4mm" x="101.6mm" w="57.15mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold" size="14pt"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="3.81mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <text>Flight Number</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="flightDate" y="38.1mm" x="44.45mm" w="38.1mm" h="12.7mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <text>Flight Date</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <bind>
+                  <picture>MM/DD/YYYY</picture>
+               </bind>
+               <format>
+                  <picture>MMMM D, YYYY</picture>
+               </format>
+               <value>
+                  <date/>
+               </value>
+            </field>
+            <field name="departureTime" y="38.1mm" x="82.55mm" w="38.1mm" h="12.7mm">
+               <ui>
+                  <dateTimeEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <text>Departure Time</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+               <bind>
+                  <picture>h:MM A</picture>
+               </bind>
+               <format>
+                  <picture>h:MM A</picture>
+               </format>
+               <value>
+                  <time/>
+               </value>
+            </field>
+            <field name="gate" y="38.1mm" x="120.65mm" w="12.7mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <text>Gate</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="class" y="38.1mm" x="133.35mm" w="12.7mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <text>Class</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <field name="seat" y="38.1mm" x="146.05mm" w="12.7mm" h="12.7mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge presence="hidden">
+                        </edge>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Minion Pro" weight="bold"/>
+               <margin topInset="0.9906mm" bottomInset="0mm" leftInset="0.9906mm" rightInset="0mm"/>
+               <para vAlign="middle" hAlign="center"/>
+               <caption reserve="5.08mm" placement="top">
+                  <font typeface="Minion Pro" size="8pt" posture="italic"/>
+                  <value>
+                     <text>Seat</text>
+                  </value>
+               </caption>
+               <border>
+                  <edge thickness="0.0762mm"/>
+                  <corner thickness="0.0762mm"/>
+               </border>
+            </field>
+            <break startNew="1" before="pageArea" beforeTarget="#Page2"/>
+            <field name="passBarcode" y="53.34mm" x="50.5206mm" w="101.6mm" h="7.62mm">
+               <ui>
+                  <barcode type="code3Of9" wideNarrowRatio="3.0" textLocation="none" dataLength="22"/>
+               </ui>
+               <font typeface="Minion Pro"/>
+               <border>
+                  <edge presence="hidden"/>
+               </border>
+               <value>
+                  <text>1234568790123456789012</text>
+               </value>
+            </field>
+            <draw name="Line2" y="63.5mm" x="44.45mm" w="114.3mm" h="0mm">
+               <value>
+                  <line>
+                     <edge thickness="0.0762mm"/>
+                  </line>
+               </value>
+            </draw>
+            <draw name="Circle1" y="3.175mm" x="238.385mm" w="6.35mm" h="6.35mm" anchorType="middleCenter">
+               <value>
+                  <arc hand="right" circular="1">
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </arc>
+               </value>
+               <para vAlign="middle" hAlign="center"/>
+            </draw>
+            <draw name="StaticText34" y="3.175mm" x="238.385mm" anchorType="middleCenter">
+               <ui>
+                  <textEdit>
+                  </textEdit>
+               </ui>
+               <value>
+                  <text>8</text>
+               </value>
+               <font size="12pt" typeface="Minion Pro" weight="bold">
+                  <fill>
+                     <color value="255,255,255"/>
+                  </fill>
+               </font>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
+            <margin topInset="50.8mm"/>
+            <?templateDesigner expand 0?></subform>
+         <bind match="none"/>
+         <?templateDesigner expand 0?></subform>
+      <desc>
+         <text name="title">E-Ticket</text>
+         <text name="description">Adobe LiveCycle Designer Sample</text>
+         <text name="contact">Adobe Systems Incorporated</text>
+      </desc>
+      <?renderCache.subset "Minion Pro" 0 0 ISO-8859-1 4 240 62 0000000100050009000A000D000F0010001100120013001400150016001700180019001A001C002200230024002500260027002A002D002E002F003000310034003500360038003A00420043004400450046004700480049004A004C004D004E004F005000510052005300540055005600570058005A005B￼ $(),./0123456789;ABCDEFILMNOPSTUWYabcdefghiklmnopqrstuvwyz?>
+      <?renderCache.subset "Minion Pro" 1 0 ISO-8859-1 4 200 50 0001000F0010001100120013001400150016001700180019001A002200230024002500270028002A002D002E002F0031003300340035003A003B00420043004400450046004700480049004A004D004E004F0050005100530054005500560057005A005B ./0123456789ABCDFGILMNPRSTYZabcdefghilmnoprstuvyz?>
+      <?renderCache.subset "Minion Pro" 0 1 ISO-8859-1 4 188 47 00010009000A000D000E000F00220023002400250026002700280029002A002D002E002F003100330034003500420043004400450046004700480049004A004C004D004E004F0050005100520053005400550056005700580059005A005B (),-.ABCDEFGHILMNPRSTabcdefghiklmnopqrstuvwxyz?>
+      <?renderCache.subset "Minion Pro" 1 1 ISO-8859-1 4 96 24 00010022002A002E003100350042004400450046004700480049004A004C004D004E004F00500053005400550056005A AIMPTacdefghiklmnorstuy?></subform>
+   <?templateDesigner Grid show:0, snap:0, units:0, color:ff8080, origin:(0,0), interval:(250000,250000)?>
+   <?templateDesigner Zoom 87?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner DefaultPreviewType print?>
+   <?templateDesigner XDPPreviewFormat 14?></template>
+<config xmlns="http://www.xfa.org/schema/xci/1.0/">
+   <agent name="designer">
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <trace>
+      <area name="font" level="1"/>
+   </trace>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+         </fontInfo>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+      <cache>
+         <macroCache/>
+      </cache>
+   </present>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.1/">
+   <locale name="en_US" desc="English (United States)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+   </locale>
+</localeSet>
+<PDFSecurity print="1" printHighQuality="1" change="1" modifyAnnots="1" formFieldFilling="1" documentAssembly="1" contentCopy="1" accessibleContent="1" metadata="1" xmlns="http://ns.adobe.com/xtd/"/></xdp:xdp>

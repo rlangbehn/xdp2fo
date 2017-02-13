@@ -1,0 +1,40 @@
+~~
+~~ $Id: index.apt,v 1.5 2008/07/01 21:43:55 rlangbehn Exp $
+~~
+~~ This file is part of the XSL XDP Stylesheet distribution xdp2fo.
+~~ See ../../../README.txt or http://xdp2fo.sourceforge.net/ for
+~~ copyright and other information.
+~~
+~~ Copyright (c) 2007 The XDP To XSL-FO Development Team.
+~~ Also see acknowledgements in README.txt.
+~~
+~~ xdp2fo is free software; you can redistribute it and/or modify
+~~ it under the terms of the GNU Lesser General Public License as
+~~ published by the Free Software Foundation; either version 3 of
+~~ the License, or (at your option) any later version.
+~~
+~~ xdp2fo is distributed in the hope that it will be useful,
+~~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+~~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+~~ GNU Lesser General Public License for more details.
+~~
+~~ You should have received a copy of the GNU Lesser General Public License
+~~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+~~
+~~ Version: $Revision: 1.5 $ $Date: 2008/07/01 21:43:55 $
+~~ Author:  Rainer Langbehn, rlangbehn@users.sourceforge.net
+~~
+
+           ------------------------
+           Welcome to XDP To XSL-FO
+           ------------------------
+
+Welcome to XDP To XSL-FO
+
+  The XDP To XSL-FO project is a collection of {{{http://www.w3.org/TR/xslt}XSL Transformation}} (XSLT) stylesheets to
+  convert documents from Adobe's {{{http://partners.adobe.com/public/developer/xml/index_arch.html}XML Data Package}}
+  (XDP) vocabulary into documents in the W3C's {{{http://www.w3.org/TR/xsl}XSL Formatting Objects}} (XSL-FO) vocabulary.
+
+* XDP To XSL-FO News
+
+  No news so far. Please check back at a later date.

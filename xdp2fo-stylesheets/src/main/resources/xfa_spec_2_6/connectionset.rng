@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+		Copyright (C) 2007 Adobe Systems Incorporated. All rights reserved. The original 
+		version of this material may be obtained from Adobe Systems Incorporated.
+	-->
+<rng:grammar xmlns:rng="http://relaxng.org/ns/structure/1.0" ns="http://www.xfa.org/schema/xfa-connection-set/2.4/" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+		<!-- The root element -->
+		
+   <rng:start>
+			
+      <rng:ref name="connectionSetElement"/>
+		
+   </rng:start>
+
+		<!-- selection-set-specific patterns -->
+
+		<!-- type for string (wrapper required because a pattern name is expected for "content", not a type) -->
+		
+   <rng:define name="stringDataType">
+			
+      <rng:data type="string"/>
+		
+   </rng:define>
+		
+		<!-- type for NCName (wrapper required because a pattern name is expected for "content", not a type) -->
+		
+   <rng:define name="NCNameDataType">
+			
+      <rng:data type="NCName"/>
+		
+   </rng:define>
+		
+		<!-- type for a URI -->
+		
+   <rng:define name="uriDataType">
+			
+      <rng:data type="anyURI"/>
+		
+   </rng:define>
+
+		<!-- Element types -->
+	
+   <rng:define name="connectionSetElement">
+      <rng:element name="connectionSet"><!--This element is the container for the set of connections.-->
+         <rng:ref name="connectionSetContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="connectionSetContent">
+      <rng:interleave>
+         <rng:zeroOrMore>
+            <rng:ref name="wsdlConnectionElement"/>
+         </rng:zeroOrMore>
+         <rng:zeroOrMore>
+            <rng:ref name="xmlConnectionElement"/>
+         </rng:zeroOrMore>
+         <rng:zeroOrMore>
+            <rng:ref name="xsdConnectionElement"/>
+         </rng:zeroOrMore>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="operationElement">
+      <rng:element name="operation"><!--This element declares the SOAP operation that is associated with its parent.-->
+         <rng:ref name="operationContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="operationContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="input">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="output">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="rootElementElement">
+      <rng:element name="rootElement"><!--This element declares the starting point (root) within the associated schema.-->
+         <rng:ref name="rootElementContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="rootElementContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="NCNameDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="soapActionElement">
+      <rng:element name="soapAction"><!--This element declares the SOAP action for its parent.-->
+         <rng:ref name="soapActionContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="soapActionContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="soapAddressElement">
+      <rng:element name="soapAddress"><!--This element declares the host location for its parent.-->
+         <rng:ref name="soapAddressContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="soapAddressContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="uriElement">
+      <rng:element name="uri"><!--This element declares the location of the sample document or schema for its parent.-->
+         <rng:ref name="uriContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="uriContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="uriDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="wsdlAddressElement">
+      <rng:element name="wsdlAddress"><!--This element identifies the location of the service description to which its parent corresponds.-->
+         <rng:ref name="wsdlAddressContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="wsdlAddressContent">
+      <rng:optional>
+         <rng:attribute name="id">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="use">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="usehref">
+            <rng:data type="string"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:ref name="stringDataType"/>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="wsdlConnectionElement">
+      <rng:element name="wsdlConnection"><!--This element represents one connection to a web service.-->
+         <rng:ref name="wsdlConnectionContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="wsdlConnectionContent">
+      <rng:optional>
+         <rng:attribute name="dataDescription">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:optional>
+            <rng:ref name="operationElement"/>
+         </rng:optional>
+         <rng:optional>
+            <rng:ref name="soapActionElement"/>
+         </rng:optional>
+         <rng:optional>
+            <rng:ref name="soapAddressElement"/>
+         </rng:optional>
+         <rng:optional>
+            <rng:ref name="wsdlAddressElement"/>
+         </rng:optional>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="xmlConnectionElement">
+      <rng:element name="xmlConnection"><!--This element represents a connection to sample data.-->
+         <rng:ref name="xmlConnectionContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="xmlConnectionContent">
+      <rng:optional>
+         <rng:attribute name="dataDescription">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:optional>
+            <rng:ref name="uriElement"/>
+         </rng:optional>
+      </rng:interleave>
+   </rng:define>
+   <rng:define name="xsdConnectionElement">
+      <rng:element name="xsdConnection"><!--This element represents a connection to a schema.-->
+         <rng:ref name="xsdConnectionContent"/>
+      </rng:element>
+   </rng:define>
+   <rng:define name="xsdConnectionContent">
+      <rng:optional>
+         <rng:attribute name="dataDescription">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:optional>
+         <rng:attribute name="name">
+            <rng:data type="NCName"/>
+         </rng:attribute>
+      </rng:optional>
+      <rng:interleave>
+         <rng:optional>
+            <rng:ref name="rootElementElement"/>
+         </rng:optional>
+         <rng:optional>
+            <rng:ref name="uriElement"/>
+         </rng:optional>
+      </rng:interleave>
+   </rng:define>
+</rng:grammar>

@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/"
+	timeStamp="2006-06-12T12:17:01Z"
+	uuid="724e7ae3-24aa-482d-b8cf-3c5e3c816a16">
+	<template xmlns="http://www.xfa.org/schema/xfa-template/2.5/">
+		<subform name="Formular1" layout="tb" restoreState="auto">
+			<pageSet>
+				<pageArea name="all-pages" id="all-pages">
+					<contentArea x="0.7in" y="0.7in" w="7.1in"
+						h="9.6in" />
+					<medium stock="letter" short="8.5in" long="11in" />
+				</pageArea>
+			</pageSet>
+			<subform w="7.1in" h="9.6in">
+				<draw>
+					<value>
+						<text>Block Properties - Borders</text>
+					</value>
+					<font size="14pt" typeface="Helvetica"
+						weight="bold">
+						<fill>
+							<color value="0,0,0" />
+						</fill>
+					</font>
+					<border>
+						<fill>
+							<color value="192,192,192" />
+						</fill>
+					</border>
+					<para hAlign="center" spaceAbove="18pt"
+						spaceBelow="6pt" />
+				</draw>
+				<draw>
+					<value>
+						<text>
+							This paragraph should have a solid border, 3
+							pt thick. Top and bottom edges are black,
+							and left and right edges are red. The text
+							is black on white.
+						</text>
+					</value>
+					<font size="10pt" typeface="Helvetica" />
+					<margin bottomInset="12pt" leftInset="0pt"
+						rightInset="0pt" />
+					<border>
+						<edge stroke="solid" thickness="3pt">
+							<color value="0,0,0" />
+						</edge>
+						<edge stroke="solid" thickness="3pt">
+							<color value="255,0,0" />
+						</edge>
+						<edge stroke="solid" thickness="3pt">
+							<color value="0,0,0" />
+						</edge>
+						<edge stroke="solid" thickness="3pt">
+							<color value="255,0,0" />
+						</edge>
+					</border>
+					<para hAlign="center" />
+				</draw>
+				<draw>
+					<value>
+						<text>
+							This paragraph should have a thin red dashed
+							border, 0.5 pt thick. Background color is
+							light grey, and text color is dark blue.
+						</text>
+					</value>
+					<font size="10pt" typeface="Helvetica">
+						<fill>
+							<color value="0,0,128" />
+						</fill>
+					</font>
+					<margin bottomInset="12pt" leftInset="0pt"
+						rightInset="0pt" />
+					<border>
+						<edge stroke="dashed" thickness="0.5pt">
+							<color value="255,0,0" />
+						</edge>
+						<edge stroke="dashed" thickness="0.5pt">
+							<color value="255,0,0" />
+						</edge>
+						<edge stroke="dashed" thickness="0.5pt">
+							<color value="255,0,0" />
+						</edge>
+						<edge stroke="dashed" thickness="0.5pt">
+							<color value="255,0,0" />
+						</edge>
+						<fill>
+							<color value="208,208,208" />
+						</fill>
+					</border>
+					<para hAlign="center" />
+				</draw>
+				<draw>
+					<value>
+						<text>
+							This text is rendered in default colors
+							(black on white). As for the border, we
+							should have a thin (2pt) dotted blue line
+							above and below, and a thick (12pt) solid
+							green bars on the right and on the left.
+						</text>
+					</value>
+					<font size="10pt" typeface="Helvetica" />
+					<margin bottomInset="12pt" leftInset="0pt"
+						rightInset="0pt" />
+					<border>
+						<edge stroke="dotted" thickness="2pt">
+							<color value="0,0,255" />
+						</edge>
+						<edge stroke="solid" thickness="12pt">
+							<color value="0,128,0" />
+						</edge>
+						<edge stroke="dotted" thickness="2pt">
+							<color value="0,0,255" />
+						</edge>
+						<edge stroke="solid" thickness="12pt">
+							<color value="0,128,0" />
+						</edge>
+					</border>
+					<para hAlign="center" />
+				</draw>
+				<draw>
+					<value>
+						<text>
+							This text is rendered in default colors
+							(black on white). All borders have the same
+							thickness of 6 pt. Colors and styles are:
+						</text>
+					</value>
+					<font size="10pt" typeface="Helvetica" />
+					<margin bottomInset="12pt" leftInset="0pt"
+						rightInset="0pt" />
+					<border>
+						<edge stroke="double" thickness="6pt">
+							<color value="255,0,0" />
+						</edge>
+						<edge stroke="solid" thickness="6pt">
+							<color value="255,0,255" />
+						</edge>
+						<edge stroke="double" thickness="6pt">
+							<color value="0,128,0" />
+						</edge>
+						<edge stroke="solid" thickness="6pt">
+							<color value="0,0,255" />
+						</edge>
+					</border>
+					<para hAlign="center" />
+				</draw>
+				<draw>
+					<value>
+						<text>
+							Though the border color of this paragraph is
+							set to green, it should not be visible,
+							since the border style is set to hidden.
+							Background color is blue, and text color is
+							yellow. The text is printed in bold
+							typeface.
+						</text>
+					</value>
+					<font size="10pt" typeface="Helvetica"
+						weight="bold">
+						<fill>
+							<color value="255,255,0" />
+						</fill>
+					</font>
+					<margin bottomInset="12pt" leftInset="0pt"
+						rightInset="0pt" />
+					<border>
+						<edge stroke="hidden" thickness="2pt">
+							<color value="0,128,0" />
+						</edge>
+						<edge stroke="hidden" thickness="2pt">
+							<color value="0,128,0" />
+						</edge>
+						<edge stroke="hidden" thickness="2pt">
+							<color value="0,128,0" />
+						</edge>
+						<edge stroke="hidden" thickness="2pt">
+							<color value="0,128,0" />
+						</edge>
+						<fill>
+							<color value="0,0,255" />
+						</fill>
+					</border>
+					<para hAlign="center" />
+				</draw>
+				<draw>
+					<value>
+						<text>
+							This text should be rendered blue on white,
+							and surrounded by a grey groove, 3pt thick.
+						</text>
+					</value>
+					<font size="10pt" typeface="Helvetica">
+						<fill>
+							<color value="0,0,255" />
+						</fill>
+					</font>
+					<margin bottomInset="12pt" leftInset="0pt"
+						rightInset="0pt" />
+					<border>
+						<edge stroke="groove" thickness="3pt">
+							<color value="128,128,128" />
+						</edge>
+						<edge stroke="groove" thickness="3pt">
+							<color value="128,128,128" />
+						</edge>
+						<edge stroke="groove" thickness="3pt">
+							<color value="128,128,128" />
+						</edge>
+						<edge stroke="groove" thickness="3pt">
+							<color value="128,128,128" />
+						</edge>
+					</border>
+					<para hAlign="center" />
+				</draw>
+				<draw>
+					<value>
+						<text>
+							This text should be rendered black on white,
+							and surrounded by a blue ridge of the same
+							thickness as above (3pt).
+						</text>
+					</value>
+					<font size="10pt" typeface="Helvetica">
+						<fill>
+							<color value="0,0,0" />
+						</fill>
+					</font>
+					<margin bottomInset="12pt" leftInset="0pt"
+						rightInset="0pt" />
+					<border>
+						<edge stroke="ridge" thickness="3pt">
+							<color value="0,0,255" />
+						</edge>
+						<edge stroke="ridge" thickness="3pt">
+							<color value="0,0,255" />
+						</edge>
+						<edge stroke="ridge" thickness="3pt">
+							<color value="0,0,255" />
+						</edge>
+						<edge stroke="ridge" thickness="3pt">
+							<color value="0,0,255" />
+						</edge>
+					</border>
+					<para hAlign="center" />
+				</draw>
+				<subform>
+					<margin bottomInset="12pt" />
+					<border>
+						<edge stroke="solid" thickness="2pt">
+							<color value="255,0,0" />
+						</edge>
+						<edge stroke="solid" thickness="2pt">
+							<color value="255,0,0" />
+						</edge>
+						<edge stroke="solid" thickness="2pt">
+							<color value="255,0,0" />
+						</edge>
+						<edge stroke="solid" thickness="2pt">
+							<color value="255,0,0" />
+						</edge>
+					</border>
+					<para hAlign="center" />
+					<subform>
+						<margin />
+						<border>
+							<edge stroke="solid" thickness="2pt">
+								<color value="0,0,255" />
+							</edge>
+							<edge stroke="solid" thickness="2pt">
+								<color value="0,0,255" />
+							</edge>
+							<edge stroke="solid" thickness="2pt">
+								<color value="0,0,255" />
+							</edge>
+							<edge stroke="solid" thickness="2pt">
+								<color value="0,0,255" />
+							</edge>
+						</border>
+						<para hAlign="center" />
+						<subform>
+							<margin />
+							<border>
+								<edge stroke="solid" thickness="2pt">
+									<color value="255,0,0" />
+								</edge>
+								<edge stroke="solid" thickness="2pt">
+									<color value="255,0,0" />
+								</edge>
+								<edge stroke="solid" thickness="2pt">
+									<color value="255,0,0" />
+								</edge>
+								<edge stroke="solid" thickness="2pt">
+									<color value="255,0,0" />
+								</edge>
+							</border>
+							<para hAlign="center" />
+							<subform>
+								<margin />
+								<border>
+									<edge stroke="solid"
+										thickness="2pt">
+										<color value="0,0,255" />
+									</edge>
+									<edge stroke="solid"
+										thickness="2pt">
+										<color value="0,0,255" />
+									</edge>
+									<edge stroke="solid"
+										thickness="2pt">
+										<color value="0,0,255" />
+									</edge>
+									<edge stroke="solid"
+										thickness="2pt">
+										<color value="0,0,255" />
+									</edge>
+								</border>
+								<para hAlign="center" />
+								<subform>
+									<margin />
+									<border>
+										<edge stroke="solid"
+											thickness="2pt">
+											<color value="255,0,0" />
+										</edge>
+										<edge stroke="solid"
+											thickness="2pt">
+											<color value="255,0,0" />
+										</edge>
+										<edge stroke="solid"
+											thickness="2pt">
+											<color value="255,0,0" />
+										</edge>
+										<edge stroke="solid"
+											thickness="2pt">
+											<color value="255,0,0" />
+										</edge>
+									</border>
+									<para hAlign="center" />
+									<subform>
+										<margin />
+										<border>
+											<edge stroke="solid"
+												thickness="2pt">
+												<color value="0,0,255" />
+											</edge>
+											<edge stroke="solid"
+												thickness="2pt">
+												<color value="0,0,255" />
+											</edge>
+											<edge stroke="solid"
+												thickness="2pt">
+												<color value="0,0,255" />
+											</edge>
+											<edge stroke="solid"
+												thickness="2pt">
+												<color value="0,0,255" />
+											</edge>
+										</border>
+										<para hAlign="center" />
+										<subform>
+											<margin />
+											<border>
+												<edge stroke="solid"
+													thickness="2pt">
+													<color
+														value="255,0,0" />
+												</edge>
+												<edge stroke="solid"
+													thickness="2pt">
+													<color
+														value="255,0,0" />
+												</edge>
+												<edge stroke="solid"
+													thickness="2pt">
+													<color
+														value="255,0,0" />
+												</edge>
+												<edge stroke="solid"
+													thickness="2pt">
+													<color
+														value="255,0,0" />
+												</edge>
+											</border>
+											<para hAlign="center" />
+											<subform>
+												<margin />
+												<border>
+													<edge stroke="solid"
+														thickness="2pt">
+														<color
+															value="0,0,255" />
+													</edge>
+													<edge stroke="solid"
+														thickness="2pt">
+														<color
+															value="0,0,255" />
+													</edge>
+													<edge stroke="solid"
+														thickness="2pt">
+														<color
+															value="0,0,255" />
+													</edge>
+													<edge stroke="solid"
+														thickness="2pt">
+														<color
+															value="0,0,255" />
+													</edge>
+												</border>
+												<para hAlign="center" />
+												<subform>
+													<draw>
+														<value>
+															<text>
+																This
+																text is
+																included
+																into 10
+																solid
+																frames
+																of 2pt
+																each,
+																with
+																alternated
+																colors:
+																red/blue.
+																So you
+																should
+																have a
+																20 pt
+																striped
+																border,
+																made of
+																5 red
+																stripes
+																and 5
+																blue
+																ones.
+																The
+																outermost
+																stripe
+																is red,
+																and the
+																innermost
+																stripe
+																is blue.
+															</text>
+														</value>
+														<font
+															size="10pt" typeface="Helvetica" />
+														<margin />
+														<border>
+															<edge
+																stroke="solid" thickness="2pt">
+																<color
+																	value="0,0,255" />
+															</edge>
+															<edge
+																stroke="solid" thickness="2pt">
+																<color
+																	value="0,0,255" />
+															</edge>
+															<edge
+																stroke="solid" thickness="2pt">
+																<color
+																	value="0,0,255" />
+															</edge>
+															<edge
+																stroke="solid" thickness="2pt">
+																<color
+																	value="0,0,255" />
+															</edge>
+														</border>
+														<para
+															hAlign="center" />
+													</draw>
+												</subform>
+											</subform>
+										</subform>
+									</subform>
+								</subform>
+							</subform>
+						</subform>
+					</subform>
+				</subform>
+			</subform>
+		</subform>
+	</template>
+</xdp:xdp>

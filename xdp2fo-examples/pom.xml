@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ | $Id: pom.xml,v 1.38 2008/07/14 18:53:19 rlangbehn Exp $
+ |
+ | This file is part of the XSL XDP Stylesheet distribution xdp2fo.
+ | See README.txt or http://xdp2fo.sourceforge.net/ for
+ | copyright and other information.
+ |
+ | Copyright (c) 2007 The XDP To XSL-FO Development Team.
+ | Also see acknowledgements in README.txt.
+ |
+ | xdp2fo is free software; you can redistribute it and/or modify
+ | it under the terms of the GNU Lesser General Public License as
+ | published by the Free Software Foundation; either version 3 of
+ | the License, or (at your option) any later version.
+ |
+ | xdp2fo is distributed in the hope that it will be useful,
+ | but WITHOUT ANY WARRANTY; without even the implied warranty of
+ | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ | GNU Lesser General Public License for more details.
+ |
+ | You should have received a copy of the GNU Lesser General Public License
+ | along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ |
+ | Version: $Revision: 1.38 $ $Date: 2008/07/14 18:53:19 $
+ | Author:  Rainer Langbehn, rlangbehn@users.sourceforge.net
+ +-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                        http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>net.sourceforge.xdp2fo</groupId>
+		<artifactId>xdp2fo</artifactId>
+		<relativePath>../pom.xml</relativePath>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>xdp2fo-examples</artifactId>
+	<name>xdp2fo-examples</name>
+	<description>xdp2fo-examples</description>
+	
+	<dependencies>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.barcode4j</groupId>
+			<artifactId>barcode4j</artifactId>
+			<version>2.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/barcode4j-2.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.xdp2fo</groupId>
+			<artifactId>xdp2fo-stylesheets</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>src/main/xsl</directory>
+			</resource>
+			<resource>
+				<directory>target/generated-resources</directory>
+			</resource>
+		</resources>
+		
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+			<testResource>
+				<directory>src/test/xsl</directory>
+			</testResource>
+		</testResources>
+		
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>**/SubformSet1Test.java</exclude>
+						<exclude>**/SubformSet2Test.java</exclude>
+						<exclude>**/SubformSet3Test.java</exclude>
+						<exclude>**/SubformSet4Test.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>xml-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>transform</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<transformationSets>
+						<transformationSet>
+							<dir>src/main/resources</dir>
+							<outputDir>${project.build.directory}/generated-resources</outputDir>
+							<stylesheet>${basedir}/../xdp2fo-stylesheets/target/classes/net/sourceforge/xdp2fo/xdp2fo.xsl</stylesheet>
+							<fileMappers>
+								<fileMapper
+									implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
+									<targetExtension>.xsl</targetExtension>
+								</fileMapper>
+							</fileMappers>
+							<parameters>
+								<parameter>
+									<name>xdp2fo.version</name>
+									<value>${project.version}</value>
+								</parameter>
+								<parameter>
+									<name>xdp2fo.logging.level</name>
+									<value>WARN</value>
+								</parameter>
+								<parameter>
+									<name>xdp2fo.drawing-aids.showGrid</name>
+									<value>false</value>
+								</parameter>
+								<parameter>
+									<name>xdp2fo.drawing-aids.showGuidelines</name>
+									<value>false</value>
+								</parameter>
+								<parameter>
+									<name>xdp2fo.drawing-aids.showHorizontalRuler</name>
+									<value>false</value>
+								</parameter>
+								<parameter>
+									<name>xdp2fo.drawing-aids.showObjectBoundaries</name>
+									<value>true</value>
+								</parameter>
+								<parameter>
+									<name>xdp2fo.drawing-aids.showVerticalRuler</name>
+									<value>false</value>
+								</parameter>
+							</parameters>
+							<includes>
+								<include>**/Dunning Notice.xdp</include>
+								<include>**/E-Ticket.xdp</include>
+								<include>**/Purchase Order.xdp</include>
+								<include>**/SubformSet1.xdp</include>
+								<include>**/SubformSet2.xdp</include>
+								<include>**/SubformSet3.xdp</include>
+								<include>**/SubformSet4.xdp</include>
+								<include>**/Tax Receipt.xdp</include>
+							</includes>
+						</transformationSet>
+					</transformationSets>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<profiles>
+		<profile>
+			<!-- XSLT processor + XSL processor -->
+			<id>JRE Default + Apache FOP</id>
+			
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>xdp2fo.test.profile</name>
+					<value>jre-fop</value>
+				</property>
+			</activation>
+			
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>testCompile</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<testExcludes>
+								<exclude>**/XEPAdapter.java</exclude>
+							</testExcludes>
+						</configuration>
+					</plugin>
+					
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<systemProperties>
+								<property>
+									<name>net.sourceforge.xdp2fo.XSLProcessorAdapter</name>
+									<value>net.sourceforge.xdp2fo.FOPAdapter</value>
+								</property>
+							</systemProperties>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+			
+			<dependencies>
+				<dependency>
+					<groupId>com.sun.media</groupId>
+					<artifactId>jai-codec</artifactId>
+				</dependency>
+				<dependency>
+					<groupId>javax.media</groupId>
+					<artifactId>jai-core</artifactId>
+				</dependency>
+				<dependency>
+					<groupId>net.sourceforge.barcode4j</groupId>
+					<artifactId>barcode4j-fop-ext</artifactId>
+					<version>0.93</version>
+					<scope>system</scope>
+					<systemPath>${basedir}/lib/barcode4j-fop-ext-0.93.jar</systemPath>
+				</dependency>
+				<dependency>
+					<groupId>org.apache.xmlgraphics</groupId>
+					<artifactId>fop</artifactId>
+				</dependency>
+			</dependencies>
+		</profile>
+		
+		<profile>
+			<!-- XSLT processor + XSL processor -->
+			<id>Saxon + Apache FOP</id>
+			
+			<activation>
+				<property>
+					<name>xdp2fo.test.profile</name>
+					<value>saxon-fop</value>
+				</property>
+			</activation>
+			
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>testCompile</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<testExcludes>
+								<exclude>**/XEPAdapter.java</exclude>
+							</testExcludes>
+						</configuration>
+					</plugin>
+					
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<systemProperties>
+								<property>
+									<name>net.sourceforge.xdp2fo.XSLProcessorAdapter</name>
+									<value>net.sourceforge.xdp2fo.FOPAdapter</value>
+								</property>
+							</systemProperties>
+						</configuration>
+					</plugin>
+					
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>xml-maven-plugin</artifactId>
+						<dependencies>
+							<dependency>
+								<groupId>net.sf.saxon</groupId>
+								<artifactId>saxon</artifactId>
+								<version>8.7</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+			
+			<dependencies>
+				<dependency>
+					<groupId>com.sun.media</groupId>
+					<artifactId>jai-codec</artifactId>
+				</dependency>
+				<dependency>
+					<groupId>javax.media</groupId>
+					<artifactId>jai-core</artifactId>
+				</dependency>
+				<dependency>
+					<groupId>net.sourceforge.barcode4j</groupId>
+					<artifactId>barcode4j-fop-ext</artifactId>
+					<version>0.93</version>
+					<scope>system</scope>
+					<systemPath>${basedir}/lib/barcode4j-fop-ext-0.93.jar</systemPath>
+				</dependency>
+				<dependency>
+					<groupId>org.apache.xmlgraphics</groupId>
+					<artifactId>fop</artifactId>
+				</dependency>
+			</dependencies>
+		</profile>
+		
+		<profile>
+			<!-- XSLT processor + XSL processor -->
+			<id>Xalan + Apache FOP</id>
+			
+			<activation>
+				<property>
+					<name>xdp2fo.test.profile</name>
+					<value>xalan-fop</value>
+				</property>
+			</activation>
+			
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>testCompile</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<testExcludes>
+								<exclude>**/XEPAdapter.java</exclude>
+							</testExcludes>
+						</configuration>
+					</plugin>
+					
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<systemProperties>
+								<property>
+									<name>net.sourceforge.xdp2fo.XSLProcessorAdapter</name>
+									<value>net.sourceforge.xdp2fo.FOPAdapter</value>
+								</property>
+							</systemProperties>
+						</configuration>
+					</plugin>
+					
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>xml-maven-plugin</artifactId>
+						<dependencies>
+							<dependency>
+								<groupId>xalan</groupId>
+								<artifactId>xalan</artifactId>
+								<version>2.7.0</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+			
+			<dependencies>
+				<dependency>
+					<groupId>com.sun.media</groupId>
+					<artifactId>jai-codec</artifactId>
+				</dependency>
+				<dependency>
+					<groupId>javax.media</groupId>
+					<artifactId>jai-core</artifactId>
+				</dependency>
+				<dependency>
+					<groupId>net.sourceforge.barcode4j</groupId>
+					<artifactId>barcode4j-fop-ext</artifactId>
+					<version>0.93</version>
+					<scope>system</scope>
+					<systemPath>${basedir}/lib/barcode4j-fop-ext-0.93.jar</systemPath>
+				</dependency>
+				<dependency>
+					<groupId>org.apache.xmlgraphics</groupId>
+					<artifactId>fop</artifactId>
+				</dependency>
+			</dependencies>
+		</profile>
+		
+		<profile>
+			<!-- XSLT processor + XSL processor -->
+			<id>JRE Default + RenderX XEP</id>
+			
+			<activation>
+				<property>
+					<name>xdp2fo.test.profile</name>
+					<value>jre-xep</value>
+				</property>
+			</activation>
+			
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>testCompile</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<testExcludes>
+								<exclude>**/FOPAdapter.java</exclude>
+							</testExcludes>
+						</configuration>
+					</plugin>
+					
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<systemProperties>
+								<property>
+									<name>net.sourceforge.xdp2fo.XSLProcessorAdapter</name>
+									<value>net.sourceforge.xdp2fo.XEPAdapter</value>
+								</property>
+							</systemProperties>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+			
+			<dependencies>
+				<dependency>
+					<groupId>com.renderx</groupId>
+					<artifactId>xep</artifactId>
+					<version>4.12</version>
+					<scope>system</scope>
+					<systemPath>${basedir}/lib/xep-4.12.jar</systemPath>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+</project>
