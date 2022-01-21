@@ -113,7 +113,7 @@ public class FOPAdapter implements XSLProcessorAdapter
 	 * @see net.sourceforge.xdp2fo.XSLProcessorAdapter#getFormatterVersion()
 	 */
 	public String getFormatterVersion() {
-		return "0.95beta";
+		return "2.6";
 	}
 
     // Public ----------------------------------------------------------------
