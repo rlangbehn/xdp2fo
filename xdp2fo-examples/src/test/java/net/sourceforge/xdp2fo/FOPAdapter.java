@@ -65,17 +65,16 @@ public class FOPAdapter implements XSLProcessorAdapter
 			OutputStream outputStream)
 	throws Exception {
 		
-		FOUserAgent userAgent = fopFactory.newFOUserAgent();
-        userAgent.setBaseURL(baseUri);
+		final FOUserAgent userAgent = fopFactory.newFOUserAgent();
 
         if ("application/X-fop-areatree".equals(outputFormat)) {
+        	
             //Create an instance of the target renderer so the XMLRenderer can use its font setup
-            Renderer targetRenderer = userAgent.getRendererFactory().createRenderer(
+            final Renderer targetRenderer = userAgent.getRendererFactory().createRenderer(
                     userAgent, MimeConstants.MIME_PDF); 
             
             //Create the XMLRenderer to create the intermediate format (area tree XML)
-            XMLRenderer xmlRenderer = new XMLRenderer();
-            xmlRenderer.setUserAgent(userAgent);
+            final XMLRenderer xmlRenderer = new XMLRenderer(userAgent);
             
             //Tell the XMLRenderer to mimic the target renderer
             xmlRenderer.mimicRenderer(targetRenderer);
@@ -84,7 +83,7 @@ public class FOPAdapter implements XSLProcessorAdapter
             userAgent.setRendererOverride(xmlRenderer);
         }
         
-        Fop fop = fopFactory.newFop(outputFormat, userAgent, outputStream);
+        final Fop fop = fopFactory.newFop(outputFormat, userAgent, outputStream);
         return fop.getDefaultHandler();
 	}
 
