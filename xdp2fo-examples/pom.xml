@@ -29,6 +29,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                         http://maven.apache.org/maven-v4_0_0.xsd">
+
 	<parent>
 		<groupId>net.sourceforge.xdp2fo</groupId>
 		<artifactId>xdp2fo</artifactId>
@@ -55,16 +56,13 @@
 			<artifactId>log4j</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>net.sourceforge.barcode4j</groupId>
+			<groupId>net.sf.barcode4j</groupId>
 			<artifactId>barcode4j</artifactId>
-			<version>2.0</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/lib/barcode4j-2.0.jar</systemPath>
+			<version>2.1</version>
 		</dependency>
 		<dependency>
 			<groupId>net.sourceforge.xdp2fo</groupId>
 			<artifactId>xdp2fo-stylesheets</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 	
@@ -179,7 +177,6 @@
 			<id>JRE Default + Apache FOP</id>
 			
 			<activation>
-				<activeByDefault>true</activeByDefault>
 				<property>
 					<name>xdp2fo.test.profile</name>
 					<value>jre-fop</value>
@@ -230,11 +227,9 @@
 					<artifactId>jai-core</artifactId>
 				</dependency>
 				<dependency>
-					<groupId>net.sourceforge.barcode4j</groupId>
+					<groupId>net.sf.barcode4j</groupId>
 					<artifactId>barcode4j-fop-ext</artifactId>
-					<version>0.93</version>
-					<scope>system</scope>
-					<systemPath>${basedir}/lib/barcode4j-fop-ext-0.93.jar</systemPath>
+					<version>2.1</version>
 				</dependency>
 				<dependency>
 					<groupId>org.apache.xmlgraphics</groupId>
@@ -310,11 +305,9 @@
 					<artifactId>jai-core</artifactId>
 				</dependency>
 				<dependency>
-					<groupId>net.sourceforge.barcode4j</groupId>
+					<groupId>net.sf.barcode4j</groupId>
 					<artifactId>barcode4j-fop-ext</artifactId>
-					<version>0.93</version>
-					<scope>system</scope>
-					<systemPath>${basedir}/lib/barcode4j-fop-ext-0.93.jar</systemPath>
+					<version>2.1</version>
 				</dependency>
 				<dependency>
 					<groupId>org.apache.xmlgraphics</groupId>
@@ -390,11 +383,9 @@
 					<artifactId>jai-core</artifactId>
 				</dependency>
 				<dependency>
-					<groupId>net.sourceforge.barcode4j</groupId>
+					<groupId>net.sf.barcode4j</groupId>
 					<artifactId>barcode4j-fop-ext</artifactId>
-					<version>0.93</version>
-					<scope>system</scope>
-					<systemPath>${basedir}/lib/barcode4j-fop-ext-0.93.jar</systemPath>
+					<version>2.1</version>
 				</dependency>
 				<dependency>
 					<groupId>org.apache.xmlgraphics</groupId>
