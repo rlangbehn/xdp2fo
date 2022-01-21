@@ -64,6 +64,10 @@
 			<groupId>net.sourceforge.xdp2fo</groupId>
 			<artifactId>xdp2fo-stylesheets</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>fop</artifactId>
+        </dependency>
 	</dependencies>
 	
 	<build>
