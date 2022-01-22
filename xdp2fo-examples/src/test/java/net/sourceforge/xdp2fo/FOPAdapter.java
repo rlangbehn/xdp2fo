@@ -24,6 +24,7 @@
 package net.sourceforge.xdp2fo;
 
 import java.io.OutputStream;
+import java.net.URI;
 
 import org.apache.fop.apps.FOUserAgent;
 import org.apache.fop.apps.Fop;
@@ -48,7 +49,7 @@ public class FOPAdapter implements XSLProcessorAdapter
 	/**
 	 * TODO
 	 */
-	private static FopFactory fopFactory = FopFactory.newInstance();
+	private static FopFactory fopFactory = FopFactory.newInstance(URI.create("."));
 
     // Static ----------------------------------------------------------------
 

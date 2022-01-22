@@ -61,7 +61,7 @@ public class SubformSet1Test extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/SubformSet1.xsl",
     			"/com/adobe/designer/samples/data/DataA.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/SubformSet1 DataA.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/SubformSet1 DataA.pdf",
     			"application/pdf"
     	);
     }
@@ -75,7 +75,7 @@ public class SubformSet1Test extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/SubformSet1.xsl",
     			"/com/adobe/designer/samples/data/DataB.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/SubformSet1 DataB.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/SubformSet1 DataB.pdf",
     			"application/pdf"
     	);
     }

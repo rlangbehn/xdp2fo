@@ -134,7 +134,6 @@ public abstract class AbstractTransformationTest extends TestCase
 	 * 
 	 * @throws Exception
 	 */
-	@SuppressWarnings("unchecked")
 	protected XSLProcessorAdapter createXSLProcessorAdapter()
 	throws Exception {
 
@@ -145,7 +144,7 @@ public abstract class AbstractTransformationTest extends TestCase
         assertNotNull("className shouldn't be null", className);
 
         ClassLoader cL = Thread.currentThread().getContextClassLoader();
-        Class clazz = cL.loadClass(className);
+        Class<?> clazz = cL.loadClass(className);
         assertNotNull("clazz shouldn't be null", clazz);
 
         return (XSLProcessorAdapter)clazz.newInstance();

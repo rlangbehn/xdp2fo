@@ -61,7 +61,7 @@ public class PurchaseOrderTest extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/Purchase Order.xsl",
     			"/com/adobe/designer/samples/data/Purchase Order.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/Purchase Order.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/Purchase Order.pdf",
     			"application/pdf"
     	);
     }
@@ -75,7 +75,7 @@ public class PurchaseOrderTest extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/Purchase Order.xsl",
     			"/com/adobe/designer/samples/data/Purchase Order Long.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/Purchase Order Long.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/Purchase Order Long.pdf",
     			"application/pdf"
     	);
     }
@@ -89,7 +89,7 @@ public class PurchaseOrderTest extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/Purchase Order Ref.xsl",
     			"/com/adobe/designer/samples/data/Purchase Order.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/Purchase Order Ref.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/Purchase Order Ref.pdf",
     			"application/pdf"
     	);
     }
@@ -103,7 +103,7 @@ public class PurchaseOrderTest extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/Purchase Order Ref.xsl",
     			"/com/adobe/designer/samples/data/Purchase Order Long.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/Purchase Order Ref Long.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/Purchase Order Ref Long.pdf",
     			"application/pdf"
     	);
     }

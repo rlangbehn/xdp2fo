@@ -75,7 +75,7 @@ public class TaxReceiptTest extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/Tax Receipt.xsl",
     			"/com/adobe/designer/samples/data/Tax Receipt.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/Tax Receipt.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/Tax Receipt.pdf",
     			"application/pdf"
     	);
     }
@@ -89,7 +89,7 @@ public class TaxReceiptTest extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/Tax Receipt Ref.xsl",
     			"/com/adobe/designer/samples/data/Tax Receipt.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/Tax Receipt Ref.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/Tax Receipt Ref.pdf",
     			"application/pdf"
     	);
     }

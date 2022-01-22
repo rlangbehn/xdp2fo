@@ -75,7 +75,7 @@ public class ETicketTest extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/E-Ticket.xsl",
     			"/com/adobe/designer/samples/data/E-Ticket.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/E-Ticket.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/E-Ticket.pdf",
     			"application/pdf"
     	);
     }

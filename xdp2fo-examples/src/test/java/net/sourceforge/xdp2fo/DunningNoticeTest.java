@@ -61,7 +61,7 @@ public class DunningNoticeTest extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/Dunning Notice.xsl",
     			"/com/adobe/designer/samples/data/Dunning Notice Level1.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/Dunning Notice Level1.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/Dunning Notice Level1.pdf",
     			"application/pdf"
     	);
     }
@@ -75,7 +75,7 @@ public class DunningNoticeTest extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/Dunning Notice.xsl",
     			"/com/adobe/designer/samples/data/Dunning Notice Level2.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/Dunning Notice Level2.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/Dunning Notice Level2.pdf",
     			"application/pdf"
     	);
     }
@@ -89,7 +89,7 @@ public class DunningNoticeTest extends AbstractTransformationTest
     	runTest(
     			"/com/adobe/designer/samples/forms/Dunning Notice.xsl",
     			"/com/adobe/designer/samples/data/Dunning Notice Level3.xml",
-    			"target/test-classes/com/adobe/designer/samples/outputs/Dunning Notice Level3.pdf",
+    			"target/test-output/com/adobe/designer/samples/outputs/Dunning Notice Level3.pdf",
     			"application/pdf"
     	);
     }
